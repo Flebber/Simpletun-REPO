@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://kq4siblljmwu"]
+
+[ext_resource type="Texture2D" uid="uid://d2vj7xapts102" path="res://assets/sprites/Objects/spike_blood.png" id="1_njs70"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vq266"]
+size = Vector2(64, 18.5)
+
+[node name="Bloody_Spike" type="Area2D" unique_id=1001421182]
+z_index = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1115798488]
+position = Vector2(0, -10)
+texture = ExtResource("1_njs70")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1146186236]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_vq266")

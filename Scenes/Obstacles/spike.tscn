@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://caqq1sr8aexqs"]
+
+[ext_resource type="Script" uid="uid://cilb85q68qjd1" path="res://Scripts/Obstacles/spike.gd" id="1_08aae"]
+[ext_resource type="Texture2D" uid="uid://dj7bpk8kt66sd" path="res://assets/sprites/Objects/spike.png" id="1_uoxgv"]
+[ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Obstacles/collide_check.gd" id="3_08aae"]
+[ext_resource type="Script" uid="uid://nvmn3wn4f0b0" path="res://Scenes/Obstacles/damage.gd" id="4_sysqy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uoxgv"]
+size = Vector2(64, 18.5)
+
+[node name="Spike" type="Area2D" unique_id=1903761688]
+z_index = -1
+script = ExtResource("1_08aae")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1936623282]
+unique_name_in_owner = true
+position = Vector2(0, -10)
+texture = ExtResource("1_uoxgv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2043943838]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_uoxgv")
+
+[node name="CollisionCheck" type="Node" parent="." unique_id=896582175]
+unique_name_in_owner = true
+script = ExtResource("3_08aae")
+
+[node name="Damage" type="Node" parent="." unique_id=1448717133]
+unique_name_in_owner = true
+script = ExtResource("4_sysqy")
