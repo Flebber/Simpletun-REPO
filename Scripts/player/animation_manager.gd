@@ -1,11 +1,13 @@
 class_name AnimationManager extends Node
 
-@onready var player : CharacterBody2D = get_parent()
+@onready var player : Player = get_parent()
 
 var input_manager : InputManager
 var anim : AnimationPlayer
+@export var health : Health
 
 var previous_anim : String = ""
+var is_dead : bool = false
 
 
 func setup():
@@ -15,13 +17,22 @@ func setup():
 	if anim == null:
 			print("no animation player for animation manager")
 			return
+	if health == null:
+		print("no health for animation manager")
+		return
+		
+	health.dead.connect(dead_animation)
 
 func _process(delta: float) -> void:
+	if is_dead:
+		return
 	walk_animation()
 	
 
 
 func walk_animation():
+	if is_dead:
+		return
 	var xdir = input_manager.get_move_vector()
 	
 	#Walk Left
@@ -41,3 +52,8 @@ func walk_animation():
 		anim.current_animation = "Player/jump"
 		if player.is_on_floor():
 			anim.stop()
+
+func dead_animation():
+	is_dead = true
+	print("im dead")
+	anim.current_animation = "Player/dead"

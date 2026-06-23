@@ -9,5 +9,5 @@ func setup() -> void:
 
 func collision_detect(body : Node):
 		collided.emit(body)
-		print("collided with ", body.name)
+
 		

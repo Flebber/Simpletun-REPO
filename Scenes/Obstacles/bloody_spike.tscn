@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://kq4siblljmwu"]
 
 [ext_resource type="Texture2D" uid="uid://d2vj7xapts102" path="res://assets/sprites/Objects/spike_blood.png" id="1_njs70"]
+[ext_resource type="Script" uid="uid://fxniwh6sxdgw" path="res://Scenes/Obstacles/bloody_spike.gd" id="1_rmnta"]
+[ext_resource type="Script" uid="uid://nvmn3wn4f0b0" path="res://Scenes/Obstacles/damage.gd" id="2_im44f"]
+[ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Obstacles/collide_check.gd" id="3_rmnta"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vq266"]
 size = Vector2(64, 18.5)
 
-[node name="Bloody_Spike" type="Area2D" unique_id=1001421182]
+[node name="Bloody_Spike" type="Area2D" unique_id=1001421182 node_paths=PackedStringArray("collision_check", "damage")]
 z_index = -1
+script = ExtResource("1_rmnta")
+collision_check = NodePath("CollisionCheck")
+damage = NodePath("Damage")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1115798488]
 position = Vector2(0, -10)
@@ -15,3 +21,13 @@ texture = ExtResource("1_njs70")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1146186236]
 position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_vq266")
+
+[node name="Damage" type="Node" parent="." unique_id=1811519132 node_paths=PackedStringArray("collision_check")]
+script = ExtResource("2_im44f")
+collision_check = NodePath("../CollisionCheck")
+amount = 10.0
+metadata/_custom_type_script = "uid://nvmn3wn4f0b0"
+
+[node name="CollisionCheck" type="Node" parent="." unique_id=306288973]
+script = ExtResource("3_rmnta")
+metadata/_custom_type_script = "uid://dov27h2jhaq5u"

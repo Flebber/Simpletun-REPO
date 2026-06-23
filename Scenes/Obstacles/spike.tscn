@@ -21,10 +21,12 @@ texture = ExtResource("1_uoxgv")
 position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_uoxgv")
 
+[node name="Damage" type="Node" parent="." unique_id=1448717133 node_paths=PackedStringArray("collision_check")]
+unique_name_in_owner = true
+script = ExtResource("4_sysqy")
+collision_check = NodePath("../CollisionCheck")
+amount = 3.5
+
 [node name="CollisionCheck" type="Node" parent="." unique_id=896582175]
 unique_name_in_owner = true
 script = ExtResource("3_08aae")
-
-[node name="Damage" type="Node" parent="." unique_id=1448717133]
-unique_name_in_owner = true
-script = ExtResource("4_sysqy")
