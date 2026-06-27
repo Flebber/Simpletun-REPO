@@ -122,17 +122,17 @@ _data = {
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0xm2m"]
 height = 35.06
 
-[node name="Player" type="CharacterBody2D" unique_id=1000896276 node_paths=PackedStringArray("movement", "input_manager", "animation_manager", "sprite", "animation_player", "health")]
+[node name="Player" type="CharacterBody2D" unique_id=1000896276 node_paths=PackedStringArray("movement", "input_manager", "health", "animation_manager", "animation_player", "sprite")]
 z_index = -2
 scale = Vector2(0.28, 0.28)
 floor_max_angle = 0.0
 script = ExtResource("1_x3wgy")
 movement = NodePath("Movement")
 input_manager = NodePath("InputManager")
-animation_manager = NodePath("AnimationManager")
-sprite = NodePath("Sprite")
-animation_player = NodePath("AnimationPlayer")
 health = NodePath("Health")
+animation_manager = NodePath("AnimationManager")
+animation_player = NodePath("AnimationPlayer")
+sprite = NodePath("Sprite")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=112688490]
 position = Vector2(-8.583069e-06, 75)
@@ -169,10 +169,10 @@ target_position = Vector2(0, 300)
 unique_name_in_owner = true
 script = ExtResource("4_f1ek2")
 
-[node name="Movement" type="Node2D" parent="." unique_id=808691857]
+[node name="Movement" type="Node2D" parent="." unique_id=808691857 node_paths=PackedStringArray("glide_check")]
 unique_name_in_owner = true
 script = ExtResource("5_tx1dd")
-gravity = 400
+glide_check = NodePath("../GlideCheck")
 
 [node name="AnimationManager" type="Node" parent="." unique_id=700487824 node_paths=PackedStringArray("health")]
 unique_name_in_owner = true
@@ -181,6 +181,7 @@ health = NodePath("../Health")
 
 [node name="Health" type="Node" parent="." unique_id=647384210]
 script = ExtResource("6_khnq4")
+display_health = true
 
 [node name="Label" type="Label" parent="." unique_id=215717849]
 offset_left = -100.0
@@ -188,5 +189,4 @@ offset_top = -103.57143
 offset_right = 109.0
 offset_bottom = -53.571426
 theme_override_font_sizes/font_size = 52
-text = "PlaceHolder"
 horizontal_alignment = 1

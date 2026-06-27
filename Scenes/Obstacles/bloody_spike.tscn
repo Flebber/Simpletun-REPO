@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://kq4siblljmwu"]
 
 [ext_resource type="Texture2D" uid="uid://d2vj7xapts102" path="res://assets/sprites/Objects/spike_blood.png" id="1_njs70"]
-[ext_resource type="Script" uid="uid://fxniwh6sxdgw" path="res://Scenes/Obstacles/bloody_spike.gd" id="1_rmnta"]
-[ext_resource type="Script" uid="uid://nvmn3wn4f0b0" path="res://Scenes/Obstacles/damage.gd" id="2_im44f"]
-[ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Obstacles/collide_check.gd" id="3_rmnta"]
+[ext_resource type="Script" uid="uid://cilb85q68qjd1" path="res://Scripts/Obstacles/spike.gd" id="1_rmnta"]
+[ext_resource type="Script" uid="uid://nvmn3wn4f0b0" path="res://Scripts/Base Systems/damage.gd" id="2_im44f"]
+[ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="3_rmnta"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vq266"]
 size = Vector2(64, 18.5)
