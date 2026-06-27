@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bxjadeioh7ry4"]
 
-[ext_resource type="Script" uid="uid://chf1kpxgyda6c" path="res://Scripts/player/player.gd" id="1_x3wgy"]
+[ext_resource type="Script" uid="uid://chf1kpxgyda6c" path="res://Scripts/Player/player.gd" id="1_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://c48qsfsytjvkm" path="res://assets/sprites/Characters/Player/pud_spritesheet.png" id="2_utp2y"]
 [ext_resource type="Animation" uid="uid://d3lbg63xng38o" path="res://assets/animations/player/idle.res" id="3_8erm5"]
-[ext_resource type="Script" uid="uid://b487ylpe2s5v1" path="res://Scripts/player/input_manager.gd" id="4_f1ek2"]
-[ext_resource type="Script" uid="uid://bk6w55j6s7n8e" path="res://Scripts/player/movement.gd" id="5_tx1dd"]
-[ext_resource type="Script" uid="uid://2dt240obw50u" path="res://Scripts/player/animation_manager.gd" id="6_gymyn"]
+[ext_resource type="Script" uid="uid://b487ylpe2s5v1" path="res://Scripts/Player/input_manager.gd" id="4_f1ek2"]
+[ext_resource type="Script" uid="uid://bk6w55j6s7n8e" path="res://Scripts/Player/movement.gd" id="5_tx1dd"]
+[ext_resource type="Script" uid="uid://2dt240obw50u" path="res://Scripts/Player/animation_manager.gd" id="6_gymyn"]
 [ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scenes/Characters/health.gd" id="6_khnq4"]
 
 [sub_resource type="Animation" id="Animation_272bh"]
@@ -145,6 +145,7 @@ rotation_smoothing_speed = 8.0
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1527416693]
 unique_name_in_owner = true
 position = Vector2(0, -9.059906e-06)
+scale = Vector2(1.095, 1.095)
 texture = ExtResource("2_utp2y")
 hframes = 9
 vframes = 5
@@ -156,8 +157,8 @@ libraries/ = SubResource("AnimationLibrary_272bh")
 libraries/Player = SubResource("AnimationLibrary_5vw27")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=1669661548]
-position = Vector2(1.3928082e-05, 74.4187)
-scale = Vector2(4.753, 6.087)
+position = Vector2(0, 85.71428)
+scale = Vector2(6.193, 6.087)
 shape = SubResource("CapsuleShape2D_0xm2m")
 
 [node name="GlideCheck" type="RayCast2D" parent="." unique_id=596893292]
@@ -173,6 +174,8 @@ script = ExtResource("4_f1ek2")
 unique_name_in_owner = true
 script = ExtResource("5_tx1dd")
 glide_check = NodePath("../GlideCheck")
+glide_strength = 0.93
+jump_strength = -300.0
 
 [node name="AnimationManager" type="Node" parent="." unique_id=700487824 node_paths=PackedStringArray("health")]
 unique_name_in_owner = true

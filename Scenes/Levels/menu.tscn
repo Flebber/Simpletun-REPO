@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cc4422hdqsc55"]
+
+[ext_resource type="Script" uid="uid://o1emp2rxikg4" path="res://Scripts/UI/menu.gd" id="1_7pnm7"]
+[ext_resource type="Texture2D" uid="uid://ch3otg2fuhhof" path="res://assets/sprites/Secret/smile laptop.png" id="1_mvsu8"]
+[ext_resource type="Script" uid="uid://dfxxemuy3kpgb" path="res://Scripts/UI/scene_manager.gd" id="2_ju4x4"]
+
+[node name="Menu" type="Node" unique_id=1344936002 node_paths=PackedStringArray("playbutton", "scene_manager")]
+script = ExtResource("1_7pnm7")
+playbutton = NodePath("CanvasLayer/PlayButton")
+scene_manager = NodePath("SceneManager")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=942045471]
+position = Vector2(959, 535)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2078148551]
+follow_viewport_enabled = true
+
+[node name="Placeholder" type="Sprite2D" parent="CanvasLayer" unique_id=1150856128]
+position = Vector2(959, 216)
+scale = Vector2(2.400311, 0.98120797)
+texture = ExtResource("1_mvsu8")
+
+[node name="PlayButton" type="Button" parent="CanvasLayer" unique_id=982397923]
+offset_left = 795.0
+offset_top = 422.0
+offset_right = 1114.0
+offset_bottom = 606.0
+theme_override_font_sizes/font_size = 81
+text = "PLAY"
+
+[node name="SceneManager" type="Node" parent="." unique_id=1821978659]
+script = ExtResource("2_ju4x4")

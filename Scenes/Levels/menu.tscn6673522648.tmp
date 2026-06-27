@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cc4422hdqsc55"]
+
+[ext_resource type="Texture2D" uid="uid://ch3otg2fuhhof" path="res://assets/sprites/Secret/smile laptop.png" id="1_mvsu8"]
+
+[sub_resource type="GDScript" id="GDScript_mvsu8"]
+script/source = "class_name Menu extends Node
+
+@export var playbutton : Button
+@export var scene_manager : SceneManager
+
+func _ready() -> void:
+	scene_manager.setup()
+	scene_manager.playbutton = playbutton
+"
+
+[sub_resource type="GDScript" id="GDScript_ju4x4"]
+script/source = "class_name SceneManager extends Node
+
+var playbutton : Button 
+
+
+# Assign Levels To Variables
+@onready var menu_scene : PackedScene = preload(\"res://Scenes/Levels/menu.tscn\")
+@onready var test_level : PackedScene = preload(\"res://Scenes/Levels/test_level.tscn\")
+
+func setup() -> void:
+	#if menu == null:
+		#print(\"no menu for scene_manager.gd\")
+		#return
+
+	if playbutton == null:
+		print(\"no playbutton for scene_manager.gd\")
+	else:
+		playbutton.pressed.connect(load_test_level)
+	
+
+func scene_select(scene):
+	var tree = get_tree()
+	tree.change_scene_to_packed(scene)
+
+func load_test_level():
+	scene_select(test_level)
+"
+
+[node name="Menu" type="Node" unique_id=1344936002 node_paths=PackedStringArray("playbutton", "scene_manager")]
+script = SubResource("GDScript_mvsu8")
+playbutton = NodePath("CanvasLayer/PlayButton")
+scene_manager = NodePath("SceneManager")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=942045471]
+position = Vector2(959, 535)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2078148551]
+follow_viewport_enabled = true
+
+[node name="Placeholder" type="Sprite2D" parent="CanvasLayer" unique_id=1150856128]
+position = Vector2(959, 216)
+scale = Vector2(2.400311, 0.98120797)
+texture = ExtResource("1_mvsu8")
+
+[node name="PlayButton" type="Button" parent="CanvasLayer" unique_id=982397923]
+offset_left = 795.0
+offset_top = 422.0
+offset_right = 1114.0
+offset_bottom = 606.0
+theme_override_font_sizes/font_size = 81
+text = "PLAY"
+
+[node name="SceneManager" type="Node" parent="." unique_id=1821978659]
+script = SubResource("GDScript_ju4x4")
