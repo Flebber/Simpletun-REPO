@@ -15,6 +15,10 @@ run/main_scene="uid://cc4422hdqsc55"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SceneManagerNode="*uid://dfxxemuy3kpgb"
+
 [display]
 
 window/size/viewport_width=1920

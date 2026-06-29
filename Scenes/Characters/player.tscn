@@ -174,8 +174,6 @@ script = ExtResource("4_f1ek2")
 unique_name_in_owner = true
 script = ExtResource("5_tx1dd")
 glide_check = NodePath("../GlideCheck")
-glide_strength = 0.93
-jump_strength = -300.0
 
 [node name="AnimationManager" type="Node" parent="." unique_id=700487824 node_paths=PackedStringArray("health")]
 unique_name_in_owner = true

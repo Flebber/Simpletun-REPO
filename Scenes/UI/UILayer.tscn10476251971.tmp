@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dd4i75iue25lk"]
+
+[ext_resource type="Texture2D" uid="uid://bryjwytqe1t12" path="res://assets/sprites/Secret/sad laptop.png" id="1_olk0k"]
+[ext_resource type="Script" uid="uid://ec3wjmbd00ix" path="res://Scenes/UI/menu_button.gd" id="2_axik5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_db73o"]
+draw_center = false
+
+[node name="UI" type="CanvasLayer" unique_id=649945580]
+
+[node name="MenuButtonSprite" type="Sprite2D" parent="." unique_id=700293252]
+position = Vector2(100, 970)
+scale = Vector2(0.2752161, 0.34174946)
+texture = ExtResource("1_olk0k")
+
+[node name="MenuButton" type="Button" parent="MenuButtonSprite" unique_id=1298801490]
+offset_left = -319.74872
+offset_top = -198.97623
+offset_right = -311.74872
+offset_bottom = -190.97623
+scale = Vector2(79.58975, 49.290005)
+theme_override_styles/normal = SubResource("StyleBoxFlat_db73o")
+script = ExtResource("2_axik5")
+
+[connection signal="button_down" from="MenuButtonSprite/MenuButton" to="MenuButtonSprite/MenuButton" method="_on_button_down"]

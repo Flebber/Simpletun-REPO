@@ -11,8 +11,8 @@ var input_manager : InputManager
 # Changeable Movement Properties
 @export var speed : float = 200
 @export var gravity : float = 550.0
-@export var glide_strength : float = 0.95
-@export var jump_strength : float = -350.0
+@export var glide_strength : float = 0.93
+@export var jump_strength : float = -320.0
 
 # Failsafes and Signals
 func setup():
