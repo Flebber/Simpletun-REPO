@@ -1,5 +1,5 @@
-class_name Main extends Node
+extends Button
 
-func _ready() -> void:
+
+func _on_button_down() -> void:
 	SceneManagerNode.scene_select(SceneManagerNode.levels["Level 0 (menu)"])
-	

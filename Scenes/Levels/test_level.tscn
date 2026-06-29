@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b2qdw57212jeu" path="res://assets/references/sonic.png" id="3_npfmg"]
 [ext_resource type="PackedScene" uid="uid://dd4i75iue25lk" path="res://Scenes/UI/UILayer.tscn" id="4_db73o"]
 
-[node name="Menu" type="Node" unique_id=1168264735]
+[node name="Main" type="Node" unique_id=846885988]
 
 [node name="Test Level" type="Node2D" parent="." unique_id=1181596774]
 

@@ -1,4 +1,4 @@
-class_name MainMenu extends Node
+extends Node
 
 func _ready() -> void:
 	pass
