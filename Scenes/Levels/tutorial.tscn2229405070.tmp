@@ -1,0 +1,26 @@
+[gd_scene format=4 uid="uid://bogduq58netc0"]
+
+[ext_resource type="Script" uid="uid://u1pm18mgbnhe" path="res://Scripts/Base Systems/main.gd" id="1_e3iji"]
+[ext_resource type="PackedScene" uid="uid://dd4i75iue25lk" path="res://Scenes/UI/UILayer.tscn" id="2_eqxtb"]
+[ext_resource type="TileSet" uid="uid://8xnkj64fgjxh" path="res://assets/sprites/Terrain/terrain_tileset.tres" id="3_302wg"]
+[ext_resource type="PackedScene" uid="uid://bxjadeioh7ry4" path="res://Scenes/Characters/player.tscn" id="3_l7elp"]
+[ext_resource type="Texture2D" uid="uid://sy7v6w6g0vlm" path="res://assets/references/Levels/grass template.png" id="4_fenkg"]
+
+[node name="Main" type="Node" unique_id=394908706]
+script = ExtResource("1_e3iji")
+metadata/_custom_type_script = "uid://u1pm18mgbnhe"
+
+[node name="Tutorial" type="Node2D" parent="." unique_id=2127703526]
+
+[node name="UI" parent="Tutorial" unique_id=649945580 instance=ExtResource("2_eqxtb")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Tutorial" unique_id=1826624660]
+tile_map_data = PackedByteArray("AAAGAP//AQAJAAAAAAAHAP//AQALAAAAAAAHAAAAAQALAAEAAAAHAAEAAQALAAEAAAAGAAAAAQAJAAEAAAAGAAEAAQAJAAEAAAAGAAIAAQAJAAIAAAAHAAIAAQALAAIAAAAeABIAAQANAAIAAAAdABIAAQANAAIAAAAcABIAAQANAAIAAAAbABIAAQANAAIAAAAaABIAAQANAAIAAAAZABIAAQANAAIAAAAYABIAAQANAAIAAAAXABIAAQANAAIAAAAWABIAAQANAAIAAAAVABIAAQANAAIAAAAUABIAAQANAAIAAAATABIAAQANAAIAAAASABIAAQANAAIAAAARABIAAQANAAIAAAAZABAAAQANAAIAAAAYABAAAQANAAIAAAAXABAAAQANAAIAAAAWAA4AAQANAAIAAAAVAA4AAQANAAIAAAAUAA4AAQANAAIAAAATAAwAAQANAAIAAAASAAwAAQANAAIAAAARAAwAAQANAAIAAAAQAAoAAQANAAIAAAAPAAoAAQANAAIAAAAOAAoAAQANAAIAAAANAAgAAQANAAIAAAAMAAgAAQANAAIAAAALAAgAAQANAAIAAAAKAAYAAQANAAIAAAAJAAYAAQANAAIAAAAIAAQAAQANAAIAAAAHAAQAAQANAAIAAAA=")
+tile_set = ExtResource("3_302wg")
+
+[node name="Player" parent="Tutorial" unique_id=1000896276 instance=ExtResource("3_l7elp")]
+position = Vector2(956, 514)
+
+[node name="GrassTemplate" type="Sprite2D" parent="Tutorial" unique_id=1662061735]
+position = Vector2(483, 256)
+texture = ExtResource("4_fenkg")

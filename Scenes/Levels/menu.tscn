@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://u1pm18mgbnhe" path="res://Scripts/Base Systems/main.gd" id="1_dsa84"]
 [ext_resource type="Texture2D" uid="uid://ch3otg2fuhhof" path="res://assets/sprites/Secret/smile laptop.png" id="1_mvsu8"]
 [ext_resource type="Script" uid="uid://b6eeygunufbj" path="res://Scripts/UI/level_list.gd" id="3_lli10"]
+[ext_resource type="Script" uid="uid://4s12s1ipw6q" path="res://Scripts/LevelScripts/level_code.gd" id="5_rwfgf"]
 
 [node name="Main" type="Node" unique_id=1351125488]
 script = ExtResource("1_dsa84")
@@ -31,5 +32,14 @@ auto_width = true
 auto_height = true
 icon_scale = 0.3
 script = ExtResource("3_lli10")
+
+[node name="TextEdit" type="TextEdit" parent="Menu" unique_id=1650034915]
+custom_minimum_size = Vector2(208.51, 46.48)
+offset_left = 29.0
+offset_top = 45.0
+offset_right = 37.0
+offset_bottom = 53.0
+placeholder_text = "Placeholder"
+script = ExtResource("5_rwfgf")
 
 [connection signal="item_clicked" from="Menu/CanvasLayer/LevelList" to="Menu/CanvasLayer/LevelList" method="_on_item_clicked"]

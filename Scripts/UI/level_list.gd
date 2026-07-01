@@ -18,8 +18,10 @@ func generate_level_buttons():
 		add_item(level, SMILE_LAPTOP, true)
 		sort_items_by_text()
 
-
+# Load the level the user selects
 func _on_item_clicked(index, _at_position: Vector2, _mouse_button_index: int) -> void:
+	# Assigns the name : string of the pressed level to the key variable
 	var key = level_dict.keys()[index]
+	# Loads the PackedScene assigned to the specified key in the SceneManagerNode singleton
 	SceneManagerNode.scene_select(level_dict[key])
 	print(key)
