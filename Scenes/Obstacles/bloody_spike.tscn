@@ -15,11 +15,13 @@ collision_check = NodePath("CollisionCheck")
 damage = NodePath("Damage")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1115798488]
+texture_filter = 1
 position = Vector2(0, -10)
 texture = ExtResource("1_njs70")
+offset = Vector2(0, 13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1146186236]
-position = Vector2(-1, -1.875)
+position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_vq266")
 
 [node name="Damage" type="Node" parent="." unique_id=1811519132 node_paths=PackedStringArray("collision_check")]

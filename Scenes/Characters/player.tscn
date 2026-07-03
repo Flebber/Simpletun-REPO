@@ -163,6 +163,7 @@ shape = SubResource("CapsuleShape2D_0xm2m")
 
 [node name="GlideCheck" type="RayCast2D" parent="." unique_id=596893292]
 unique_name_in_owner = true
+texture_filter = 1
 position = Vector2(0, 185.71428)
 target_position = Vector2(0, 250)
 
