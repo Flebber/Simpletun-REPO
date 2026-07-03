@@ -37,6 +37,6 @@ tile_set = ExtResource("1_2ytpj")
 
 [node name="Player" parent="Test Level" unique_id=1000896276 instance=ExtResource("2_db73o")]
 unique_name_in_owner = true
-position = Vector2(288, 128)
+position = Vector2(263, 204.99998)
 
 [node name="UI" parent="Test Level" unique_id=649945580 instance=ExtResource("4_db73o")]

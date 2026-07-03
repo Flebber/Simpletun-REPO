@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://nvmn3wn4f0b0" path="res://Scripts/Base Systems/damage.gd" id="4_sysqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uoxgv"]
-size = Vector2(64, 18.5)
+size = Vector2(28, 13.25)
 
 [node name="Spike" type="Area2D" unique_id=1903761688 node_paths=PackedStringArray("collision_check", "damage")]
 z_index = -1
@@ -20,7 +20,7 @@ position = Vector2(0, -10)
 texture = ExtResource("1_uoxgv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2043943838]
-position = Vector2(0, 12)
+position = Vector2(0, -0.375)
 shape = SubResource("RectangleShape2D_uoxgv")
 
 [node name="Damage" type="Node" parent="." unique_id=1448717133 node_paths=PackedStringArray("collision_check")]

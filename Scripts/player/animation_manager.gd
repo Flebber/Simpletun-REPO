@@ -6,6 +6,7 @@ class_name PlayerAnimationManager extends Node
 var input_manager : InputManager
 var anim : AnimationPlayer
 @export var health : Health
+@export var glide_check: RayCast2D
 
 # Flagging variable
 var is_dead : bool = false
@@ -24,7 +25,7 @@ func setup():
 		
 	health.dead.connect(dead_animation)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# Death Flag
 	if is_dead:
 		return
@@ -50,9 +51,12 @@ func movement_animation():
 		anim.current_animation = "Player/idle"
 			
 	# Jump Animation (Play Glide Anim if held and !onfloor)
-	if Input.is_action_pressed("jump") and not player.is_on_floor():
+	if Input.is_action_just_pressed("jump") and player.is_on_floor():
 		anim.current_animation = "Player/jump"
-		if player.is_on_floor():
+		
+	elif Input.is_action_pressed("glide") and not player.is_on_floor():
+		anim.current_animation = "Player/jump"
+		if glide_check.is_colliding() and not player.is_on_floor():
 			anim.stop()
 
 # Death Animation and Set Flags {Connected to health.dead}

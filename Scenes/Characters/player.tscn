@@ -164,7 +164,7 @@ shape = SubResource("CapsuleShape2D_0xm2m")
 [node name="GlideCheck" type="RayCast2D" parent="." unique_id=596893292]
 unique_name_in_owner = true
 position = Vector2(0, 185.71428)
-target_position = Vector2(0, 300)
+target_position = Vector2(0, 250)
 
 [node name="InputManager" type="Node2D" parent="." unique_id=213206019]
 unique_name_in_owner = true
@@ -174,11 +174,15 @@ script = ExtResource("4_f1ek2")
 unique_name_in_owner = true
 script = ExtResource("5_tx1dd")
 glide_check = NodePath("../GlideCheck")
+gravity = 600.0
+glide_strength = 0.91
+jump_strength = -300.0
 
-[node name="AnimationManager" type="Node" parent="." unique_id=700487824 node_paths=PackedStringArray("health")]
+[node name="AnimationManager" type="Node" parent="." unique_id=700487824 node_paths=PackedStringArray("health", "glide_check")]
 unique_name_in_owner = true
 script = ExtResource("6_gymyn")
 health = NodePath("../Health")
+glide_check = NodePath("../GlideCheck")
 
 [node name="Health" type="Node" parent="." unique_id=647384210]
 script = ExtResource("6_khnq4")

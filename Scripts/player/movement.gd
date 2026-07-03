@@ -43,7 +43,7 @@ func _is_jump_pressed():
 
 # Glide System
 func glide():
-	if glide_check.is_colliding() ==  false and Input.is_action_pressed("jump"):
+	if glide_check.is_colliding() ==  false and Input.is_action_pressed("glide"):
 		player.velocity.y *= glide_strength
 
 #endregion
