@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://djagtn1ndn425" path="res://assets/sprites/Terrain/terrain_tileset.png" id="1_kijn0"]
 [ext_resource type="PackedScene" uid="uid://caqq1sr8aexqs" path="res://Scenes/Obstacles/spike.tscn" id="2_kijn0"]
 [ext_resource type="PackedScene" uid="uid://kq4siblljmwu" path="res://Scenes/Obstacles/bloody_spike.tscn" id="3_m1cf4"]
+[ext_resource type="PackedScene" uid="uid://b81ndh8ktqx54" path="res://Scenes/Obstacles/roof_bloody_spike.tscn" id="4_vv5x3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kijn0"]
 texture = ExtResource("1_kijn0")
@@ -68,6 +69,7 @@ texture_region_size = Vector2i(32, 32)
 resource_name = "obstacle_tileset"
 scenes/1/scene = ExtResource("2_kijn0")
 scenes/2/scene = ExtResource("3_m1cf4")
+scenes/4/scene = ExtResource("4_vv5x3")
 
 [resource]
 tile_size = Vector2i(32, 32)

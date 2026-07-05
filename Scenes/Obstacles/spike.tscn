@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://nvmn3wn4f0b0" path="res://Scripts/Base Systems/damage.gd" id="4_sysqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uoxgv"]
-size = Vector2(28, 13.625)
+size = Vector2(26, 13.625)
 
 [node name="Spike" type="Area2D" unique_id=1903761688 node_paths=PackedStringArray("collision_check", "damage")]
 z_index = -1
@@ -17,7 +17,8 @@ damage = NodePath("Damage")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1936623282]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(0, -10)
+position = Vector2(9.536743e-07, -10)
+scale = Vector2(0.87500006, 1)
 texture = ExtResource("1_uoxgv")
 offset = Vector2(0, 13)
 

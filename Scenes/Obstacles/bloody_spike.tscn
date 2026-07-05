@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="3_rmnta"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vq266"]
-size = Vector2(28, 16.25)
+size = Vector2(26, 16.25)
 
 [node name="Bloody_Spike" type="Area2D" unique_id=1001421182 node_paths=PackedStringArray("collision_check", "damage")]
 z_index = -1
@@ -16,7 +16,8 @@ damage = NodePath("Damage")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1115798488]
 texture_filter = 1
-position = Vector2(0, -10)
+position = Vector2(7.1525574e-07, -10)
+scale = Vector2(0.87500006, 1)
 texture = ExtResource("1_njs70")
 offset = Vector2(0, 13)
 
