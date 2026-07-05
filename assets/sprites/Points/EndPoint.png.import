@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2vj7xapts102"
-path="res://.godot/imported/spike_blood.png-2869cafde08c2be88c4a4e5ec7099c37.ctex"
+uid="uid://cby18ps5dinyj"
+path="res://.godot/imported/EndPoint.png-c27192f4af30f33e6a42103f65ba8cd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Objects/spike_blood.png"
-dest_files=["res://.godot/imported/spike_blood.png-2869cafde08c2be88c4a4e5ec7099c37.ctex"]
+source_file="res://assets/sprites/Points/EndPoint.png"
+dest_files=["res://.godot/imported/EndPoint.png-c27192f4af30f33e6a42103f65ba8cd3.ctex"]
 
 [params]
 
