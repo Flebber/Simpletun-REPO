@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://u1pm18mgbnhe" path="res://Scripts/Base Systems/main.gd" id="1_nexu6"]
 [ext_resource type="Script" uid="uid://o1emp2rxikg4" path="res://Scripts/LevelScripts/Menus/menu.gd" id="2_504rq"]
-[ext_resource type="Texture2D" uid="uid://ch3otg2fuhhof" path="res://assets/sprites/Secret/smile laptop.png" id="3_0ilff"]
+[ext_resource type="Texture2D" uid="uid://cb574djqrhlng" path="res://assets/sprites/UI/simpletunMenu.png" id="3_nexu6"]
 [ext_resource type="Script" uid="uid://b6eeygunufbj" path="res://Scripts/UI/level_list.gd" id="4_8p67x"]
 [ext_resource type="Script" uid="uid://4s12s1ipw6q" path="res://Scripts/LevelScripts/level_code.gd" id="5_y8klj"]
 
@@ -19,15 +19,15 @@ position = Vector2(959, 535)
 follow_viewport_enabled = true
 
 [node name="Placeholder" type="Sprite2D" parent="Menu/CanvasLayer" unique_id=1150856128]
-position = Vector2(346, 539)
-scale = Vector2(0.89335895, 2.2212067)
-texture = ExtResource("3_0ilff")
+position = Vector2(959.00006, 288)
+scale = Vector2(3, 3)
+texture = ExtResource("3_nexu6")
 
 [node name="LevelList" type="ItemList" parent="Menu/CanvasLayer" unique_id=601838724]
-offset_left = 959.0
-offset_top = 111.0
-offset_right = 999.0
-offset_bottom = 151.0
+offset_left = 448.0
+offset_top = 576.0
+offset_right = 488.0
+offset_bottom = 616.0
 auto_width = true
 auto_height = true
 icon_scale = 0.3
@@ -35,10 +35,9 @@ script = ExtResource("4_8p67x")
 
 [node name="TextEdit" type="TextEdit" parent="Menu" unique_id=1650034915]
 custom_minimum_size = Vector2(208.51, 46.48)
-offset_left = 29.0
-offset_top = 45.0
-offset_right = 37.0
-offset_bottom = 53.0
+offset_top = 1032.0
+offset_right = 208.51
+offset_bottom = 1078.48
 placeholder_text = "Placeholder"
 script = ExtResource("5_y8klj")
 

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ch3otg2fuhhof" path="res://assets/sprites/Secret/smile laptop.png" id="1_6p742"]
 [ext_resource type="Script" uid="uid://cghvag12txo0t" path="res://Scripts/LevelScripts/Menus/death_menu_retry.gd" id="2_jc4gn"]
 [ext_resource type="Script" uid="uid://ghkfmr0nq1ae" path="res://Scripts/LevelScripts/Menus/death_menu_return.gd" id="3_e51c8"]
+[ext_resource type="Texture2D" uid="uid://8557f4vpnk3q" path="res://assets/sprites/UI/retry.png" id="3_jc4gn"]
 
 [node name="DeathMenu" type="Node" unique_id=317548959]
 
@@ -12,12 +13,19 @@
 position = Vector2(960, 320)
 texture = ExtResource("1_6p742")
 
-[node name="RetryButton" type="Button" parent="CanvasLayer" unique_id=485867920]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=176968345]
+position = Vector2(448, 832)
+scale = Vector2(2, 2)
+texture = ExtResource("3_jc4gn")
+
+[node name="RetryButton" type="Button" parent="CanvasLayer/Sprite2D" unique_id=485867920]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(256, 128)
-offset_left = 320.0
-offset_top = 768.0
-offset_right = 576.0
-offset_bottom = 896.0
+offset_left = -64.0
+offset_top = -32.0
+offset_right = 192.0
+offset_bottom = 96.0
+scale = Vector2(0.4970231, 0.6205172)
 text = "Retry"
 script = ExtResource("2_jc4gn")
 
@@ -30,5 +38,5 @@ offset_bottom = 896.0
 text = "Return ToMenu"
 script = ExtResource("3_e51c8")
 
-[connection signal="button_down" from="CanvasLayer/RetryButton" to="CanvasLayer/RetryButton" method="_on_button_down"]
+[connection signal="button_down" from="CanvasLayer/Sprite2D/RetryButton" to="CanvasLayer/Sprite2D/RetryButton" method="_on_button_down"]
 [connection signal="button_down" from="CanvasLayer/MenuButton" to="CanvasLayer/MenuButton" method="_on_button_down"]
