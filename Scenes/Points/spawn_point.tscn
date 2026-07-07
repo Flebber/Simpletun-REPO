@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d371d1qkeh7hh"]
 
 [ext_resource type="Texture2D" uid="uid://blkaeys8iawur" path="res://assets/sprites/Points/StartPoint.png" id="1_30ejs"]
-[ext_resource type="Script" uid="uid://crp2v5mfm0emg" path="res://Scenes/Points/spawn_point.gd" id="1_ddkrn"]
+[ext_resource type="Script" uid="uid://crp2v5mfm0emg" path="res://Scripts/LevelScripts/Points/spawn_point.gd" id="1_ddkrn"]
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="2_ddkrn"]
 [ext_resource type="Script" uid="uid://dnfgqumltw7bo" path="res://Scripts/LevelScripts/Points/point_manager.gd" id="3_xg2n3"]
 

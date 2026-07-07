@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://depjp563f6b8j"]
-
-[node name="DeathMenu" type="Node" unique_id=317548959]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=279124061]

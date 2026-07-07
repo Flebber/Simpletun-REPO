@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://depjp563f6b8j"]
+
+[ext_resource type="Texture2D" uid="uid://ch3otg2fuhhof" path="res://assets/sprites/Secret/smile laptop.png" id="1_6p742"]
+[ext_resource type="Script" uid="uid://cghvag12txo0t" path="res://Scripts/LevelScripts/Menus/death_menu_retry.gd" id="2_jc4gn"]
+[ext_resource type="Script" uid="uid://ghkfmr0nq1ae" path="res://Scripts/LevelScripts/Menus/death_menu_return.gd" id="3_e51c8"]
+
+[node name="DeathMenu" type="Node" unique_id=317548959]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=279124061]
+
+[node name="YouDied" type="Sprite2D" parent="CanvasLayer" unique_id=1466487806]
+position = Vector2(960, 320)
+texture = ExtResource("1_6p742")
+
+[node name="RetryButton" type="Button" parent="CanvasLayer" unique_id=485867920]
+custom_minimum_size = Vector2(256, 128)
+offset_left = 320.0
+offset_top = 768.0
+offset_right = 576.0
+offset_bottom = 896.0
+text = "Retry"
+script = ExtResource("2_jc4gn")
+
+[node name="MenuButton" type="Button" parent="CanvasLayer" unique_id=948646935]
+custom_minimum_size = Vector2(256, 128)
+offset_left = 1344.0
+offset_top = 768.0
+offset_right = 1600.0
+offset_bottom = 896.0
+text = "Return ToMenu"
+script = ExtResource("3_e51c8")
+
+[connection signal="button_down" from="CanvasLayer/RetryButton" to="CanvasLayer/RetryButton" method="_on_button_down"]
+[connection signal="button_down" from="CanvasLayer/MenuButton" to="CanvasLayer/MenuButton" method="_on_button_down"]

@@ -19,6 +19,7 @@ func _ready() -> void:
 	#region Assign Component -> Component
 	#Movement.gd
 	movement.input_manager = input_manager
+	movement.health = health
 	
 	#Animation_manager.gd
 	animation_manager.input_manager  = input_manager
@@ -30,5 +31,13 @@ func _ready() -> void:
 	movement.setup()
 	animation_manager.setup()
 	
+	health.dead.connect(death_menu_on)
+	
 	# Set Players' sprite to sprite_texture ( Allows for easy change )
 	sprite.texture = sprite_texture
+	
+
+func death_menu_on():
+	
+	await get_tree().create_timer(3).timeout
+	SceneManagerNode.scene_select(SceneManagerNode.menu_levels["Death Menu"])

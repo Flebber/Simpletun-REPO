@@ -7,6 +7,7 @@ class_name Movement extends Node2D
 
 # Empty variables for Parent to assign
 var input_manager : InputManager
+var health : Health
 
 # Changeable Movement Properties
 @export var speed : float = 200
@@ -24,6 +25,8 @@ func setup():
 #region Movement
 
 func _physics_process(delta: float):
+	if health.is_dead:
+		return
 	# Assign the Inputted Direction from input_manager
 	var xdir = input_manager.get_move_vector()
 	

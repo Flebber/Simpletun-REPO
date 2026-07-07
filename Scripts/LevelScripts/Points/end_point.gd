@@ -21,4 +21,4 @@ func _ready() -> void:
 func end_point_reached(emitted_point):
 	if emitted_point == point:
 		print("end touched")
-		SceneManagerNode.scene_select(SceneManagerNode.test_levels["Menu"])
+		SceneManagerNode.scene_select(SceneManagerNode.menu_levels["Menu"])

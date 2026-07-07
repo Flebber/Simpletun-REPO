@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dd4i75iue25lk"]
 
 [ext_resource type="Texture2D" uid="uid://bryjwytqe1t12" path="res://assets/sprites/Secret/sad laptop.png" id="1_olk0k"]
-[ext_resource type="Script" uid="uid://ec3wjmbd00ix" path="res://Scripts/UI/menu_button.gd" id="2_axik5"]
+[ext_resource type="Script" uid="uid://ec3wjmbd00ix" path="res://Scripts/LevelScripts/Menus/menu_button.gd" id="2_axik5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_db73o"]
 draw_center = false

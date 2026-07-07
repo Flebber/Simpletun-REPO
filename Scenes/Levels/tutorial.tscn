@@ -20,7 +20,7 @@ scale = Vector2(1.6057292, 1.3166667)
 texture = ExtResource("4_fenkg")
 
 [node name="Player" parent="Tutorial" unique_id=1000896276 instance=ExtResource("3_l7elp")]
-position = Vector2(528, 0)
+position = Vector2(491, 5)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Tutorial" unique_id=1826624660]
 texture_filter = 1
