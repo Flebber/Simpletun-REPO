@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://kq4siblljmwu" path="res://Scenes/Obstacles/bloody_spike.tscn" id="3_m1cf4"]
 [ext_resource type="PackedScene" uid="uid://c2ltb7cynal1b" path="res://Scenes/Obstacles/roof_spike.tscn" id="4_kn3la"]
 [ext_resource type="PackedScene" uid="uid://b81ndh8ktqx54" path="res://Scenes/Obstacles/roof_bloody_spike.tscn" id="4_vv5x3"]
+[ext_resource type="PackedScene" uid="uid://d371d1qkeh7hh" path="res://Scenes/Points/spawn_point.tscn" id="7_3xwtw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kijn0"]
 texture = ExtResource("1_kijn0")
@@ -77,6 +78,7 @@ scenes/4/scene = ExtResource("4_vv5x3")
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_3xwtw"]
 resource_name = "points"
 scenes/1/scene = ExtResource("1_fcl2p")
+scenes/2/scene = ExtResource("7_3xwtw")
 
 [resource]
 tile_size = Vector2i(32, 32)

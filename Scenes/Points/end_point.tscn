@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://dnfgqumltw7bo" path="res://Scripts/LevelScripts/Points/point_manager.gd" id="4_5s02n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4ha3"]
-size = Vector2(31, 59)
+size = Vector2(39, 75)
 
 [sub_resource type="Curve" id="Curve_nsgxq"]
 _limits = [-360.0, 360.0, 0.0, 1.0]
@@ -51,28 +51,25 @@ initial_velocity_min = 11.86
 initial_velocity_max = 11.86
 gravity = Vector3(0, -58.355, 0)
 scale_min = 0.0
-scale_max = 2.95
+scale_max = 5.85
 color = Color(0.9058968, 0.5378674, 0.87785035, 1)
 color_ramp = SubResource("GradientTexture1D_v6a7s")
 color_initial_ramp = SubResource("GradientTexture1D_5s02n")
 emission_curve = SubResource("CurveTexture_hx4ar")
 turbulence_noise_strength = 1.55
-collision_mode = 1
-collision_friction = 1.0
-collision_bounce = 1.0
-collision_use_scale = true
 
 [node name="EndPoint" type="Area2D" unique_id=147595765]
-position = Vector2(0, -13)
 script = ExtResource("1_nsgxq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=724488264]
 texture_filter = 1
+position = Vector2(0, -8)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_y4ha3")
+offset = Vector2(0, -13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1646230595]
-visible = false
-position = Vector2(-0.5, 2.5)
+position = Vector2(-0.5, -17.5)
 shape = SubResource("RectangleShape2D_y4ha3")
 
 [node name="CollisionCheck" type="Node" parent="." unique_id=662230955]
@@ -80,7 +77,7 @@ script = ExtResource("2_1jk0o")
 metadata/_custom_type_script = "uid://dov27h2jhaq5u"
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=83150171]
-position = Vector2(2, -14)
+position = Vector2(0, 17)
 scale = Vector2(6.240767, 6.9136868)
 process_material = SubResource("ParticleProcessMaterial_nsgxq")
 

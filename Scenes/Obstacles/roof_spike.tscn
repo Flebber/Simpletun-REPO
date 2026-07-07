@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c2ltb7cynal1b"]
 
 [ext_resource type="Script" uid="uid://cilb85q68qjd1" path="res://Scripts/Obstacles/spike.gd" id="1_27hnr"]
-[ext_resource type="Texture2D" uid="uid://dj7bpk8kt66sd" path="res://assets/sprites/Objects/spike.png" id="2_27hnr"]
+[ext_resource type="Texture2D" uid="uid://dj7bpk8kt66sd" path="res://assets/sprites/Obstacles/spike.png" id="2_27hnr"]
 [ext_resource type="Script" uid="uid://nvmn3wn4f0b0" path="res://Scripts/Base Systems/damage.gd" id="3_t032l"]
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="4_afkgt"]
 
@@ -10,21 +10,20 @@ size = Vector2(26, 16.25)
 
 [node name="Spike" type="Area2D" unique_id=1001421182 node_paths=PackedStringArray("collision_check", "damage")]
 z_index = -1
-position = Vector2(0, -3)
 script = ExtResource("1_27hnr")
 collision_check = NodePath("CollisionCheck")
 damage = NodePath("Damage")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1115798488]
 texture_filter = 1
-position = Vector2(-5.9604645e-08, -13)
+position = Vector2(0, -16)
 scale = Vector2(0.87500006, 1)
 texture = ExtResource("2_27hnr")
 offset = Vector2(0, 13)
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1146186236]
-position = Vector2(0, -8)
+position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_vq266")
 
 [node name="Damage" type="Node" parent="." unique_id=1811519132 node_paths=PackedStringArray("collision_check")]
