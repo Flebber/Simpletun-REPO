@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d371d1qkeh7hh"]
 
 [ext_resource type="Texture2D" uid="uid://blkaeys8iawur" path="res://assets/sprites/Points/StartPoint.png" id="1_30ejs"]
+[ext_resource type="Script" uid="uid://crp2v5mfm0emg" path="res://Scenes/Points/spawn_point.gd" id="1_ddkrn"]
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="2_ddkrn"]
 [ext_resource type="Script" uid="uid://dnfgqumltw7bo" path="res://Scripts/LevelScripts/Points/point_manager.gd" id="3_xg2n3"]
 
@@ -57,7 +58,12 @@ color_initial_ramp = SubResource("GradientTexture1D_5s02n")
 emission_curve = SubResource("CurveTexture_hx4ar")
 turbulence_noise_strength = 1.55
 
-[node name="SpawnPoint" type="Area2D" unique_id=1504176874]
+[node name="SpawnPoint" type="Area2D" unique_id=1504176874 node_paths=PackedStringArray("collision_check", "point_manager", "point", "point_anim_player")]
+script = ExtResource("1_ddkrn")
+collision_check = NodePath("CollisionCheck")
+point_manager = NodePath("PointManager")
+point = NodePath(".")
+point_anim_player = NodePath("AnimationPlayer")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1411042093]
 texture_filter = 1
@@ -80,8 +86,8 @@ rotation = -3.1415927
 scale = Vector2(6.240767, 6.9136868)
 process_material = SubResource("ParticleProcessMaterial_nxkp5")
 
-[node name="PointManager" type="Node2D" parent="." unique_id=1403727066 node_paths=PackedStringArray("collision_check", "point")]
+[node name="PointManager" type="Node2D" parent="." unique_id=1403727066]
 script = ExtResource("3_xg2n3")
-collision_check = NodePath("")
-point = NodePath("")
 metadata/_custom_type_script = "uid://dnfgqumltw7bo"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=140767073]

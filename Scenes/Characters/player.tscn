@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://b487ylpe2s5v1" path="res://Scripts/Player/input_manager.gd" id="4_f1ek2"]
 [ext_resource type="Script" uid="uid://bk6w55j6s7n8e" path="res://Scripts/Player/movement.gd" id="5_tx1dd"]
 [ext_resource type="Script" uid="uid://2dt240obw50u" path="res://Scripts/Player/animation_manager.gd" id="6_gymyn"]
-[ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scenes/Characters/health.gd" id="6_khnq4"]
+[ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scripts/Base Systems/health.gd" id="6_khnq4"]
 
 [sub_resource type="Animation" id="Animation_272bh"]
 length = 0.001

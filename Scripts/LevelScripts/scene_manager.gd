@@ -5,9 +5,10 @@ var levels : Dictionary[String, PackedScene] = {
 	"Level 1 (Tutorial)": load("res://Scenes/Levels/tutorial.tscn"),
 }
 
-var test_levels : Dictionary[String, PackedScene] = {
-	"Level 0 (menu)": load("res://Scenes/Levels/menu.tscn"),
-	"Level -1 (test)":  load("res://Scenes/Levels/test_level.tscn"),
+var menu_levels : Dictionary[String, PackedScene] = {
+	"Menu": load("res://Scenes/Levels/menu.tscn"),
+	"Death Menu": load("res://Scenes/Levels/death_menu.tscn"),
+	"Test":  load("res://Scenes/Levels/test_level.tscn"),
 }
 
 func scene_select(scene : PackedScene):

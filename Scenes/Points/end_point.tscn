@@ -20,7 +20,7 @@ curve = SubResource("Curve_nsgxq")
 offsets = PackedFloat32Array(0, 0.3227513, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.962963, 0.962963, 0.962963, 1, 1, 1, 1, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_5s02n"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7aqpk"]
 gradient = SubResource("Gradient_nsgxq")
 
 [sub_resource type="Gradient" id="Gradient_7aqpk"]
@@ -34,7 +34,7 @@ gradient = SubResource("Gradient_7aqpk")
 _data = [Vector2(0.04186046, 0), 0.0, 0.0, 0, 0, Vector2(0.44651163, 0.5617978), -2.3476815, -2.3476815, 0, 0, Vector2(0.9348837, 0.5393259), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_hx4ar"]
+[sub_resource type="CurveTexture" id="CurveTexture_8cunq"]
 curve = SubResource("Curve_8cunq")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nsgxq"]
@@ -54,12 +54,16 @@ scale_min = 0.0
 scale_max = 5.85
 color = Color(0.9058968, 0.5378674, 0.87785035, 1)
 color_ramp = SubResource("GradientTexture1D_v6a7s")
-color_initial_ramp = SubResource("GradientTexture1D_5s02n")
-emission_curve = SubResource("CurveTexture_hx4ar")
+color_initial_ramp = SubResource("GradientTexture1D_7aqpk")
+emission_curve = SubResource("CurveTexture_8cunq")
 turbulence_noise_strength = 1.55
 
-[node name="EndPoint" type="Area2D" unique_id=147595765]
+[node name="EndPoint" type="Area2D" unique_id=147595765 node_paths=PackedStringArray("collision_check", "point_manager", "point", "point_anim_player")]
 script = ExtResource("1_nsgxq")
+collision_check = NodePath("CollisionCheck")
+point_manager = NodePath("PointManager")
+point = NodePath(".")
+point_anim_player = NodePath("AnimationPlayer")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=724488264]
 texture_filter = 1
@@ -81,8 +85,8 @@ position = Vector2(0, 17)
 scale = Vector2(6.240767, 6.9136868)
 process_material = SubResource("ParticleProcessMaterial_nsgxq")
 
-[node name="PointManager" type="Node2D" parent="." unique_id=2036267152 node_paths=PackedStringArray("collision_check", "point")]
+[node name="PointManager" type="Node2D" parent="." unique_id=2036267152]
 script = ExtResource("4_5s02n")
-collision_check = NodePath("../CollisionCheck")
-point = NodePath("..")
 metadata/_custom_type_script = "uid://dnfgqumltw7bo"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1571453560]
