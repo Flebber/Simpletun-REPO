@@ -8,6 +8,10 @@ class_name Player extends CharacterBody2D
 @export var health : Health
 @onready var label: Label = $Label
 
+@onready var death_menu : PackedScene = SceneManagerNode.menu_levels["Death Menu"]
+
+
+
 # Visual Systems
 @export var animation_manager : PlayerAnimationManager 
 @export var animation_player : AnimationPlayer 
@@ -21,6 +25,7 @@ func _ready() -> void:
 	movement.input_manager = input_manager
 	movement.health = health
 	
+	
 	#Animation_manager.gd
 	animation_manager.input_manager  = input_manager
 	animation_manager.anim = animation_player 
@@ -31,13 +36,15 @@ func _ready() -> void:
 	movement.setup()
 	animation_manager.setup()
 	
-	health.dead.connect(death_menu_on)
+	GameManager.player_dead.connect(death_menu_on)
 	
 	# Set Players' sprite to sprite_texture ( Allows for easy change )
 	sprite.texture = sprite_texture
 	
 
 func death_menu_on():
+	await get_tree().create_timer(2).timeout
+
 	
-	await get_tree().create_timer(3).timeout
-	SceneManagerNode.scene_select(SceneManagerNode.menu_levels["Death Menu"])
+	var deathmen_instance = death_menu.instantiate()
+	add_child(deathmen_instance)

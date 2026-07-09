@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dmreaawblghip"]
+
+[ext_resource type="Texture2D" uid="uid://ch3otg2fuhhof" path="res://assets/sprites/Secret/smile laptop.png" id="1_qhnhh"]
+[ext_resource type="Texture2D" uid="uid://8557f4vpnk3q" path="res://assets/sprites/UI/retry.png" id="2_6yfbd"]
+[ext_resource type="Script" uid="uid://cghvag12txo0t" path="res://Scripts/LevelScripts/Menus/retry_button.gd" id="3_t5fxg"]
+[ext_resource type="Script" uid="uid://ghkfmr0nq1ae" path="res://Scripts/LevelScripts/Menus/return_button.gd" id="4_6etty"]
+[ext_resource type="Script" uid="uid://0iev5noupyim" path="res://Scripts/LevelScripts/Menus/continue_button.gd" id="4_6yfbd"]
+
+[node name="finish_menu" type="CanvasLayer" unique_id=1755357166]
+
+[node name="YouFinished" type="Sprite2D" parent="." unique_id=1343365249]
+position = Vector2(960, 320)
+texture = ExtResource("1_qhnhh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1453538992]
+position = Vector2(704, 864)
+scale = Vector2(2, 2)
+texture = ExtResource("2_6yfbd")
+
+[node name="RetryButton" type="Button" parent="Sprite2D" unique_id=367756151]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(256, 128)
+offset_left = -64.0
+offset_top = -32.0
+offset_right = 192.0
+offset_bottom = 96.0
+scale = Vector2(0.4970231, 0.6205172)
+text = "Retry"
+script = ExtResource("3_t5fxg")
+metadata/_edit_use_anchors_ = true
+
+[node name="ContinueButton" type="Button" parent="." unique_id=1258675546]
+custom_minimum_size = Vector2(256, 128)
+offset_left = 832.0
+offset_top = 544.0
+offset_right = 1088.0
+offset_bottom = 672.0
+scale = Vector2(1, 1.25)
+text = "Continue"
+script = ExtResource("4_6yfbd")
+
+[node name="MenuButton2" type="Button" parent="." unique_id=378795644]
+custom_minimum_size = Vector2(256, 128)
+offset_left = 1088.0
+offset_top = 800.0
+offset_right = 1344.0
+offset_bottom = 928.0
+scale = Vector2(1, 1.25)
+text = "Return ToMenu"
+script = ExtResource("4_6etty")
+
+[connection signal="button_down" from="Sprite2D/RetryButton" to="Sprite2D/RetryButton" method="_on_button_down"]
+[connection signal="button_down" from="ContinueButton" to="ContinueButton" method="_on_button_down"]
+[connection signal="button_down" from="MenuButton2" to="MenuButton2" method="_on_button_down"]

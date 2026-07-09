@@ -8,7 +8,6 @@ var current_health : float = max_health
 
 # Death Flag/Signal
 var is_dead : bool = false
-signal dead
 
 # Modular option to display current health
 @export var display_health : bool = false
@@ -29,7 +28,7 @@ func die_check():
 	if current_health <= 0 and !is_dead:
 		#Death Flag
 		is_dead = true
-		dead.emit()
+		GameManager.player_dead.emit()
 
 # Heal the body that calls this function
 func heal(amount):

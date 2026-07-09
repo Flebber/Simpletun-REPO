@@ -23,7 +23,7 @@ func setup():
 		print("no health for animation manager")
 		return
 		
-	health.dead.connect(dead_animation)
+	GameManager.player_dead.connect(dead_animation)
 
 func _process(_delta: float) -> void:
 	# Death Flag

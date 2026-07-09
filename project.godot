@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 SceneManagerNode="*uid://dfxxemuy3kpgb"
+GameManager="*uid://dup5khvaff85e"
 
 [display]
 

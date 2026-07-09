@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://idwwk6luycy4"]
 
 [ext_resource type="TileSet" uid="uid://8xnkj64fgjxh" path="res://assets/sprites/Terrain/terrain_tileset.tres" id="1_2ytpj"]
-[ext_resource type="Script" uid="uid://ckbbngpeaxffu" path="res://Scripts/LevelScripts/test_level.gd" id="1_npfmg"]
 [ext_resource type="PackedScene" uid="uid://bxjadeioh7ry4" path="res://Scenes/Characters/player.tscn" id="2_db73o"]
 [ext_resource type="Texture2D" uid="uid://b2qdw57212jeu" path="res://assets/references/sonic.png" id="3_npfmg"]
 [ext_resource type="PackedScene" uid="uid://dd4i75iue25lk" path="res://Scenes/UI/UILayer.tscn" id="4_db73o"]
@@ -10,7 +9,6 @@
 [node name="Main" type="Node" unique_id=846885988]
 
 [node name="Test Level" type="Node2D" parent="." unique_id=1181596774]
-script = ExtResource("1_npfmg")
 
 [node name="TextEdit" type="TextEdit" parent="Test Level" unique_id=1032231449]
 unique_name_in_owner = true
