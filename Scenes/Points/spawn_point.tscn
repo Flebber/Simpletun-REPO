@@ -59,6 +59,7 @@ emission_curve = SubResource("CurveTexture_hx4ar")
 turbulence_noise_strength = 1.55
 
 [node name="SpawnPoint" type="Area2D" unique_id=1504176874 node_paths=PackedStringArray("collision_check", "point_manager", "point", "point_anim_player")]
+z_index = -2
 script = ExtResource("1_ddkrn")
 collision_check = NodePath("CollisionCheck")
 point_manager = NodePath("PointManager")

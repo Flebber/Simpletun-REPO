@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ctcbvbdtdegn7"]
+
+[ext_resource type="Texture2D" uid="uid://8557f4vpnk3q" path="res://assets/sprites/UI/retry.png" id="1_1glri"]
+[ext_resource type="Script" uid="uid://cghvag12txo0t" path="res://Scripts/LevelScripts/Menus/retry_button.gd" id="2_kh1id"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=354183844]
+scale = Vector2(2, 2)
+texture = ExtResource("1_1glri")
+
+[node name="RetryButton" type="Button" parent="." unique_id=1942702222]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(256, 128)
+offset_left = -64.0
+offset_top = -32.0
+offset_right = 192.0
+offset_bottom = 96.0
+scale = Vector2(0.4970231, 0.6205172)
+text = "Retry"
+script = ExtResource("2_kh1id")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="RetryButton" to="RetryButton" method="_on_button_down"]

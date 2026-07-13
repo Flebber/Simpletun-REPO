@@ -28,5 +28,5 @@ func setup():
 
 func point_touched(_body):
 	#print(body, " touched ", point)
-	#point_reached.emit(point)
+	point_reached.emit(point)
 	pass
