@@ -27,6 +27,6 @@ func setup():
 # When a flag gets touched = save data of player touching, play flag anamation, 
 
 func point_touched(body):
-	print(body, " touched ", point)
-	point_reached.emit(point)
-	
+	#print(body, " touched ", point)
+	#point_reached.emit(point)
+	pass
