@@ -1,15 +1,16 @@
 [gd_resource type="TileSet" format=3 uid="uid://8xnkj64fgjxh"]
 
-[ext_resource type="PackedScene" uid="uid://db4q3sjgy4t3k" path="res://Scenes/Points/end_point.tscn" id="1_fcl2p"]
-[ext_resource type="Texture2D" uid="uid://djagtn1ndn425" path="res://assets/sprites/Terrain/terrain_tileset.png" id="1_kijn0"]
-[ext_resource type="PackedScene" uid="uid://caqq1sr8aexqs" path="res://Scenes/Obstacles/spike.tscn" id="2_kijn0"]
-[ext_resource type="PackedScene" uid="uid://kq4siblljmwu" path="res://Scenes/Obstacles/bloody_spike.tscn" id="3_m1cf4"]
-[ext_resource type="PackedScene" uid="uid://c2ltb7cynal1b" path="res://Scenes/Obstacles/roof_spike.tscn" id="4_kn3la"]
-[ext_resource type="PackedScene" uid="uid://b81ndh8ktqx54" path="res://Scenes/Obstacles/roof_bloody_spike.tscn" id="4_vv5x3"]
-[ext_resource type="PackedScene" uid="uid://d371d1qkeh7hh" path="res://Scenes/Points/spawn_point.tscn" id="7_3xwtw"]
+[ext_resource type="Texture2D" uid="uid://djagtn1ndn425" path="res://assets/sprites/Terrain/terrain_tileset.png" id="1_rpbx2"]
+[ext_resource type="PackedScene" uid="uid://caqq1sr8aexqs" path="res://Scenes/Obstacles/spike.tscn" id="2_3s02o"]
+[ext_resource type="PackedScene" uid="uid://kq4siblljmwu" path="res://Scenes/Obstacles/bloody_spike.tscn" id="3_6gg0w"]
+[ext_resource type="PackedScene" uid="uid://c2ltb7cynal1b" path="res://Scenes/Obstacles/roof_spike.tscn" id="4_aodgd"]
+[ext_resource type="PackedScene" uid="uid://b81ndh8ktqx54" path="res://Scenes/Obstacles/roof_bloody_spike.tscn" id="5_d71c7"]
+[ext_resource type="PackedScene" uid="uid://db4q3sjgy4t3k" path="res://Scenes/Points/end_point.tscn" id="6_ikvjr"]
+[ext_resource type="PackedScene" uid="uid://d371d1qkeh7hh" path="res://Scenes/Points/spawn_point.tscn" id="7_051wk"]
+[ext_resource type="PackedScene" uid="uid://c17sd8h5i8htd" path="res://Scenes/Points/check_point.tscn" id="8_c7xlj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kijn0"]
-texture = ExtResource("1_kijn0")
+texture = ExtResource("1_rpbx2")
 texture_region_size = Vector2i(32, 32)
 9:0/0 = 0
 9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -8, -2.3954964, -8, -8, -8, -8, -0.6142292, -8, 16, 16, 16)
@@ -70,15 +71,16 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_m1cf4"]
 resource_name = "obstacle_tileset"
-scenes/1/scene = ExtResource("2_kijn0")
-scenes/2/scene = ExtResource("3_m1cf4")
-scenes/3/scene = ExtResource("4_kn3la")
-scenes/4/scene = ExtResource("4_vv5x3")
+scenes/1/scene = ExtResource("2_3s02o")
+scenes/2/scene = ExtResource("3_6gg0w")
+scenes/3/scene = ExtResource("4_aodgd")
+scenes/4/scene = ExtResource("5_d71c7")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_3xwtw"]
 resource_name = "points"
-scenes/1/scene = ExtResource("1_fcl2p")
-scenes/2/scene = ExtResource("7_3xwtw")
+scenes/1/scene = ExtResource("6_ikvjr")
+scenes/2/scene = ExtResource("7_051wk")
+scenes/3/scene = ExtResource("8_c7xlj")
 
 [resource]
 tile_size = Vector2i(32, 32)

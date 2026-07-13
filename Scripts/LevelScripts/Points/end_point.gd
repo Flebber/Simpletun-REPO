@@ -25,6 +25,7 @@ func end_point_reached(emitted_point):
 		print("end touched")
 	
 	GameManager.level_finished.emit()
+	GameManager.is_level_finished = true
 	
 	var finmen_instance = finish_menu.instantiate()
 	add_child(finmen_instance)

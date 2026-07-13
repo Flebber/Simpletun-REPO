@@ -5,7 +5,11 @@ var point: Area2D
 
 var point_anim_player: AnimationPlayer
 
+var previous_point : Area2D = null
+
+
 signal point_reached(emitted_point)
+
 
 # Signals/Failsafes
 func setup():
@@ -27,6 +31,8 @@ func setup():
 # When a flag gets touched = save data of player touching, play flag anamation, 
 
 func point_touched(_body):
-	#print(body, " touched ", point)
 	point_reached.emit(point)
-	pass
+	previous_point = point
+	print("previous point = ", previous_point)
+	
+	
