@@ -5,6 +5,7 @@ extends Area2D
 @export var point: Area2D
 
 var player : PackedScene = preload("res://Scenes/Characters/player.tscn")
+var player_instance: Node = null
 
 @export var point_anim_player: AnimationPlayer
 
@@ -24,12 +25,12 @@ func _ready() -> void:
 func spawn_player(scene):
 	if scene in SceneManagerNode.levels.values():
 		await get_tree().process_frame
-		var player_instance = player.instantiate()
 		
-		
-		get_tree().current_scene.add_child(player_instance)
-		print(position)
-		player_instance.position = position
+		if player_instance == null and !is_instance_valid(player_instance):
+			player_instance = player.instantiate()
+			get_tree().current_scene.add_child(player_instance)
+			print(position)
+			player_instance.position = position
 	
 
 #func spawn_point_reached(emitted_point):

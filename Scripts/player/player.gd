@@ -44,7 +44,8 @@ func _ready() -> void:
 
 func death_menu_on():
 	await get_tree().create_timer(2).timeout
-
+	
 	
 	var deathmen_instance = death_menu.instantiate()
 	add_child(deathmen_instance)
+	
