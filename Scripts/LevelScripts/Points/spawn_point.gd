@@ -28,6 +28,7 @@ func spawn_player(scene):
 		
 		
 		get_tree().current_scene.add_child(player_instance)
+		print(position)
 		player_instance.position = position
 	
 

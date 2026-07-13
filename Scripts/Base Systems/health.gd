@@ -1,6 +1,7 @@
 class_name Health extends Node
 
-@onready var parent : Player = get_parent()
+@onready var player : Player = get_parent()
+@onready var parent = get_parent()
 
 # Modular Max Health Variable, Sets initial health state to == Max Health 
 @export var max_health : float = 10
@@ -25,7 +26,14 @@ func _physics_process(delta: float) -> void:
 
 # Check if Current health is <=0
 func die_check():
-	if current_health <= 0 and !is_dead:
+# Player Die_Check
+	if current_health <= 0 and !is_dead and player == Player:
+		#Death Flag
+		is_dead = true
+		GameManager.player_dead.emit()
+
+# Entity Die_check
+	if current_health <= 0 and !is_dead and parent != Player:
 		#Death Flag
 		is_dead = true
 		GameManager.player_dead.emit()
