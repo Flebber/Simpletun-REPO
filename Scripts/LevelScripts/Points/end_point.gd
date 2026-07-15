@@ -1,15 +1,19 @@
 extends Area2D
 
+# Component/Node Assignment
 @export var collision_check: CollisionCheck
+
 @export var point_manager: PointManager
 @export var point: Area2D
-
 @export var point_anim_player: AnimationPlayer
 
+# Assigns the finish_menu UI scene from the SceneManagerNode.menu_levels dicitonary
 @onready var finish_menu : PackedScene = SceneManagerNode.menu_levels["Finish Menu"]
 
+# End_point reached flag
 var finish_reached : bool = false
 
+# Signal Connects and Child Component Assignments
 func _ready() -> void:
 	point_manager.collision_check = collision_check
 	point_manager.point = point
@@ -20,7 +24,9 @@ func _ready() -> void:
 	
 	point_manager.point_reached.connect(end_point_reached)
 
+# Set Gamemanager level finished signals/flags and display finish menu {Connected point_manager.point_reached}
 func end_point_reached(emitted_point):
+	# If the emitted point from point_manager == the parent point
 	if emitted_point == point:
 		print("end touched")
 	

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://o1emp2rxikg4" path="res://Scripts/LevelScripts/Menus/menu.gd" id="2_504rq"]
 [ext_resource type="Texture2D" uid="uid://cb574djqrhlng" path="res://assets/sprites/UI/simpletunMenu.png" id="3_nexu6"]
 [ext_resource type="Script" uid="uid://b6eeygunufbj" path="res://Scripts/UI/level_list.gd" id="4_8p67x"]
-[ext_resource type="Script" uid="uid://4s12s1ipw6q" path="res://Scripts/LevelScripts/level_code.gd" id="5_y8klj"]
+[ext_resource type="Script" uid="uid://4s12s1ipw6q" path="res://Scripts/LevelScripts/secret_level_input.gd" id="5_y8klj"]
 
 [node name="Main" type="Node" unique_id=1351125488]
 script = ExtResource("1_nexu6")

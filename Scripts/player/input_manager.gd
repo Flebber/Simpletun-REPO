@@ -1,5 +1,6 @@
 class_name InputManager extends Node2D
 
+# Assigns Parent
 @onready var player = get_parent()
 
 signal jump_pressed
