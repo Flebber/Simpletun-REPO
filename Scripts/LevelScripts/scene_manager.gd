@@ -17,10 +17,11 @@ var menu_levels : Dictionary[String, PackedScene] = {
 	"Finish Menu": load("res://Scenes/Levels/Menus/finish_menu.tscn"),
 }
 
-# Global function to change current scene to the specified (scene), Also tracks last/current scene
+# Global function to change current scene to the specified (scene), Also tracks last/current scene if it was a level
 func scene_select(scene : PackedScene):
-	previous_scene = current_scene
-	current_scene = scene
+	if scene in SceneManagerNode.levels.values():
+		previous_scene = current_scene
+		current_scene = scene
 	
 	
 	# Waits incase a funtion is midway through running, then changes scene and emits GameManager.scene_swapped signal
