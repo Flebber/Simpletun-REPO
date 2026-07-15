@@ -26,6 +26,12 @@ func setup():
 	GameManager.level_finished.connect(can_move_check)
 	GameManager.player_dead.connect(can_move_check)
 
+
+""" Checks if player can_move via signals
+Connected to:
+GameManager.level_finished
+GameManager.player_dead
+"""
 func can_move_check():
 	can_move = false
 

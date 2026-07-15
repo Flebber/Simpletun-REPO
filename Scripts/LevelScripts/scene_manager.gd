@@ -23,11 +23,9 @@ func scene_select(scene : PackedScene):
 	current_scene = scene
 	
 	
-	# Waits incase a funtion is midway through running
+	# Waits incase a funtion is midway through running, then changes scene and emits GameManager.scene_swapped signal
 	await get_tree().process_frame 
 	get_tree().change_scene_to_packed(scene)
 	
 	await get_tree().process_frame
 	GameManager.scene_swapped.emit(scene)
-	
-	print("previous = %s current = %s" % [previous_scene, current_scene])

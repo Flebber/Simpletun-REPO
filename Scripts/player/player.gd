@@ -2,25 +2,23 @@ class_name Player extends CharacterBody2D
 
 #region Components -> Variables
 
-# Base Systems
+# Base Components
 @export var movement : Movement 
 @export var input_manager : InputManager 
 @export var health : Health
-@onready var label: Label = $Label
-
-@onready var death_menu : PackedScene = SceneManagerNode.menu_levels["Death Menu"]
 
 
-
-# Visual Systems
+# Visual Components/Nodes
 @export var animation_manager : PlayerAnimationManager 
 @export var animation_player : AnimationPlayer 
+@onready var label: Label = $Label
 @export var sprite : Sprite2D 
-@onready var sprite_texture : Texture2D = load("res://assets/sprites/Characters/Player/pud_spritesheet.png")
+@onready var sprite_texture : Texture2D = load("uid://c48qsfsytjvkm")
+@onready var death_menu : PackedScene = SceneManagerNode.menu_levels["Death Menu"]
 #endregion
 
 func _ready() -> void:
-	#region Assign Component -> Component
+	#region Assign Child Components -> Component
 	#Movement.gd
 	movement.input_manager = input_manager
 	movement.health = health
@@ -42,10 +40,9 @@ func _ready() -> void:
 	sprite.texture = sprite_texture
 	
 
+# Loads a death_menu instance (2) seconds after player dies {Connected to GameManager.player_dead}
 func death_menu_on():
 	await get_tree().create_timer(2).timeout
 	
-	
 	var deathmen_instance = death_menu.instantiate()
 	add_child(deathmen_instance)
-	

@@ -1,13 +1,14 @@
 class_name PointManager extends Node2D
 
+# Create Empty Component Variables for Parent to assign
 var collision_check: CollisionCheck
 var point: Area2D
-
 var point_anim_player: AnimationPlayer
 
+# Empty previous_point tracker
 var previous_point : Area2D = null
 
-
+# Creates Signal that returns emitted_point
 signal point_reached(emitted_point)
 
 
@@ -26,13 +27,8 @@ func setup():
 		return
 	
 	collision_check.collided.connect(point_touched)
-	
 
-# When a flag gets touched = save data of player touching, play flag anamation, 
-
+# When parent point is touched, emit point_reached signal and track the last point touched {Connected to collision_check.collided}
 func point_touched(_body):
 	point_reached.emit(point)
 	previous_point = point
-	print("previous point = ", previous_point)
-	
-	
