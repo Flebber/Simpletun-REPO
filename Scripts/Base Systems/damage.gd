@@ -18,6 +18,5 @@ func setup() -> void:
 
 # Deal (amount) damage to the CharacterBody that Collided {Connected to collision_check.collided}
 func deal_damage(body : CharacterBody2D):
-	print(parent, " dealing ", amount, " damage to ", body.name)
 	body.health.current_health -= amount
 	

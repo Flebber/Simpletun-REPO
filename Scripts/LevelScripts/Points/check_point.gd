@@ -1,15 +1,17 @@
 extends Area2D
 
+# Component/Node Assignment
 @export var collision_check: CollisionCheck
 @export var point_manager: PointManager
 @export var point: Area2D
 
+@export var point_anim_player: AnimationPlayer
+
+# Assigns player.tscn and Creates empty variable for player_instance
 var player : PackedScene = preload("res://Scenes/Characters/player.tscn")
 var player_instance: Node = null
 
-@export var point_anim_player: AnimationPlayer
-
-
+# Signals and Component Assignment/Setup Functions
 func _ready() -> void:
 	point_manager.collision_check = collision_check
 	point_manager.point = point
@@ -20,10 +22,9 @@ func _ready() -> void:
 	
 	point_manager.point_reached.connect(check_point_reached)
 	
-	#GameManager.scene_swapped.connect(spawn_player)
 
+# Sets GameManager checkpoint flags/specific checkpoint position
 func check_point_reached(emitted_point):
-	print("check_point reached", emitted_point)
 	GameManager.checkpointPos = point.global_position
 	GameManager.has_checkpoint = true
-	print("chechpointpos = ", GameManager.checkpointPos)
+	

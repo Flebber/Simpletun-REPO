@@ -9,6 +9,6 @@ signal collided(body : Node)
 func setup() -> void:
 	parent.body_entered.connect(collision_detect)
 
-# Emits accessible collided signal which also returns the body which enters {Connected to parent.body_entered}
+# Emits accessible collided signal which also returns the body that entered {Connected to parent.body_entered}
 func collision_detect(body : Node):
 		collided.emit(body)
