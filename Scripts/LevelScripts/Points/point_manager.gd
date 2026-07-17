@@ -10,6 +10,8 @@ var previous_point : Area2D = null
 
 # Creates Signal that returns emitted_point
 signal point_reached(emitted_point)
+# bool flag if point has been reached (For Animation Purposes)
+var is_point_reached : bool = false
 
 
 # Signals/Failsafes
@@ -32,3 +34,4 @@ func setup():
 func point_touched(_body):
 	point_reached.emit(point)
 	previous_point = point
+	is_point_reached = true

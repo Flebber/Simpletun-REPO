@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ddpy758j50i4p" path="res://assets/animations/points/CheckPoint_Spritesheet.png" id="2_mqcwt"]
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="3_iq22u"]
 [ext_resource type="Script" uid="uid://dnfgqumltw7bo" path="res://Scripts/LevelScripts/Points/point_manager.gd" id="4_jf0lj"]
+[ext_resource type="Script" uid="uid://7mh6uhyl5s5m" path="res://Scenes/Points/point_anamation_manager.gd" id="5_hceky"]
 
 [sub_resource type="Curve" id="Curve_mqcwt"]
 _limits = [0.0, 1024.0, 0.0, 1.0]
@@ -138,13 +139,14 @@ _data = {
 &"rising": SubResource("Animation_hceky")
 }
 
-[node name="CheckPoint" type="Area2D" unique_id=1504176874 node_paths=PackedStringArray("collision_check", "point_manager", "point", "point_anim_player")]
+[node name="CheckPoint" type="Area2D" unique_id=1504176874 node_paths=PackedStringArray("collision_check", "point_manager", "point", "point_anim_player", "point_animation_manager")]
 z_index = -2
 script = ExtResource("1_mqcwt")
 collision_check = NodePath("CollisionCheck")
 point_manager = NodePath("PointManager")
 point = NodePath(".")
 point_anim_player = NodePath("AnimationPlayer")
+point_animation_manager = NodePath("PointAnimationManager")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=272738722]
 position = Vector2(-8.029131e-13, 21.000011)
@@ -179,3 +181,8 @@ metadata/_custom_type_script = "uid://dnfgqumltw7bo"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=140767073]
 libraries/ = SubResource("AnimationLibrary_jf0lj")
 libraries/CheckPoint = SubResource("AnimationLibrary_iq22u")
+autoplay = &"CheckPoint/idle_down"
+
+[node name="PointAnimationManager" type="Node" parent="." unique_id=703890212]
+script = ExtResource("5_hceky")
+metadata/_custom_type_script = "uid://7mh6uhyl5s5m"

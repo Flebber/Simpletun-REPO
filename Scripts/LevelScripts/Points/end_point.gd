@@ -6,6 +6,7 @@ extends Area2D
 @export var point_manager: PointManager
 @export var point: Area2D
 @export var point_anim_player: AnimationPlayer
+@export var point_animation_manager : PointAnimationManager
 
 # Assigns the finish_menu UI scene from the SceneManagerNode.menu_levels dicitonary
 @onready var finish_menu : PackedScene = SceneManagerNode.menu_levels["Finish Menu"]
@@ -18,6 +19,12 @@ func _ready() -> void:
 	point_manager.collision_check = collision_check
 	point_manager.point = point
 	point_manager.point_anim_player = point_anim_player
+	
+	point_animation_manager.point = point
+	point_animation_manager.animation_player = point_anim_player
+	point_animation_manager.point_manager = point_manager
+	
+	point_animation_manager.setup()
 	
 	point_manager.setup()
 	collision_check.setup()

@@ -132,13 +132,14 @@ _data = {
 &"rising": SubResource("Animation_7aqpk")
 }
 
-[node name="EndPoint" type="Area2D" unique_id=147595765 node_paths=PackedStringArray("collision_check", "point_manager", "point", "point_anim_player")]
+[node name="EndPoint" type="Area2D" unique_id=147595765 node_paths=PackedStringArray("collision_check", "point_manager", "point", "point_anim_player", "point_animation_manager")]
 z_index = -2
 script = ExtResource("1_nsgxq")
 collision_check = NodePath("CollisionCheck")
 point_manager = NodePath("PointManager")
 point = NodePath(".")
 point_anim_player = NodePath("AnimationPlayer")
+point_animation_manager = NodePath("PointAnimationManager")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=724488264]
 texture_filter = 1
