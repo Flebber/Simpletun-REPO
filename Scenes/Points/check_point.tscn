@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c17sd8h5i8htd"]
 
 [ext_resource type="Script" uid="uid://cmcist7qxx5o3" path="res://Scripts/LevelScripts/Points/check_point.gd" id="1_mqcwt"]
-[ext_resource type="Texture2D" uid="uid://l7ihgp7bvhpx" path="res://assets/sprites/Points/CheckPoint.png" id="2_mqcwt"]
+[ext_resource type="Texture2D" uid="uid://ddpy758j50i4p" path="res://assets/animations/points/CheckPoint_Spritesheet.png" id="2_mqcwt"]
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="3_iq22u"]
 [ext_resource type="Script" uid="uid://dnfgqumltw7bo" path="res://Scripts/LevelScripts/Points/point_manager.gd" id="4_jf0lj"]
 
@@ -64,6 +64,80 @@ turbulence_noise_strength = 1.55
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1q5q"]
 size = Vector2(39, 75)
 
+[sub_resource type="Animation" id="Animation_iq22u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jf0lj"]
+_data = {
+&"RESET": SubResource("Animation_iq22u")
+}
+
+[sub_resource type="Animation" id="Animation_jf0lj"]
+resource_name = "idle_down"
+length = 0.03333667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_mqcwt"]
+length = 0.03333667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_hceky"]
+length = 0.66667503
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25, 0.33333334, 0.4166667, 0.5, 0.5833334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11, 12, 13, 14, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iq22u"]
+_data = {
+&"idle_down": SubResource("Animation_jf0lj"),
+&"idle_up": SubResource("Animation_mqcwt"),
+&"rising": SubResource("Animation_hceky")
+}
+
 [node name="CheckPoint" type="Area2D" unique_id=1504176874 node_paths=PackedStringArray("collision_check", "point_manager", "point", "point_anim_player")]
 z_index = -2
 script = ExtResource("1_mqcwt")
@@ -87,6 +161,8 @@ position = Vector2(0, -8)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_mqcwt")
 offset = Vector2(0, -13)
+hframes = 8
+vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2061265663]
 position = Vector2(-0.5, -17.5)
@@ -101,3 +177,5 @@ script = ExtResource("4_jf0lj")
 metadata/_custom_type_script = "uid://dnfgqumltw7bo"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=140767073]
+libraries/ = SubResource("AnimationLibrary_jf0lj")
+libraries/CheckPoint = SubResource("AnimationLibrary_iq22u")

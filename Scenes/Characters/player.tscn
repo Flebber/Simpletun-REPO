@@ -130,7 +130,7 @@ script = ExtResource("1_x3wgy")
 movement = NodePath("Movement")
 input_manager = NodePath("InputManager")
 health = NodePath("Health")
-animation_manager = NodePath("AnimationManager")
+animation_manager = NodePath("PlayerAnimationManager")
 animation_player = NodePath("AnimationPlayer")
 sprite = NodePath("Sprite")
 
@@ -179,7 +179,7 @@ gravity = 600.0
 glide_strength = 0.91
 jump_strength = -300.0
 
-[node name="AnimationManager" type="Node" parent="." unique_id=700487824 node_paths=PackedStringArray("health", "glide_check")]
+[node name="PlayerAnimationManager" type="Node" parent="." unique_id=700487824 node_paths=PackedStringArray("health", "glide_check")]
 unique_name_in_owner = true
 script = ExtResource("6_gymyn")
 health = NodePath("../Health")
