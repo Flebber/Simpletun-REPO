@@ -17,8 +17,6 @@ func setup() -> void:
 		print("No point for PointAnimationManager")
 		return
 	
-	# Assign point_name when point is ready
-	point_name = str(get_parent().name)
 	
 	point_manager.point_reached.connect(rise_point)
 

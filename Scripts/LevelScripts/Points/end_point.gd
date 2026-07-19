@@ -24,6 +24,8 @@ func _ready() -> void:
 	point_animation_manager.animation_player = point_anim_player
 	point_animation_manager.point_manager = point_manager
 	
+	point_animation_manager.point_name = "EndPoint"
+	
 	point_animation_manager.setup()
 	
 	point_manager.setup()
@@ -40,5 +42,6 @@ func end_point_reached(emitted_point):
 	GameManager.level_finished.emit()
 	GameManager.is_level_finished = true
 	
+	await get_tree().create_timer(2).timeout
 	var finmen_instance = finish_menu.instantiate()
 	add_child(finmen_instance)

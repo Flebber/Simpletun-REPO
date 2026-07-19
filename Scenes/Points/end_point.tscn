@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="2_1jk0o"]
 [ext_resource type="Texture2D" uid="uid://cmmxgcwf6yygv" path="res://assets/animations/points/EndPoint_Spritesheet.png" id="2_5s02n"]
 [ext_resource type="Script" uid="uid://dnfgqumltw7bo" path="res://Scripts/LevelScripts/Points/point_manager.gd" id="4_5s02n"]
-[ext_resource type="Script" uid="uid://7mh6uhyl5s5m" path="res://Scenes/Points/point_anamation_manager.gd" id="5_7aqpk"]
+[ext_resource type="Script" uid="uid://7mh6uhyl5s5m" path="res://Scripts/LevelScripts/Points/point_animation_manager.gd" id="5_7aqpk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4ha3"]
 size = Vector2(39, 75)

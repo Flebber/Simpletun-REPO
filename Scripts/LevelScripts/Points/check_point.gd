@@ -22,6 +22,8 @@ func _ready() -> void:
 	point_animation_manager.animation_player = point_anim_player
 	point_animation_manager.point_manager = point_manager
 	
+	point_animation_manager.point_name = "CheckPoint"
+	
 	point_animation_manager.setup()
 	point_manager.setup()
 	collision_check.setup()
@@ -29,8 +31,8 @@ func _ready() -> void:
 	point_manager.point_reached.connect(check_point_reached)
 	
 
-# Sets GameManager checkpoint flags/specific checkpoint position
-func check_point_reached(emitted_point):
+# Sets GameManager checkpoint flags/specific checkpoint position {Connected point_manager.point_reached}
+func check_point_reached(_emitted_point):
 	GameManager.checkpointPos = point.global_position
 	print("check pos = ", GameManager.checkpointPos)
 	GameManager.has_checkpoint = true
