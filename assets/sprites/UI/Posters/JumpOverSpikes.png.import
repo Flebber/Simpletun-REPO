@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8557f4vpnk3q"
-path="res://.godot/imported/retry.png-40607864fe20a830a9f901730fca43e1.ctex"
+uid="uid://dmophkb1w0knh"
+path="res://.godot/imported/JumpOverSpikes.png-bb83ec8533ea8081d7dee5086812d4ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/UI/retry.png"
-dest_files=["res://.godot/imported/retry.png-40607864fe20a830a9f901730fca43e1.ctex"]
+source_file="res://assets/sprites/UI/Posters/JumpOverSpikes.png"
+dest_files=["res://.godot/imported/JumpOverSpikes.png-bb83ec8533ea8081d7dee5086812d4ce.ctex"]
 
 [params]
 
