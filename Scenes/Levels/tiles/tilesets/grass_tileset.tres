@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://db4q3sjgy4t3k" path="res://Scenes/Points/end_point.tscn" id="6_ikvjr"]
 [ext_resource type="PackedScene" uid="uid://d371d1qkeh7hh" path="res://Scenes/Points/spawn_point.tscn" id="7_051wk"]
 [ext_resource type="PackedScene" uid="uid://c17sd8h5i8htd" path="res://Scenes/Points/check_point.tscn" id="8_c7xlj"]
-[ext_resource type="PackedScene" uid="uid://du83s5f7t3uap" path="res://Scenes/Interactables/poster_board.tscn" id="9_3s02o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kijn0"]
 texture = ExtResource("1_rpbx2")
@@ -85,7 +84,6 @@ scenes/3/scene = ExtResource("8_c7xlj")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_6gg0w"]
 resource_name = "Interactables"
-scenes/1/scene = ExtResource("9_3s02o")
 
 [resource]
 tile_size = Vector2i(32, 32)

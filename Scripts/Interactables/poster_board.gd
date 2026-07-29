@@ -4,6 +4,7 @@ extends Area2D
 
 @export var poster: Sprite2D
 @export var interact_component: InteractComponent
+@export var spriteFrame: int
 
 func _ready() -> void:
 
@@ -11,7 +12,7 @@ func _ready() -> void:
 
 	collision_check.setup()
 	interact_component.setup()
-	
+	poster.frame = spriteFrame
 
 
 

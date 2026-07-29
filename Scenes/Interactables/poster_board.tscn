@@ -31,6 +31,7 @@ hframes = 2
 vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=6608625]
+visible = false
 position = Vector2(-1.5, -21.25)
 shape = SubResource("RectangleShape2D_heacf")
 
