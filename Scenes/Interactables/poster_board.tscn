@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://du83s5f7t3uap"]
+
+[ext_resource type="Script" uid="uid://c3obm6tdif85m" path="res://Scripts/Interactables/poster_board.gd" id="1_dop1h"]
+[ext_resource type="Texture2D" uid="uid://beckrcj3hmimr" path="res://assets/sprites/Posters/PosterBoard.png" id="1_j7x4n"]
+[ext_resource type="Texture2D" uid="uid://ceacgowh0qr22" path="res://assets/sprites/Posters/TutorialPosters/tutorialposterpage.png" id="2_heacf"]
+[ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="4_rmmg2"]
+[ext_resource type="Script" uid="uid://cilm36ukt120y" path="res://Scripts/Interactables/interact_node.gd" id="5_rmmg2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_heacf"]
+size = Vector2(65, 81.5)
+
+[node name="PosterBoard" type="Area2D" unique_id=693978719 node_paths=PackedStringArray("collision_check", "poster", "interact_node")]
+z_index = -2
+script = ExtResource("1_dop1h")
+collision_check = NodePath("CollisionCheck")
+poster = NodePath("Poster")
+interact_node = NodePath("InteractNode")
+
+[node name="Board" type="Sprite2D" parent="." unique_id=1845500038]
+position = Vector2(-1, -19)
+scale = Vector2(2, 2)
+texture = ExtResource("1_j7x4n")
+offset = Vector2(0, -13)
+
+[node name="Poster" type="Sprite2D" parent="." unique_id=1121130669]
+texture_filter = 1
+position = Vector2(-1, -28)
+texture = ExtResource("2_heacf")
+offset = Vector2(0, -13)
+hframes = 2
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=6608625]
+position = Vector2(-1.5, -21.25)
+shape = SubResource("RectangleShape2D_heacf")
+
+[node name="CollisionCheck" type="Node" parent="." unique_id=896015572]
+script = ExtResource("4_rmmg2")
+metadata/_custom_type_script = "uid://dov27h2jhaq5u"
+
+[node name="InteractNode" type="Node" parent="." unique_id=1386766432]
+script = ExtResource("5_rmmg2")
