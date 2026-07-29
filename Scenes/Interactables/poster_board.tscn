@@ -4,17 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://beckrcj3hmimr" path="res://assets/sprites/Posters/PosterBoard.png" id="1_j7x4n"]
 [ext_resource type="Texture2D" uid="uid://ceacgowh0qr22" path="res://assets/sprites/Posters/TutorialPosters/tutorialposterpage.png" id="2_heacf"]
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="4_rmmg2"]
-[ext_resource type="Script" uid="uid://cilm36ukt120y" path="res://Scripts/Interactables/interact_node.gd" id="5_rmmg2"]
+[ext_resource type="Script" uid="uid://cilm36ukt120y" path="res://Scripts/Interactables/interact_component.gd" id="5_rmmg2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_heacf"]
 size = Vector2(65, 81.5)
 
-[node name="PosterBoard" type="Area2D" unique_id=693978719 node_paths=PackedStringArray("collision_check", "poster", "interact_node")]
+[node name="PosterBoard" type="Area2D" unique_id=693978719 node_paths=PackedStringArray("collision_check", "poster", "interact_component")]
 z_index = -2
 script = ExtResource("1_dop1h")
 collision_check = NodePath("CollisionCheck")
 poster = NodePath("Poster")
-interact_node = NodePath("InteractNode")
+interact_component = NodePath("InteractComponent")
 
 [node name="Board" type="Sprite2D" parent="." unique_id=1845500038]
 position = Vector2(-1, -19)
@@ -38,5 +38,5 @@ shape = SubResource("RectangleShape2D_heacf")
 script = ExtResource("4_rmmg2")
 metadata/_custom_type_script = "uid://dov27h2jhaq5u"
 
-[node name="InteractNode" type="Node" parent="." unique_id=1386766432]
+[node name="InteractComponent" type="Node" parent="." unique_id=1386766432]
 script = ExtResource("5_rmmg2")

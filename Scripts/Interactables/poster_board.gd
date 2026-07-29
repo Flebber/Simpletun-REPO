@@ -3,12 +3,15 @@ extends Area2D
 @export var collision_check : CollisionCheck
 
 @export var poster: Sprite2D
-@export var interact_node: InteractNode
+@export var interact_component: InteractComponent
 
 func _ready() -> void:
 
+	interact_component.collision_check = collision_check
+
 	collision_check.setup()
-	#interact_node.setup()
+	interact_component.setup()
+	
 
 
 
