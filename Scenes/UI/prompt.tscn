@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dweg3gd21eops"]
+
+[ext_resource type="Texture2D" uid="uid://b6r32xxltl1aq" path="res://icon.svg" id="1_6cucg"]
+[ext_resource type="Script" uid="uid://c5h2w6eu2bm3q" path="res://Scripts/UI/prompt.gd" id="1_ex6et"]
+
+[node name="Prompt" type="Control" unique_id=2124150758 node_paths=PackedStringArray("label", "key_icon")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -19.0
+offset_top = -16.0
+offset_right = 21.0
+offset_bottom = 24.0
+script = ExtResource("1_ex6et")
+label = NodePath("Label")
+key_icon = NodePath("KeyIcon")
+
+[node name="Label" type="Label" parent="." unique_id=1079880649]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 4.0000005
+offset_right = 70.0
+offset_bottom = 27.0
+text = "Interact [E]  "
+
+[node name="KeyIcon" type="TextureRect" parent="." unique_id=1503162817]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 3.9999998
+offset_right = 101.0
+offset_bottom = 64.0
+scale = Vector2(0.4893617, 0.45882353)
+texture = ExtResource("1_6cucg")
+expand_mode = 1

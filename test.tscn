@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dxpudqagbapqq"]
+
+[ext_resource type="Script" path="res://test.gd" id="1_ppyta"]
+[ext_resource type="Texture2D" uid="uid://b6r32xxltl1aq" path="res://icon.svg" id="2_ykrsh"]
+[ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="3_g14j6"]
+[ext_resource type="Script" uid="uid://cilm36ukt120y" path="res://Scripts/Interactables/interact_component.gd" id="4_vbegm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mnia5"]
+
+[node name="Area2D" type="Area2D" unique_id=1490897289 node_paths=PackedStringArray("collision_check", "poster", "interact_component")]
+script = ExtResource("1_ppyta")
+collision_check = NodePath("CollisionCheck")
+poster = NodePath("Sprite2D")
+interact_component = NodePath("InteractComponent")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2025704791]
+position = Vector2(-1.999939, 2.0000076)
+scale = Vector2(0.37737492, 0.3811951)
+texture = ExtResource("2_ykrsh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=928800002]
+position = Vector2(0, -0.9999962)
+scale = Vector2(3.2618804, 2.4577258)
+shape = SubResource("CircleShape2D_mnia5")
+
+[node name="CollisionCheck" type="Node" parent="." unique_id=1054224516]
+script = ExtResource("3_g14j6")
+metadata/_custom_type_script = "uid://dov27h2jhaq5u"
+
+[node name="InteractComponent" type="Node" parent="." unique_id=874340435]
+script = ExtResource("4_vbegm")
+PromptText = "poottest"
+metadata/_custom_type_script = "uid://cilm36ukt120y"

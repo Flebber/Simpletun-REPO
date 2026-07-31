@@ -41,3 +41,4 @@ metadata/_custom_type_script = "uid://dov27h2jhaq5u"
 
 [node name="InteractComponent" type="Node" parent="." unique_id=1386766432]
 script = ExtResource("5_rmmg2")
+PromptText = "Poo On Me"
