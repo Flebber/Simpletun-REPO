@@ -22,11 +22,15 @@ func setup() -> void:
 # Connected to {interact_component.interact_pressed}
 func zoomIn():
 	if zoomed == false:
-		
+		GameManager.can_player_move = false
 		poster.z_index = 2
 		animation_player.play("Poster/ZoomIn")
 		zoomed = true
+		
 	else:
+		
 		poster.z_index = 0
 		animation_player.play("Poster/ZoomOut")
 		zoomed = false
+		await get_tree().create_timer(0.25).timeout
+		GameManager.can_player_move = true
