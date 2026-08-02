@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c5h2w6eu2bm3q" path="res://Scripts/UI/prompt.gd" id="1_ex6et"]
 
 [node name="Prompt" type="Control" unique_id=2124150758 node_paths=PackedStringArray("label", "key_icon")]
+z_index = -1
 layout_mode = 3
 anchors_preset = 0
 offset_left = -19.0
