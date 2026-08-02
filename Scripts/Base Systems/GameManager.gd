@@ -8,6 +8,7 @@ signal scene_swapped(scene : PackedScene)
 
 # Player Signals/Flags
 signal player_dead
+var can_player_move : bool = true
 
 # Point Signals/Flags
 var checkpointPos : Vector2 = Vector2.ZERO

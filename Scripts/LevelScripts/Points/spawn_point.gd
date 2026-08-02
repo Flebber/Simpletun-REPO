@@ -40,6 +40,8 @@ func spawn_player(scene):
 		if GameManager.has_checkpoint == true and GameManager.is_level_finished == false:
 			player_instance.global_position = GameManager.checkpointPos
 			print("Spawned at checkpoint: ", GameManager.checkpointPos)
+			GameManager.can_player_move = true
 		else: # Spawn player at spawn_point
-			player_instance.global_position = global_position
+			player_instance.global_position = global_position 
 			print("Spawned at default pos: ", point)
+			GameManager.can_player_move = true

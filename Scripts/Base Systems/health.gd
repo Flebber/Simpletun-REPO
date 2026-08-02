@@ -39,6 +39,7 @@ func die_check():
 # Player death signal
 	if parent is Player:
 		GameManager.player_dead.emit()
+		
 
 # Heal the body that calls this function
 func heal(amount):

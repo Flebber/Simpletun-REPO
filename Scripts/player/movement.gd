@@ -9,8 +9,6 @@ class_name Movement extends Node2D
 var input_manager : InputManager
 var health : Health
 
-var can_move : bool = true
-
 # Changeable Movement Properties
 @export var speed : float = 200
 @export var gravity : float = 550.0
@@ -33,12 +31,12 @@ GameManager.level_finished
 GameManager.player_dead
 """
 func can_move_check():
-	can_move = false
+	GameManager.can_player_move = false
 
 #region Movement
 
 func _physics_process(delta: float):
-	if !can_move:
+	if !GameManager.can_player_move:
 		return
 
 	# Assign the Inputted Direction from input_manager
