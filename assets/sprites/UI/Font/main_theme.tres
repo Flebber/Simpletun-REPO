@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://bsoyvqt3uq00v"]
+
+[ext_resource type="FontFile" uid="uid://chibp33mn3ih1" path="res://assets/sprites/UI/Font/Simpletun.fnt" id="1_fwdd5"]
+
+[resource]
+default_font = ExtResource("1_fwdd5")
+default_font_size = 15

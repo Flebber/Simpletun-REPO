@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b6r32xxltl1aq" path="res://icon.svg" id="1_6cucg"]
 [ext_resource type="Script" uid="uid://c5h2w6eu2bm3q" path="res://Scripts/UI/prompt.gd" id="1_ex6et"]
+[ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/sprites/UI/Font/main_theme.tres" id="1_o5nup"]
 
 [node name="Prompt" type="Control" unique_id=2124150758 node_paths=PackedStringArray("label", "key_icon")]
 z_index = -1
@@ -11,6 +12,7 @@ offset_left = -19.0
 offset_top = -16.0
 offset_right = 21.0
 offset_bottom = 24.0
+theme = ExtResource("1_o5nup")
 script = ExtResource("1_ex6et")
 label = NodePath("Label")
 key_icon = NodePath("KeyIcon")
