@@ -135,9 +135,16 @@ shape = SubResource("RectangleShape2D_heacf")
 script = ExtResource("4_rmmg2")
 metadata/_custom_type_script = "uid://dov27h2jhaq5u"
 
-[node name="InteractComponent" type="Node" parent="." unique_id=1386766432]
+[node name="InteractComponent" type="Control" parent="." unique_id=50007786]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -21.0
+offset_top = -48.0
+offset_right = 19.0
+offset_bottom = -8.0
 script = ExtResource("5_rmmg2")
-PromptText = "Interact"
+PromptText = "Interact [E]"
+metadata/_custom_type_script = "uid://cilm36ukt120y"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=318261068]
 libraries/ = SubResource("AnimationLibrary_4n3a6")

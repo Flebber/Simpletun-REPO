@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bk6w55j6s7n8e" path="res://Scripts/Player/movement.gd" id="5_tx1dd"]
 [ext_resource type="Script" uid="uid://2dt240obw50u" path="res://Scripts/Player/animation_manager.gd" id="6_gymyn"]
 [ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scripts/Base Systems/health.gd" id="6_khnq4"]
+[ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/sprites/UI/Font/main_theme.tres" id="8_gdgf0"]
 
 [sub_resource type="Animation" id="Animation_272bh"]
 length = 0.001
@@ -137,6 +138,7 @@ sprite = NodePath("Sprite")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=112688490]
 position = Vector2(-8.583069e-06, 75)
 scale = Vector2(3.5714285, 3.5714285)
+zoom = Vector2(1.5, 1.5)
 process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
@@ -190,9 +192,10 @@ script = ExtResource("6_khnq4")
 display_health = true
 
 [node name="Label" type="Label" parent="." unique_id=215717849]
-offset_left = -100.0
-offset_top = -103.57143
-offset_right = 109.0
-offset_bottom = -53.571426
-theme_override_font_sizes/font_size = 52
+offset_left = -114.28571
+offset_top = -114.28571
+offset_right = 94.71429
+offset_bottom = 60.714287
+theme = ExtResource("8_gdgf0")
+theme_override_font_sizes/font_size = 60
 horizontal_alignment = 1

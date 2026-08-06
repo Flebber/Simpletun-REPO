@@ -1,4 +1,4 @@
-class_name InteractComponent extends Node
+class_name InteractComponent extends Control
 
 @onready var parent : Area2D = get_parent()
 var collision_check : CollisionCheck
@@ -57,7 +57,7 @@ func create_prompt():
 	
 	prompt_instance = PROMPT.instantiate()
 	prompt_instance.label.text = PromptText
-	prompt_instance.position = parent.position
-	prompt_instance.position.y = prompt_instance.position.y - 100
+	prompt_instance.position = position
+	#prompt_instance.position.y = position.y
 	add_child(prompt_instance)
 	
