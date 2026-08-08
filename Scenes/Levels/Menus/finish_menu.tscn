@@ -12,7 +12,10 @@ position = Vector2(960, 320)
 texture = ExtResource("1_qhnhh")
 
 [node name="RetryButton" parent="." unique_id=354183844 instance=ExtResource("2_qhnhh")]
-position = Vector2(704, 864)
+offset_left = 576.0
+offset_top = 768.0
+offset_right = 829.745
+offset_bottom = 963.865
 
 [node name="ContinueButton" type="Button" parent="." unique_id=1258675546]
 custom_minimum_size = Vector2(256, 128)
@@ -21,6 +24,7 @@ offset_top = 544.0
 offset_right = 1088.0
 offset_bottom = 672.0
 scale = Vector2(1, 1.25)
+theme_override_font_sizes/font_size = 33
 text = "Continue"
 script = ExtResource("4_6yfbd")
 
@@ -31,7 +35,8 @@ offset_top = 800.0
 offset_right = 1344.0
 offset_bottom = 928.0
 scale = Vector2(1, 1.25)
-text = "Return ToMenu"
+theme_override_font_sizes/font_size = 28
+text = "Return To Menu"
 script = ExtResource("4_6etty")
 
 [connection signal="button_down" from="ContinueButton" to="ContinueButton" method="_on_button_down"]

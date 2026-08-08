@@ -1,22 +1,51 @@
 [gd_scene format=3 uid="uid://ctcbvbdtdegn7"]
 
-[ext_resource type="Texture2D" uid="uid://8557f4vpnk3q" path="res://assets/sprites/UI/retry.png" id="1_1glri"]
+[ext_resource type="Texture2D" uid="uid://8557f4vpnk3q" path="res://assets/sprites/UI/Buttons/retry.png" id="1_1glri"]
 [ext_resource type="Script" uid="uid://cghvag12txo0t" path="res://Scripts/LevelScripts/Menus/retry_button.gd" id="2_kh1id"]
 
-[node name="Sprite2D" type="Sprite2D" unique_id=354183844]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61uul"]
+bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1glri"]
+
+[node name="RetryButton" type="Control" unique_id=1685330574]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1920.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1876099245]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 scale = Vector2(2, 2)
+theme_override_styles/panel = SubResource("StyleBoxFlat_61uul")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1433927419]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=138757497]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1glri")
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer" unique_id=668863902]
+position = Vector2(19.908602, 19.829597)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_1glri")
 
-[node name="RetryButton" type="Button" parent="." unique_id=1942702222]
+[node name="Button" type="Button" parent="MarginContainer" unique_id=1923573206]
 modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(256, 128)
-offset_left = -64.0
-offset_top = -32.0
-offset_right = 192.0
-offset_bottom = 96.0
-scale = Vector2(0.4970231, 0.6205172)
-text = "Retry"
+layout_mode = 2
 script = ExtResource("2_kh1id")
-metadata/_edit_use_anchors_ = true
-
-[connection signal="button_down" from="RetryButton" to="RetryButton" method="_on_button_down"]
