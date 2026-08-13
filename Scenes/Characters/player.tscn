@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://bk6w55j6s7n8e" path="res://Scripts/Player/movement.gd" id="5_tx1dd"]
 [ext_resource type="Script" uid="uid://2dt240obw50u" path="res://Scripts/Player/animation_manager.gd" id="6_gymyn"]
 [ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scripts/Base Systems/health.gd" id="6_khnq4"]
-[ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/sprites/UI/Font/main_theme.tres" id="8_gdgf0"]
+[ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="8_gdgf0"]
 
 [sub_resource type="Animation" id="Animation_272bh"]
 length = 0.001
