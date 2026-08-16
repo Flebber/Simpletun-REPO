@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ctcbvbdtdegn7"]
 
-[ext_resource type="Texture2D" uid="uid://8557f4vpnk3q" path="res://assets/sprites/UI/Buttons/retry.png" id="1_1glri"]
+[ext_resource type="Texture2D" uid="uid://8557f4vpnk3q" path="res://assets/sprites/UI/Designs/Buttons/retry.png" id="1_1glri"]
+[ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="1_kh1id"]
 [ext_resource type="Script" uid="uid://cghvag12txo0t" path="res://Scripts/LevelScripts/Menus/retry_button.gd" id="2_kh1id"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61uul"]
@@ -19,6 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="." unique_id=1876099245]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -36,16 +38,17 @@ theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
 [node name="Panel" type="Panel" parent="MarginContainer" unique_id=138757497]
+visible = false
 modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1glri")
+
+[node name="Button" type="Button" parent="MarginContainer" unique_id=1923573206]
+layout_mode = 2
+theme = ExtResource("1_kh1id")
+script = ExtResource("2_kh1id")
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer" unique_id=668863902]
 position = Vector2(19.908602, 19.829597)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_1glri")
-
-[node name="Button" type="Button" parent="MarginContainer" unique_id=1923573206]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-script = ExtResource("2_kh1id")
