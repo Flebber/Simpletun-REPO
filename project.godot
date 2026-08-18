@@ -30,6 +30,7 @@ window/main_scene="uid://cc4422hdqsc55"
 
 [gui]
 
+theme/custom="uid://bsoyvqt3uq00v"
 theme/custom_font="uid://chibp33mn3ih1"
 
 [input]

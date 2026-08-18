@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://rl2evig0557r"]
+
+[ext_resource type="Texture2D" uid="uid://cxwjtndh16qsy" path="res://assets/sprites/UI/Nodes/Panel/panel.png" id="1_kuani"]
+[ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="2_1xl0e"]
+
+[node name="PauseMenu" type="NinePatchRect" unique_id=1364143952]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -383.99994
+offset_top = -412.0
+offset_right = -343.99994
+offset_bottom = -372.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(19.20634, 19.236517)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_kuani")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1001371359]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1305893403]
+layout_mode = 2
+theme = ExtResource("2_1xl0e")
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=617545333]
+layout_mode = 2
+theme = ExtResource("2_1xl0e")
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=2131176443]
+layout_mode = 2
+theme = ExtResource("2_1xl0e")
+
+[node name="Button" type="Button" parent="." unique_id=650849745]
+layout_mode = 0
+offset_left = 17.338018
+offset_top = 7.537747
+offset_right = 25.338018
+offset_bottom = 18.537746
+scale = Vector2(0.80086875, 0.45936167)
+theme = ExtResource("2_1xl0e")
+text = "Retry
+"

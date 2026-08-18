@@ -1,17 +1,44 @@
 [gd_resource type="Theme" format=4 uid="uid://bsoyvqt3uq00v"]
 
 [ext_resource type="FontFile" uid="uid://chibp33mn3ih1" path="res://assets/sprites/UI/Font/Simpletun.fnt" id="1_3f3va"]
-[ext_resource type="Texture2D" uid="uid://dhls6acftc7n5" path="res://assets/sprites/UI/Nodes/Button/buttonIdle.png" id="2_vhku8"]
-[ext_resource type="Texture2D" uid="uid://bl0acjssfcqr2" path="res://assets/sprites/UI/Nodes/Button/buttonPressed.png" id="3_gvtt4"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vhku8"]
-texture = ExtResource("2_vhku8")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3f3va"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_axncs"]
-texture = ExtResource("2_vhku8")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lxams"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4fp8c"]
-texture = ExtResource("3_gvtt4")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3f3va"]
+content_margin_left = 1.0
+content_margin_top = 4.0
+content_margin_right = 1.0
+bg_color = Color(0.7510584, 0.59827137, 0.25022346, 1)
+border_width_bottom = 1
+border_color = Color(0.6923173, 0.55217457, 0.22206849, 1)
+border_blend = true
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+shadow_color = Color(0, 0, 0, 0.30980393)
+shadow_size = 1
+shadow_offset = Vector2(0, 0.99)
+anti_aliasing_size = 0.562
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxams"]
+content_margin_left = 1.0
+content_margin_top = 4.0
+content_margin_right = 1.0
+bg_color = Color(0.7510584, 0.59827137, 0.25022346, 1)
+border_color = Color(0.6923173, 0.55217457, 0.22206849, 1)
+border_blend = true
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+anti_aliasing_size = 0.01
 
 [sub_resource type="Image" id="Image_bepg5"]
 data = {
@@ -603,6 +630,66 @@ cache/0/12/0/kerning_overrides/88/65 = Vector2(0, 0)
 cache/0/12/0/kerning_overrides/89/65 = Vector2(0, 0)
 cache/0/12/0/kerning_overrides/90/65 = Vector2(0, 0)
 cache/0/12/0/kerning_overrides/82/65 = Vector2(1, 0)
+cache/0/12/1/glyphs/67/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/67/size = Vector2(0, 0)
+cache/0/12/1/glyphs/67/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/67/texture_idx = -1
+cache/0/12/1/glyphs/104/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/104/size = Vector2(0, 0)
+cache/0/12/1/glyphs/104/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/104/texture_idx = -1
+cache/0/12/1/glyphs/101/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/101/size = Vector2(0, 0)
+cache/0/12/1/glyphs/101/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/101/texture_idx = -1
+cache/0/12/1/glyphs/99/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/99/size = Vector2(0, 0)
+cache/0/12/1/glyphs/99/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/99/texture_idx = -1
+cache/0/12/1/glyphs/107/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/107/size = Vector2(0, 0)
+cache/0/12/1/glyphs/107/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/107/texture_idx = -1
+cache/0/12/1/glyphs/66/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/66/size = Vector2(0, 0)
+cache/0/12/1/glyphs/66/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/66/texture_idx = -1
+cache/0/12/1/glyphs/117/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/117/size = Vector2(0, 0)
+cache/0/12/1/glyphs/117/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/117/texture_idx = -1
+cache/0/12/1/glyphs/116/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/116/size = Vector2(0, 0)
+cache/0/12/1/glyphs/116/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/116/texture_idx = -1
+cache/0/12/1/glyphs/111/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/111/size = Vector2(0, 0)
+cache/0/12/1/glyphs/111/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/111/texture_idx = -1
+cache/0/12/1/glyphs/110/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/110/size = Vector2(0, 0)
+cache/0/12/1/glyphs/110/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/110/texture_idx = -1
+cache/0/12/1/glyphs/120/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/120/size = Vector2(0, 0)
+cache/0/12/1/glyphs/120/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/120/texture_idx = -1
+cache/0/12/1/glyphs/77/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/77/size = Vector2(0, 0)
+cache/0/12/1/glyphs/77/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/77/texture_idx = -1
+cache/0/12/1/glyphs/79/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/79/size = Vector2(0, 0)
+cache/0/12/1/glyphs/79/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/79/texture_idx = -1
+cache/0/12/1/glyphs/112/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/112/size = Vector2(0, 0)
+cache/0/12/1/glyphs/112/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/112/texture_idx = -1
+cache/0/12/1/glyphs/105/offset = Vector2(0, 0)
+cache/0/12/1/glyphs/105/size = Vector2(0, 0)
+cache/0/12/1/glyphs/105/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/12/1/glyphs/105/texture_idx = -1
 
 [resource]
 default_font = SubResource("FontFile_ff0wp")
@@ -624,13 +711,13 @@ Button/constants/align_to_largest_stylebox = 0
 Button/constants/h_separation = 0
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
-Button/font_sizes/font_size = 16
+Button/font_sizes/font_size = 2
 Button/fonts/font = ExtResource("1_3f3va")
-Button/styles/disabled = null
-Button/styles/focus = null
-Button/styles/hover = SubResource("StyleBoxTexture_vhku8")
-Button/styles/normal = SubResource("StyleBoxTexture_axncs")
-Button/styles/pressed = SubResource("StyleBoxTexture_4fp8c")
+Button/styles/disabled = SubResource("StyleBoxEmpty_3f3va")
+Button/styles/focus = SubResource("StyleBoxEmpty_lxams")
+Button/styles/hover = SubResource("StyleBoxFlat_3f3va")
+Button/styles/normal = SubResource("StyleBoxFlat_3f3va")
+Button/styles/pressed = SubResource("StyleBoxFlat_lxams")
 MarginContainer/constants/margin_bottom = 0
 MarginContainer/constants/margin_left = 0
 MarginContainer/constants/margin_right = 0
