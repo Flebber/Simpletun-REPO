@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dmreaawblghip"]
 
 [ext_resource type="Texture2D" uid="uid://ch3otg2fuhhof" path="res://assets/sprites/Secret/smile laptop.png" id="1_qhnhh"]
-[ext_resource type="PackedScene" uid="uid://ctcbvbdtdegn7" path="res://Scenes/Levels/Menus/Buttons/Retry_Button.tscn" id="2_qhnhh"]
+[ext_resource type="PackedScene" uid="uid://ctcbvbdtdegn7" path="res://Scenes/UI/Buttons/Retry_Button.tscn" id="2_qhnhh"]
 [ext_resource type="Script" uid="uid://ghkfmr0nq1ae" path="res://Scripts/LevelScripts/Menus/return_button.gd" id="4_6etty"]
 [ext_resource type="Script" uid="uid://0iev5noupyim" path="res://Scripts/LevelScripts/Menus/continue_button.gd" id="4_6yfbd"]
 

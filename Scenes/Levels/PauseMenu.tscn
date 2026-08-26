@@ -36,13 +36,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -11.981818
-offset_top = -14.905523
-offset_right = 28.01818
-offset_bottom = 26.094479
+offset_left = -7.92066
+offset_top = -16.72498
+offset_right = 13.079342
+offset_bottom = 33.27502
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.6008331, 0.7353928)
+scale = Vector2(0.778, 0.7)
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer" unique_id=1305893403]
 layout_mode = 2
@@ -59,3 +59,6 @@ text = "Retry
 layout_mode = 2
 theme = ExtResource("2_1xl0e")
 text = "Menu"
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer" unique_id=1720410230]
+layout_mode = 2

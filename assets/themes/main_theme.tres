@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=4 uid="uid://bsoyvqt3uq00v"]
 
-[ext_resource type="FontFile" uid="uid://chibp33mn3ih1" path="res://assets/sprites/UI/Font/Simpletun.fnt" id="1_3f3va"]
+[ext_resource type="FontFile" uid="uid://u5ai55j1seo3" path="res://assets/sprites/UI/Font/MainSimpletun.fnt" id="1_3f3va"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3f3va"]
 
@@ -711,7 +711,7 @@ Button/constants/align_to_largest_stylebox = 0
 Button/constants/h_separation = 0
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
-Button/font_sizes/font_size = 2
+Button/font_sizes/font_size = 4
 Button/fonts/font = ExtResource("1_3f3va")
 Button/styles/disabled = SubResource("StyleBoxEmpty_3f3va")
 Button/styles/focus = SubResource("StyleBoxEmpty_lxams")

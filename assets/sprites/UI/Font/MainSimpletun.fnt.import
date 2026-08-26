@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://u5ai55j1seo3"
+path="res://.godot/imported/MainSimpletun.fnt-3c42bfaa790d5ca3b321cefda35c3433.fontdata"
+
+[deps]
+
+source_file="res://assets/sprites/UI/Font/MainSimpletun.fnt"
+dest_files=["res://.godot/imported/MainSimpletun.fnt-3c42bfaa790d5ca3b321cefda35c3433.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2
