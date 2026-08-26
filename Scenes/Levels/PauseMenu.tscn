@@ -59,6 +59,3 @@ text = "Retry
 layout_mode = 2
 theme = ExtResource("2_1xl0e")
 text = "Menu"
-
-[node name="TextEdit" type="TextEdit" parent="VBoxContainer" unique_id=1720410230]
-layout_mode = 2
