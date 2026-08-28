@@ -14,6 +14,7 @@ var menu_levels : Dictionary[String, PackedScene] = {
 	"Test":  load("res://Scenes/Levels/test_level.tscn"),
 	"Menu": load("res://Scenes/UI/Menus/menu.tscn"),
 	"Death Menu": load("res://Scenes/UI/Menus/death_menu.tscn"),
+	"Pause Menu": load("res://Scenes/UI/Menus/pause_menu.tscn"),
 	"Finish Menu": load("res://Scenes/UI/Menus/finish_menu.tscn"),
 }
 

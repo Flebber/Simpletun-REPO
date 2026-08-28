@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://rl2evig0557r"]
 
-[ext_resource type="Texture2D" uid="uid://cxwjtndh16qsy" path="res://assets/sprites/UI/Nodes/Panel/panel.png" id="1_kuani"]
-[ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="2_1xl0e"]
+[ext_resource type="Texture2D" uid="uid://cxwjtndh16qsy" path="res://assets/sprites/UI/Nodes/Panel/panel.png" id="1_igq5e"]
+[ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="2_13aw7"]
 
-[node name="PauseMenu" type="NinePatchRect" unique_id=1364143952]
+[node name="pause_menu" type="NinePatchRect" unique_id=1364143952]
 texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -19,7 +19,7 @@ grow_vertical = 2
 scale = Vector2(19.20634, 19.236517)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("1_kuani")
+texture = ExtResource("1_igq5e")
 region_rect = Rect2(0, 0, 48, 48)
 patch_margin_left = 7
 patch_margin_top = 7
@@ -46,16 +46,16 @@ scale = Vector2(0.778, 0.7)
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer" unique_id=1305893403]
 layout_mode = 2
-theme = ExtResource("2_1xl0e")
+theme = ExtResource("2_13aw7")
 text = "Settings"
 
 [node name="RetryButton" type="Button" parent="VBoxContainer" unique_id=650849745]
 layout_mode = 2
-theme = ExtResource("2_1xl0e")
+theme = ExtResource("2_13aw7")
 text = "Retry
 "
 
 [node name="MenuButton" type="Button" parent="VBoxContainer" unique_id=760038014]
 layout_mode = 2
-theme = ExtResource("2_1xl0e")
+theme = ExtResource("2_13aw7")
 text = "Menu"

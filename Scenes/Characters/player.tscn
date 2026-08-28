@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://2dt240obw50u" path="res://Scripts/Player/animation_manager.gd" id="6_gymyn"]
 [ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scripts/Base Systems/health.gd" id="6_khnq4"]
 [ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="8_gdgf0"]
+[ext_resource type="Script" uid="uid://diiylu8rs278j" path="res://Scripts/Player/ui_component.gd" id="9_xo8ps"]
 
 [sub_resource type="Animation" id="Animation_272bh"]
 length = 0.001
@@ -199,3 +200,10 @@ offset_bottom = 60.714287
 theme = ExtResource("8_gdgf0")
 theme_override_font_sizes/font_size = 60
 horizontal_alignment = 1
+
+[node name="UIController" type="Control" parent="." unique_id=1667630515]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_xo8ps")
