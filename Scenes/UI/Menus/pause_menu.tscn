@@ -4,6 +4,7 @@
 [ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="2_13aw7"]
 
 [node name="pause_menu" type="NinePatchRect" unique_id=1364143952]
+z_index = 2
 texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
