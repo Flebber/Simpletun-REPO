@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cxwjtndh16qsy" path="res://assets/sprites/UI/Nodes/Panel/panel.png" id="1_igq5e"]
 [ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="2_13aw7"]
+[ext_resource type="Script" uid="uid://cghvag12txo0t" path="res://Scripts/LevelScripts/Menus/retry_button.gd" id="3_mxyo1"]
+[ext_resource type="Script" uid="uid://ghkfmr0nq1ae" path="res://Scripts/LevelScripts/Menus/return_button.gd" id="4_58362"]
 
 [node name="pause_menu" type="NinePatchRect" unique_id=1364143952]
 z_index = 2
@@ -11,15 +13,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -383.99994
-offset_top = -412.0
-offset_right = -343.99994
-offset_bottom = -372.0
+offset_left = -768.0
+offset_top = -828.0
+offset_right = -728.0
+offset_bottom = -788.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(19.20634, 19.236517)
-size_flags_horizontal = 4
-size_flags_vertical = 4
+scale = Vector2(41.371, 41.438)
+size_flags_horizontal = 6
+size_flags_vertical = 6
 texture = ExtResource("1_igq5e")
 region_rect = Rect2(0, 0, 48, 48)
 patch_margin_left = 7
@@ -28,7 +30,6 @@ patch_margin_right = 7
 patch_margin_bottom = 7
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1001371359]
 layout_mode = 1
@@ -37,10 +38,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -7.92066
-offset_top = -16.72498
-offset_right = 13.079342
-offset_bottom = 33.27502
+offset_left = -8.493388
+offset_top = -14.957507
+offset_right = 12.506611
+offset_bottom = 23.042492
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.778, 0.7)
@@ -55,8 +56,10 @@ layout_mode = 2
 theme = ExtResource("2_13aw7")
 text = "Retry
 "
+script = ExtResource("3_mxyo1")
 
 [node name="MenuButton" type="Button" parent="VBoxContainer" unique_id=760038014]
 layout_mode = 2
 theme = ExtResource("2_13aw7")
 text = "Menu"
+script = ExtResource("4_58362")

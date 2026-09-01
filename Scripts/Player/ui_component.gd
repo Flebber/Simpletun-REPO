@@ -1,6 +1,7 @@
 extends Control
 
-
+var pausemen_instance = GameManager.pause_menu.instantiate()
+var pauseOn : bool = false
 
 func _ready() -> void:
 	GameManager.player_dead.connect(death_menu_on)
@@ -15,5 +16,11 @@ func death_menu_on():
 
 func _input(event):
 	if event.is_action_pressed("pause"):
-		var pausemen_instance = GameManager.pause_menu.instantiate()
-		add_child(pausemen_instance)
+		if pauseOn == false:
+			GameManager.can_player_move = false
+			add_child(pausemen_instance)
+			pauseOn = true
+		else:
+			GameManager.can_player_move = true
+			remove_child(pausemen_instance)
+			pauseOn = false
