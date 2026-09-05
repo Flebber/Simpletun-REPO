@@ -1,43 +1,18 @@
 [gd_scene format=3 uid="uid://dmreaawblghip"]
 
 [ext_resource type="Texture2D" uid="uid://ch3otg2fuhhof" path="res://assets/sprites/Secret/smile laptop.png" id="1_qhnhh"]
-[ext_resource type="PackedScene" uid="uid://ctcbvbdtdegn7" path="res://Scenes/UI/Buttons/Retry_Button.tscn" id="2_qhnhh"]
-[ext_resource type="Script" uid="uid://ghkfmr0nq1ae" path="res://Scripts/LevelScripts/Menus/return_button.gd" id="4_6etty"]
-[ext_resource type="Script" uid="uid://0iev5noupyim" path="res://Scripts/LevelScripts/Menus/continue_button.gd" id="4_6yfbd"]
+[ext_resource type="PackedScene" uid="uid://degcs2rpitsg4" path="res://Scenes/UI/Menus/ninepatchpanel.tscn" id="5_ilvgm"]
 
 [node name="finish_menu" type="CanvasLayer" unique_id=1755357166]
 
-[node name="YouFinished" type="Sprite2D" parent="." unique_id=1343365249]
-position = Vector2(960, 320)
+[node name="NinePatchPanel" parent="." unique_id=1364143952 instance=ExtResource("5_ilvgm")]
+offset_left = -448.0
+offset_top = -476.0
+offset_right = -408.0
+offset_bottom = -436.0
+scale = Vector2(22.53043, 23.10596)
+
+[node name="YouFinished" type="Sprite2D" parent="NinePatchPanel" unique_id=1343365249]
+position = Vector2(19.884218, 8.309545)
+scale = Vector2(0.024171522, 0.024132438)
 texture = ExtResource("1_qhnhh")
-
-[node name="RetryButton" parent="." unique_id=354183844 instance=ExtResource("2_qhnhh")]
-offset_left = 576.0
-offset_top = 768.0
-offset_right = 829.745
-offset_bottom = 963.865
-
-[node name="ContinueButton" type="Button" parent="." unique_id=1258675546]
-custom_minimum_size = Vector2(256, 128)
-offset_left = 832.0
-offset_top = 544.0
-offset_right = 1088.0
-offset_bottom = 672.0
-scale = Vector2(1, 1.25)
-theme_override_font_sizes/font_size = 33
-text = "Continue"
-script = ExtResource("4_6yfbd")
-
-[node name="MenuButton2" type="Button" parent="." unique_id=378795644]
-custom_minimum_size = Vector2(256, 128)
-offset_left = 1088.0
-offset_top = 800.0
-offset_right = 1344.0
-offset_bottom = 928.0
-scale = Vector2(1, 1.25)
-theme_override_font_sizes/font_size = 28
-text = "Return To Menu"
-script = ExtResource("4_6etty")
-
-[connection signal="button_down" from="ContinueButton" to="ContinueButton" method="_on_button_down"]
-[connection signal="button_down" from="MenuButton2" to="MenuButton2" method="_on_button_down"]

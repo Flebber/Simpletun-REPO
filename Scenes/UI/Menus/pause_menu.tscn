@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cghvag12txo0t" path="res://Scripts/LevelScripts/Menus/retry_button.gd" id="3_mxyo1"]
 [ext_resource type="Script" uid="uid://ghkfmr0nq1ae" path="res://Scripts/LevelScripts/Menus/return_button.gd" id="4_58362"]
 
-[node name="pause_menu" type="NinePatchRect" unique_id=1364143952]
+[node name="pause_menu2" type="NinePatchRect" unique_id=1364143952]
 z_index = 2
 texture_filter = 1
 offset_left = -768.0
