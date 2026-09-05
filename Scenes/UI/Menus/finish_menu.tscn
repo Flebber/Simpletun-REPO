@@ -17,29 +17,31 @@ scale = Vector2(22.53043, 23.10596)
 
 [node name="YouFinished" type="Sprite2D" parent="NinePatchPanel" unique_id=1343365249]
 position = Vector2(19.884218, 8.309545)
-scale = Vector2(0.024171522, 0.024132438)
+scale = Vector2(0.037908055, 0.026794927)
 texture = ExtResource("1_qhnhh")
 
 [node name="RetryButton" parent="NinePatchPanel" unique_id=628859473 instance=ExtResource("2_qhnhh")]
 layout_mode = 1
-offset_left = -20.000004
-offset_top = 6.3135567
-offset_right = -6.000003
-offset_bottom = 16.313557
+offset_left = -14.318794
+offset_top = 3.543707
+offset_right = -0.31879425
+offset_bottom = 13.543709
+scale = Vector2(0.8394868, 0.8394868)
 
 [node name="MenuButton" parent="NinePatchPanel" unique_id=1583758998 instance=ExtResource("4_3al1a")]
 layout_mode = 1
-offset_left = -0.11577988
-offset_top = 6.3135567
-offset_right = 11.88422
-offset_bottom = 16.313557
+offset_left = 4.1451206
+offset_top = 3.5437088
+offset_right = 16.145119
+offset_bottom = 13.543709
+scale = Vector2(0.8394868, 0.8394868)
 
 [node name="ContinueButton" type="Button" parent="NinePatchPanel" unique_id=1827749500]
 layout_mode = 0
-offset_left = 11.362411
-offset_top = 15.234164
-offset_right = 51.36241
-offset_bottom = 20.234165
-scale = Vector2(0.325, 0.325)
+offset_left = 7.101507
+offset_top = 13.849238
+offset_right = 47.10151
+offset_bottom = 23.84924
+scale = Vector2(0.6417071, 0.8709266)
 text = "Continue"
 script = ExtResource("5_rrw7g")
