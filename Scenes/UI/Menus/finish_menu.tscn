@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://dmreaawblghip"]
 
 [ext_resource type="Texture2D" uid="uid://ch3otg2fuhhof" path="res://assets/sprites/Secret/smile laptop.png" id="1_qhnhh"]
+[ext_resource type="PackedScene" uid="uid://ctcbvbdtdegn7" path="res://Scenes/UI/Buttons/Retry_Button.tscn" id="2_qhnhh"]
+[ext_resource type="PackedScene" uid="uid://co3q7wfe0qlkf" path="res://Scenes/UI/Buttons/menu_button.tscn" id="4_3al1a"]
 [ext_resource type="PackedScene" uid="uid://degcs2rpitsg4" path="res://Scenes/UI/Menus/ninepatchpanel.tscn" id="5_ilvgm"]
+[ext_resource type="Script" uid="uid://0iev5noupyim" path="res://Scripts/UI/Buttons/continue_button.gd" id="5_rrw7g"]
 
 [node name="finish_menu" type="CanvasLayer" unique_id=1755357166]
 
@@ -16,3 +19,27 @@ scale = Vector2(22.53043, 23.10596)
 position = Vector2(19.884218, 8.309545)
 scale = Vector2(0.024171522, 0.024132438)
 texture = ExtResource("1_qhnhh")
+
+[node name="RetryButton" parent="NinePatchPanel" unique_id=628859473 instance=ExtResource("2_qhnhh")]
+layout_mode = 1
+offset_left = -20.000004
+offset_top = 6.3135567
+offset_right = -6.000003
+offset_bottom = 16.313557
+
+[node name="MenuButton" parent="NinePatchPanel" unique_id=1583758998 instance=ExtResource("4_3al1a")]
+layout_mode = 1
+offset_left = -0.11577988
+offset_top = 6.3135567
+offset_right = 11.88422
+offset_bottom = 16.313557
+
+[node name="ContinueButton" type="Button" parent="NinePatchPanel" unique_id=1827749500]
+layout_mode = 0
+offset_left = 11.362411
+offset_top = 15.234164
+offset_right = 51.36241
+offset_bottom = 20.234165
+scale = Vector2(0.325, 0.325)
+text = "Continue"
+script = ExtResource("5_rrw7g")

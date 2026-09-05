@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://8xnkj64fgjxh" path="res://Scenes/Levels/tiles/tilesets/grass_tileset.tres" id="1_2ytpj"]
 [ext_resource type="PackedScene" uid="uid://bxjadeioh7ry4" path="res://Scenes/Characters/player.tscn" id="2_db73o"]
 [ext_resource type="Texture2D" uid="uid://b2qdw57212jeu" path="res://assets/references/sonic.png" id="3_npfmg"]
-[ext_resource type="Script" uid="uid://c1b44xeg324dx" path="res://Scripts/UI/baba_ee.gd" id="4_k8g1k"]
+[ext_resource type="Script" uid="uid://c1b44xeg324dx" path="res://Scripts/LevelScripts/Secrets/baba_ee.gd" id="4_k8g1k"]
 
 [node name="Main" type="Node" unique_id=846885988]
 

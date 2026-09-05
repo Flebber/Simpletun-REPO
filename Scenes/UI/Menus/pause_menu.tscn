@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cxwjtndh16qsy" path="res://assets/sprites/UI/Nodes/Panel/panel.png" id="1_igq5e"]
 [ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="2_13aw7"]
-[ext_resource type="Script" uid="uid://cghvag12txo0t" path="res://Scripts/LevelScripts/Menus/retry_button.gd" id="3_mxyo1"]
-[ext_resource type="Script" uid="uid://ghkfmr0nq1ae" path="res://Scripts/LevelScripts/Menus/return_button.gd" id="4_58362"]
+[ext_resource type="Script" uid="uid://cghvag12txo0t" path="res://Scripts/UI/Buttons/retry_button.gd" id="3_mxyo1"]
+[ext_resource type="Script" uid="uid://ghkfmr0nq1ae" path="res://Scripts/UI/Buttons/return_button.gd" id="4_58362"]
 
 [node name="pause_menu2" type="NinePatchRect" unique_id=1364143952]
 z_index = 2

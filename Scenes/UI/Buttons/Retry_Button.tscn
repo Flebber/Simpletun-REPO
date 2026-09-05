@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ctcbvbdtdegn7"]
 
 [ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="1_kh1id"]
-[ext_resource type="Script" uid="uid://cghvag12txo0t" path="res://Scripts/LevelScripts/Menus/retry_button.gd" id="2_kh1id"]
+[ext_resource type="Script" uid="uid://cghvag12txo0t" path="res://Scripts/UI/Buttons/retry_button.gd" id="2_kh1id"]
 
 [node name="RetryButton" type="Button" unique_id=628859473]
 anchors_preset = 8

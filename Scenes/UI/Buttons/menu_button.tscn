@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://co3q7wfe0qlkf"]
 
-[ext_resource type="Script" uid="uid://ghkfmr0nq1ae" path="res://Scripts/LevelScripts/Menus/return_button.gd" id="1_s884a"]
+[ext_resource type="Script" uid="uid://ghkfmr0nq1ae" path="res://Scripts/UI/Buttons/return_button.gd" id="1_s884a"]
 [ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="1_u1fnj"]
 
 [node name="MenuButton" type="Button" unique_id=1583758998]
