@@ -2,24 +2,35 @@
 
 [ext_resource type="Texture2D" uid="uid://ch3otg2fuhhof" path="res://assets/sprites/Secret/smile laptop.png" id="1_6p742"]
 [ext_resource type="PackedScene" uid="uid://co3q7wfe0qlkf" path="res://Scenes/UI/Buttons/menu_button.tscn" id="4_e51c8"]
+[ext_resource type="PackedScene" uid="uid://degcs2rpitsg4" path="res://Scenes/UI/Menus/ninepatchpanel.tscn" id="4_rugue"]
 [ext_resource type="PackedScene" uid="uid://ctcbvbdtdegn7" path="res://Scenes/UI/Buttons/Retry_Button.tscn" id="5_5jpa3"]
 
 [node name="death_menu" type="CanvasLayer" unique_id=279124061]
 
-[node name="YouDied" type="Sprite2D" parent="." unique_id=1466487806]
-position = Vector2(960, 320)
+[node name="NinePatchPanel" parent="." unique_id=1364143952 instance=ExtResource("4_rugue")]
+offset_left = -448.0
+offset_top = -476.0
+offset_right = -408.0
+offset_bottom = -436.0
+scale = Vector2(22.53043, 23.10596)
+
+[node name="YouDied" type="Sprite2D" parent="NinePatchPanel" unique_id=1466487806]
+position = Vector2(19.88422, 11.079392)
+scale = Vector2(0.04438442, 0.043278877)
 texture = ExtResource("1_6p742")
 
-[node name="RetryButton" parent="." unique_id=1685330574 instance=ExtResource("5_5jpa3")]
-offset_left = 606.0
-offset_top = 799.9999
-offset_right = -1314.0
-offset_bottom = -280.00012
-scale = Vector2(2.416, 2.416)
+[node name="RetryButton" parent="NinePatchPanel" unique_id=1685330574 instance=ExtResource("5_5jpa3")]
+layout_mode = 1
+offset_left = -12.898495
+offset_top = 3.5437088
+offset_right = 1.1015072
+offset_bottom = 13.543709
+scale = Vector2(0.67258024, 0.6242543)
 
-[node name="Control" parent="." unique_id=1660678927 instance=ExtResource("4_e51c8")]
-offset_left = 1120.0
-offset_top = 800.0
-offset_right = -800.0
-offset_bottom = -280.0
-scale = Vector2(2.415993, 2.4155054)
+[node name="MenuButton" parent="NinePatchPanel" unique_id=1660678927 instance=ExtResource("4_e51c8")]
+layout_mode = 1
+offset_left = 4.1451206
+offset_top = 3.5437088
+offset_right = 18.145119
+offset_bottom = 13.543709
+scale = Vector2(0.67258024, 0.6242543)

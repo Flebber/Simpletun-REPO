@@ -15,33 +15,50 @@ offset_right = -408.0
 offset_bottom = -436.0
 scale = Vector2(22.53043, 23.10596)
 
-[node name="YouFinished" type="Sprite2D" parent="NinePatchPanel" unique_id=1343365249]
-position = Vector2(19.884218, 8.309545)
-scale = Vector2(0.037908055, 0.026794927)
-texture = ExtResource("1_qhnhh")
-
-[node name="RetryButton" parent="NinePatchPanel" unique_id=628859473 instance=ExtResource("2_qhnhh")]
-layout_mode = 1
-offset_left = -14.318794
-offset_top = 3.543707
-offset_right = -0.31879425
-offset_bottom = 13.543709
-scale = Vector2(0.8394868, 0.8394868)
-
-[node name="MenuButton" parent="NinePatchPanel" unique_id=1583758998 instance=ExtResource("4_3al1a")]
-layout_mode = 1
-offset_left = 4.1451206
-offset_top = 3.5437088
-offset_right = 16.145119
-offset_bottom = 13.543709
-scale = Vector2(0.8394868, 0.8394868)
-
 [node name="ContinueButton" type="Button" parent="NinePatchPanel" unique_id=1827749500]
-layout_mode = 0
-offset_left = 7.101507
-offset_top = 13.849238
-offset_right = 47.10151
-offset_bottom = 23.84924
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.497
+anchor_top = 0.5
+anchor_right = 0.497
+anchor_bottom = 0.5
+offset_left = -12.778494
+offset_top = -6.1507616
+offset_right = 27.221508
+offset_bottom = 3.8492393
 scale = Vector2(0.6417071, 0.8709266)
 text = "Continue"
 script = ExtResource("5_rrw7g")
+
+[node name="CenterContainer" type="CenterContainer" parent="NinePatchPanel" unique_id=834766639]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.208
+anchor_right = 0.5
+anchor_bottom = 0.208
+offset_left = -20.0
+offset_top = -8.32
+offset_right = 20.0
+offset_bottom = 31.68
+
+[node name="YouFinished" type="Sprite2D" parent="NinePatchPanel/CenterContainer" unique_id=1343365249]
+position = Vector2(19.88422, 8.309545)
+scale = Vector2(0.03790806, 0.026794929)
+texture = ExtResource("1_qhnhh")
+
+[node name="RetryButton2" parent="NinePatchPanel" unique_id=1696027111 instance=ExtResource("2_qhnhh")]
+layout_mode = 1
+offset_left = -14.318796
+offset_top = 3.543705
+offset_right = -0.31879616
+offset_bottom = 13.543705
+scale = Vector2(0.8394868, 0.8394868)
+
+[node name="MenuButton2" parent="NinePatchPanel" unique_id=1695280197 instance=ExtResource("4_3al1a")]
+layout_mode = 1
+offset_left = 4.1451225
+offset_top = 3.543705
+offset_right = 16.145123
+offset_bottom = 13.543705
+scale = Vector2(0.8394868, 0.8394868)
