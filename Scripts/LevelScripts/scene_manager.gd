@@ -7,6 +7,7 @@ var current_scene : PackedScene
 # Assign Levels To Dicitonary Variables
 var levels : Dictionary[String, PackedScene] = {
 	"Level 1 (Tutorial)": load("res://Scenes/Levels/tutorial.tscn"),
+	"Level 2 (Forest)": load("res://Scenes/Levels/Level2.tscn"),
 }
 
 # Assign Menu levels to seperate dicitonary
