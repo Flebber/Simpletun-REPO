@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PickupData" format=3 uid="uid://cksu6rtik1e3r"]
+
+[ext_resource type="Texture2D" uid="uid://c6ngs22rvu88c" path="res://assets/sprites/Pickups/coin.png" id="1_s6phe"]
+[ext_resource type="Script" uid="uid://coqnmew5wirw" path="res://Scripts/Pickups/PickupData.gd" id="2_p35hn"]
+
+[resource]
+script = ExtResource("2_p35hn")
+pickup_name = "coin"
+pickup_icon = ExtResource("1_s6phe")
+max_stack = 5
+metadata/_custom_type_script = "uid://coqnmew5wirw"

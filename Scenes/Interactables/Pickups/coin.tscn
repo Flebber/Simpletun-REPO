@@ -1,12 +1,20 @@
 [gd_scene format=3 uid="uid://dflxxpf8is5v2"]
 
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="1_j3yr4"]
+[ext_resource type="Script" uid="uid://do6bqdjen20lq" path="res://Scripts/Pickups/coin/coin.gd" id="1_o246w"]
 [ext_resource type="Texture2D" uid="uid://c6ngs22rvu88c" path="res://assets/sprites/Pickups/coin.png" id="2_e4ayq"]
+[ext_resource type="Resource" uid="uid://cksu6rtik1e3r" path="res://Scripts/Pickups/coin/coinData.tres" id="2_mq534"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e4ayq"]
 radius = 9.536529
 
-[node name="Coin" type="Area2D" unique_id=528341974]
+[node name="Coin" type="Area2D" unique_id=528341974 node_paths=PackedStringArray("collision_check", "sprite_2d", "animation_player")]
+z_index = -2
+script = ExtResource("1_o246w")
+pickup_data = ExtResource("2_mq534")
+collision_check = NodePath("CollisionCheck")
+sprite_2d = NodePath("Sprite2D")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="CollisionCheck" type="Node" parent="." unique_id=188931898]
 script = ExtResource("1_j3yr4")
