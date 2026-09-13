@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://btmpeyh4psnf0"]
+
+[ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="1_bnalf"]
+[ext_resource type="Script" uid="uid://csnxrppuefp1" path="res://Scripts/Pickups/poo/poo.gd" id="1_dkqwk"]
+[ext_resource type="Texture2D" uid="uid://b6r32xxltl1aq" path="res://icon.svg" id="2_dkqwk"]
+[ext_resource type="Script" uid="uid://be6t0ts2hlwqw" path="res://Scripts/Pickups/pickup_component.gd" id="3_np628"]
+[ext_resource type="Script" uid="uid://coqnmew5wirw" path="res://Scripts/Pickups/PickupData.gd" id="4_5beek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pc8sn"]
+size = Vector2(76.106186, 74.33628)
+
+[sub_resource type="Resource" id="Resource_li44e"]
+script = ExtResource("4_5beek")
+pickup_name = "poo"
+pickup_icon = ExtResource("2_dkqwk")
+max_stack = 99
+metadata/_custom_type_script = "uid://coqnmew5wirw"
+
+[node name="Poo" type="Area2D" unique_id=470767767 node_paths=PackedStringArray("collision_check", "sprite_2d", "animation_player", "pickup_component")]
+script = ExtResource("1_dkqwk")
+collision_check = NodePath("CollisionCheck")
+sprite_2d = NodePath("Sprite2D")
+animation_player = NodePath("AnimationPlayer")
+pickup_component = NodePath("PickupComponent")
+
+[node name="CollisionCheck" type="Node" parent="." unique_id=495357100]
+script = ExtResource("1_bnalf")
+metadata/_custom_type_script = "uid://dov27h2jhaq5u"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=314378555]
+texture = ExtResource("2_dkqwk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=851286179]
+root_node = NodePath("")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1504488471]
+position = Vector2(-1.4999993, -0.9999989)
+scale = Vector2(1.695, 1.695)
+shape = SubResource("RectangleShape2D_pc8sn")
+
+[node name="PickupComponent" type="Node" parent="." unique_id=1678856375]
+script = ExtResource("3_np628")
+pickupData = SubResource("Resource_li44e")
