@@ -10,6 +10,7 @@ signal scene_swapped(scene : PackedScene)
 
 # Player Signals/Flags
 @warning_ignore("unused_signal")
+var playerScene : Player
 signal player_dead
 var can_player_move : bool = true
 

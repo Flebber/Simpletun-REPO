@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SceneManagerNode="*uid://dfxxemuy3kpgb"
 GameManager="*uid://dup5khvaff85e"
+InventoryManager="*uid://co3fxat870jx0"
 
 [display]
 

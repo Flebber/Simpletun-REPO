@@ -34,6 +34,7 @@ func spawn_player(scene):
 
 		# Assigns player instance variable, Adds the instance too the tree
 		player_instance = player.instantiate()
+		GameManager.playerScene = player_instance
 		get_tree().current_scene.add_child(player_instance)
 
 		# If a checkpoint has been reached and level isnt finished, Spawn the player the checkpoint

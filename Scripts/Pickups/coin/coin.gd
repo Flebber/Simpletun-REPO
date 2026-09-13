@@ -10,3 +10,10 @@ class_name Coin
 func _ready() -> void:
 	collision_check.setup()
 	
+	collision_check.collided.connect(pickupCoin)
+	
+func pickupCoin(body):
+	if body == GameManager.playerScene:
+		print(GameManager.playerScene, " Collided With Coin")
+	else:
+		print("Not Player")
