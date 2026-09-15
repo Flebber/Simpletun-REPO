@@ -21,6 +21,7 @@ func pickupActivate(body):
 	if body == GameManager.playerScene:
 		print(GameManager.playerScene, " Collided With ", parent, "PickupDataName: ", pickupData.pickup_name)
 		parentPickupName.emit(pickupName)
-		parent.visible = false
+		await get_tree().process_frame 
+		parent.queue_free()
 	else:
 		print("Not Player")
