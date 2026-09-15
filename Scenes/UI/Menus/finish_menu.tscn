@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dmreaawblghip"]
 
 [ext_resource type="Texture2D" uid="uid://ch3otg2fuhhof" path="res://assets/sprites/Secret/smile laptop.png" id="1_qhnhh"]
+[ext_resource type="PackedScene" uid="uid://5g65yqacdjxy" path="res://Scenes/UI/Buttons/continue_button.tscn" id="2_ilvgm"]
 [ext_resource type="PackedScene" uid="uid://ctcbvbdtdegn7" path="res://Scenes/UI/Buttons/Retry_Button.tscn" id="2_qhnhh"]
 [ext_resource type="PackedScene" uid="uid://co3q7wfe0qlkf" path="res://Scenes/UI/Buttons/menu_button.tscn" id="4_3al1a"]
 [ext_resource type="PackedScene" uid="uid://degcs2rpitsg4" path="res://Scenes/UI/Menus/ninepatchpanel.tscn" id="5_ilvgm"]
-[ext_resource type="Script" uid="uid://0iev5noupyim" path="res://Scripts/UI/Buttons/continue_button.gd" id="5_rrw7g"]
 
 [node name="finish_menu" type="CanvasLayer" unique_id=1755357166]
 
@@ -14,21 +14,6 @@ offset_top = -476.0
 offset_right = -408.0
 offset_bottom = -436.0
 scale = Vector2(22.53043, 23.10596)
-
-[node name="ContinueButton" type="Button" parent="NinePatchPanel" unique_id=1827749500]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.497
-anchor_top = 0.5
-anchor_right = 0.497
-anchor_bottom = 0.5
-offset_left = -12.778494
-offset_top = -6.1507616
-offset_right = 27.221508
-offset_bottom = 3.8492393
-scale = Vector2(0.6417071, 0.8709266)
-text = "Continue"
-script = ExtResource("5_rrw7g")
 
 [node name="CenterContainer" type="CenterContainer" parent="NinePatchPanel" unique_id=834766639]
 layout_mode = 1
@@ -47,18 +32,26 @@ position = Vector2(19.88422, 8.309545)
 scale = Vector2(0.03790806, 0.026794929)
 texture = ExtResource("1_qhnhh")
 
-[node name="RetryButton2" parent="NinePatchPanel" unique_id=1696027111 instance=ExtResource("2_qhnhh")]
+[node name="ContinueButton" parent="NinePatchPanel" unique_id=378165264 instance=ExtResource("2_ilvgm")]
 layout_mode = 1
-offset_left = -14.318796
-offset_top = 3.543705
-offset_right = -0.31879616
-offset_bottom = 13.543705
-scale = Vector2(0.8394868, 0.8394868)
+offset_left = -10.5
+offset_top = -5.0
+offset_right = 10.5
+offset_bottom = 5.0
+scale = Vector2(0.9147819, 0.84765834)
 
 [node name="MenuButton2" parent="NinePatchPanel" unique_id=1695280197 instance=ExtResource("4_3al1a")]
 layout_mode = 1
-offset_left = 4.1451225
+offset_left = 2.724821
 offset_top = 3.543705
-offset_right = 16.145123
+offset_right = 14.724823
 offset_bottom = 13.543705
+scale = Vector2(0.8394868, 0.8394868)
+
+[node name="RetryButton2" parent="NinePatchPanel" unique_id=1696027111 instance=ExtResource("2_qhnhh")]
+layout_mode = 1
+offset_left = -14.318796
+offset_top = 3.543707
+offset_right = -0.31879616
+offset_bottom = 13.543709
 scale = Vector2(0.8394868, 0.8394868)

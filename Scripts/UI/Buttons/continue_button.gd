@@ -6,4 +6,6 @@ func _ready() -> void:
 # Loads the next level.tscn on press {Connected to button_down}
 func continue_pressed(): 
 	print("CONTINUE Pressed")
+	SceneManagerNode.scene_select(SceneManagerNode.levels[(SceneManagerNode.current_index) + 1])
 	
+	SceneManagerNode.current_index += 1

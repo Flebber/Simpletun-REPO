@@ -1,8 +1,9 @@
-class_name SceneManager extends Node
+extends Node
 
 var previous_scene : PackedScene
 var current_scene : PackedScene
 
+var current_index : int
 
 enum level_list {
 	TUTORIAL,
@@ -29,7 +30,7 @@ func scene_select(scene : PackedScene):
 	if scene in SceneManagerNode.levels.values():
 		previous_scene = current_scene
 		current_scene = scene
-	
+		
 	
 	# \Waits incase a funtion is midway through running, then changes scene and emits GameManager.scene_swapped signal
 	await get_tree().process_frame 
