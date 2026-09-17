@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c17sd8h5i8htd" path="res://Scenes/Points/check_point.tscn" id="8_c7xlj"]
 [ext_resource type="PackedScene" uid="uid://dflxxpf8is5v2" path="res://Scenes/Pickups/coin.tscn" id="9_3s02o"]
 [ext_resource type="PackedScene" uid="uid://btmpeyh4psnf0" path="res://Scenes/Pickups/poo.tscn" id="10_6gg0w"]
+[ext_resource type="PackedScene" uid="uid://cqn0a1aufcauy" path="res://Scenes/Pickups/key.tscn" id="11_aodgd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kijn0"]
 texture = ExtResource("1_rpbx2")
@@ -88,6 +89,7 @@ scenes/3/scene = ExtResource("8_c7xlj")
 resource_name = "pickups"
 scenes/1/scene = ExtResource("9_3s02o")
 scenes/2/scene = ExtResource("10_6gg0w")
+scenes/3/scene = ExtResource("11_aodgd")
 
 [resource]
 tile_size = Vector2i(32, 32)

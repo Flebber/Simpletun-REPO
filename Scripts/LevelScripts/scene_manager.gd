@@ -8,6 +8,7 @@ var current_index : int
 enum level_list {
 	TUTORIAL,
 	FOREST,
+	
 }
 
 # Assign Levels To Dicitonary Variables

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cqn0a1aufcauy"]
+
+[ext_resource type="Script" uid="uid://qkx0chhptt42" path="res://Scripts/Pickups/key/key.gd" id="1_dvqyv"]
+[ext_resource type="Texture2D" uid="uid://bryjwytqe1t12" path="res://assets/sprites/Secret/sad laptop.png" id="1_obuyw"]
+[ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="2_jxijn"]
+[ext_resource type="Script" uid="uid://be6t0ts2hlwqw" path="res://Scripts/Pickups/pickup_component.gd" id="3_wo74w"]
+[ext_resource type="Script" uid="uid://coqnmew5wirw" path="res://Scripts/Pickups/PickupData.gd" id="4_5bxek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obuyw"]
+size = Vector2(512, 192)
+
+[sub_resource type="Resource" id="Resource_dvqyv"]
+script = ExtResource("4_5bxek")
+pickup_name = "edenkey"
+pickup_icon = ExtResource("1_obuyw")
+max_stack = 2
+metadata/_custom_type_script = "uid://coqnmew5wirw"
+
+[node name="key" type="Area2D" unique_id=1542724691 node_paths=PackedStringArray("collision_check", "pickup_component")]
+script = ExtResource("1_dvqyv")
+collision_check = NodePath("CollisionCheck")
+pickup_component = NodePath("PickupComponent")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1591952013]
+scale = Vector2(0.75, 0.5)
+texture = ExtResource("1_obuyw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1738584054]
+shape = SubResource("RectangleShape2D_obuyw")
+
+[node name="CollisionCheck" type="Node" parent="." unique_id=1028576049]
+script = ExtResource("2_jxijn")
+metadata/_custom_type_script = "uid://dov27h2jhaq5u"
+
+[node name="PickupComponent" type="Node" parent="." unique_id=1928076448]
+script = ExtResource("3_wo74w")
+pickupData = SubResource("Resource_dvqyv")
+metadata/_custom_type_script = "uid://be6t0ts2hlwqw"

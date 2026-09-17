@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://c6ngs22rvu88c" path="res://assets/sprites/Pickups/coin.png" id="2_e4ayq"]
 [ext_resource type="Resource" uid="uid://cksu6rtik1e3r" path="res://Scripts/Pickups/coin/coinData.tres" id="2_mq534"]
 [ext_resource type="Script" uid="uid://be6t0ts2hlwqw" path="res://Scripts/Pickups/pickup_component.gd" id="5_vwphf"]
+[ext_resource type="Texture2D" uid="uid://dayhgkn2r2kgc" path="res://assets/particles/pickups/money.png" id="6_lt40f"]
+[ext_resource type="Material" uid="uid://dmxnn2vjjfehi" path="res://assets/particles/pickups/pickupParticleMat.tres" id="7_wk1ce"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e4ayq"]
 radius = 9.536529
@@ -28,9 +30,19 @@ texture = ExtResource("2_e4ayq")
 root_node = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1577471279]
+visible = false
 scale = Vector2(1.695, 1.695)
 shape = SubResource("CircleShape2D_e4ayq")
 
 [node name="PickupComponent" type="Node" parent="." unique_id=240678647]
 script = ExtResource("5_vwphf")
 pickupData = ExtResource("2_mq534")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1331144680]
+z_index = -1
+position = Vector2(2.3841858e-07, 0)
+scale = Vector2(14.0986395, 14.247909)
+texture = ExtResource("6_lt40f")
+lifetime = 0.97
+speed_scale = 0.38
+process_material = ExtResource("7_wk1ce")

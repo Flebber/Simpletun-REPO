@@ -13,7 +13,7 @@ var health : Health
 @export var speed : float = 200
 @export var gravity : float = 550.0
 @export var glide_strength : float = 0.93
-@export var jump_strength : float = -320.0
+@export var jump_strength : float = -300.0
 
 # Failsafes and Signals
 func setup():
