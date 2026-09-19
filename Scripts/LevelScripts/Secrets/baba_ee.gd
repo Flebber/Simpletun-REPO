@@ -10,7 +10,7 @@ extends TextEdit
 
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if text_edit.text == "happy":
 		secret_sprite.visible = true
 		secret_sprite.texture = secret_happy_texture

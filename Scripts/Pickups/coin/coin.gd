@@ -7,10 +7,13 @@ class_name Coin
 @export var animation_player: AnimationPlayer
 @export var pickup_component: PickupComponent
 
+@onready var pickupData
+
 
 # Signals and Failsafes
 func _ready() -> void:
 	pickup_component.collision_check = collision_check
+	pickupData = pickup_component.pickupData
 	
 	collision_check.setup()
 	pickup_component.setup()

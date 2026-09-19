@@ -34,6 +34,7 @@ func _ready() -> void:
 	movement.setup()
 	animation_manager.setup()
 	
+
 	
 	# Set Players' sprite to sprite_texture ( Allows for easy change )
 	sprite.texture = sprite_texture

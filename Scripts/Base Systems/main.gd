@@ -1,6 +1,6 @@
 class_name Main extends Node
 
 func _ready() -> void:
-	pass
+	#GameManager.level_cancelled.connect(InventoryManager.reset_count)
 	
 	

@@ -39,3 +39,4 @@ func scene_select(scene : PackedScene):
 	
 	await get_tree().process_frame
 	GameManager.scene_swapped.emit(scene)
+	

@@ -6,3 +6,5 @@ func _ready() -> void:
 # Changes current scene to menu scene on press {Connected to button_down.connect}
 func return_pressed() -> void:
 	SceneManagerNode.scene_select(SceneManagerNode.menu_levels["Menu"])
+	GameManager.has_checkpoint = false
+	GameManager.level_cancelled.emit()
