@@ -3,9 +3,11 @@ extends Node
 # Level/Scene Signals/Flags
 @warning_ignore("unused_signal")
 signal level_finished
+var is_level_finished : bool = false
+
 @warning_ignore("unused_signal")
 signal level_cancelled
-var is_level_finished : bool = false
+var is_cancel_connect : bool = false
 
 
 @warning_ignore("unused_signal")
