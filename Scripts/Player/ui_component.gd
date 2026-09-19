@@ -3,7 +3,9 @@ extends Control
 var pausemen_instance = GameManager.pause_menu.instantiate()
 var pauseOn : bool = false
 
-func _ready() -> void:
+var status_ui: CanvasLayer
+
+func setup() -> void:
 	GameManager.player_dead.connect(death_menu_on)
 
 # Loads a death_menu instance (2) seconds after player dies {Connected to GameManager.player_dead}

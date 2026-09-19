@@ -22,4 +22,5 @@ func _ready() -> void:
 func iscoin(pickupName : String):
 	if pickupName == "coin":
 		InventoryManager.coin_count += 1
+		InventoryManager.coin_collected.emit()
 		print("CoinCount: ", InventoryManager.coin_count)

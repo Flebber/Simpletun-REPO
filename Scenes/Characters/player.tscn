@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scripts/Base Systems/health.gd" id="6_khnq4"]
 [ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="8_gdgf0"]
 [ext_resource type="Script" uid="uid://diiylu8rs278j" path="res://Scripts/Player/ui_component.gd" id="9_xo8ps"]
+[ext_resource type="Script" uid="uid://ci6ho7fxj2c41" path="res://Scripts/UI/status_ui.gd" id="10_fcmex"]
 
 [sub_resource type="Animation" id="Animation_272bh"]
 length = 0.001
@@ -124,7 +125,7 @@ _data = {
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0xm2m"]
 height = 35.06
 
-[node name="Player" type="CharacterBody2D" unique_id=1000896276 node_paths=PackedStringArray("movement", "input_manager", "health", "animation_manager", "animation_player", "sprite")]
+[node name="Player" type="CharacterBody2D" unique_id=1000896276 node_paths=PackedStringArray("movement", "input_manager", "health", "animation_manager", "animation_player", "sprite", "status_ui", "ui_controller")]
 z_index = -1
 scale = Vector2(0.28, 0.28)
 floor_max_angle = 0.0
@@ -135,6 +136,8 @@ health = NodePath("Health")
 animation_manager = NodePath("PlayerAnimationManager")
 animation_player = NodePath("AnimationPlayer")
 sprite = NodePath("Sprite")
+status_ui = NodePath("Camera2D/StatusUI")
+ui_controller = NodePath("UIController")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=112688490]
 position = Vector2(-8.583069e-06, 75)
@@ -144,6 +147,26 @@ process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 rotation_smoothing_speed = 8.0
+
+[node name="StatusUI" type="CanvasLayer" parent="Camera2D" unique_id=1445492772 node_paths=PackedStringArray("coin_display")]
+script = ExtResource("10_fcmex")
+coin_display = NodePath("CoinDisplay")
+
+[node name="CoinDisplay" type="Label" parent="Camera2D/StatusUI" unique_id=516448601]
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 51.0
+offset_bottom = 58.0
+scale = Vector2(2.25, 2)
+text = "COINS:"
+
+[node name="UIController" type="Control" parent="." unique_id=1667630515]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_xo8ps")
+metadata/_edit_use_anchors_ = true
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1527416693]
 unique_name_in_owner = true
@@ -199,10 +222,4 @@ offset_bottom = 60.714287
 theme = ExtResource("8_gdgf0")
 theme_override_font_sizes/font_size = 60
 horizontal_alignment = 1
-
-[node name="UIController" type="Control" parent="." unique_id=1667630515]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("9_xo8ps")
+metadata/_edit_use_anchors_ = true

@@ -1,6 +1,8 @@
 extends Node
 
 var coin_count : int 
+signal coin_collected
+
 var key_count : int
 var poo_count : int
 var empty : int = 0
