@@ -8,8 +8,6 @@ var anim : AnimationPlayer
 @export var health : Health
 @export var glide_check: RayCast2D
 
-# Flagging variable
-var is_player_dead : bool = false
 
 # Failsafes and Signal Connects
 func setup():
@@ -27,15 +25,13 @@ func setup():
 
 func _process(_delta: float) -> void:
 	# Death Flag
-	if is_player_dead:
+	if GameManager.is_player_dead:
 		return
 	
 	movement_animation()
 
 # Walk, Idle, Jump, Glide Animations
 func movement_animation():
-	if is_player_dead:
-		return
 	var xdir = input_manager.get_move_vector()
 	
 	# Walk Left
@@ -62,5 +58,5 @@ func movement_animation():
 
 # Death Animation and Set Flags {Connected to player_dead}
 func dead_animation():
-	is_player_dead = true
+	GameManager.is_player_dead = true
 	anim.current_animation = "Player/dead"

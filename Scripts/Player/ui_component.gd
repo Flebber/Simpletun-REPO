@@ -10,10 +10,11 @@ func setup() -> void:
 
 # Loads a death_menu instance (2) seconds after player dies {Connected to GameManager.player_dead}
 func death_menu_on():
-	await get_tree().create_timer(2).timeout
+	if GameManager.has_checkpoint == false:
+		await get_tree().create_timer(2).timeout
 	
-	var deathmen_instance = GameManager.death_menu.instantiate()
-	add_child(deathmen_instance)
+		var deathmen_instance = GameManager.death_menu.instantiate()
+		add_child(deathmen_instance)
 
 # Pause Menu
 func _input(event):
