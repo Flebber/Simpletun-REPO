@@ -15,7 +15,7 @@ func death_menu_on():
 	var deathmen_instance = GameManager.death_menu.instantiate()
 	add_child(deathmen_instance)
 
-
+# Pause Menu
 func _input(event):
 	if event.is_action_pressed("pause"):
 		if pauseOn == false:

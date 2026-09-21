@@ -35,13 +35,13 @@ func _ready() -> void:
 # Sets GameManager checkpoint flags/specific checkpoint position {Connected point_manager.point_reached}
 func check_point_reached(_emitted_point):
 	GameManager.checkpointPos = point.global_position
-	print("check pos = ", GameManager.checkpointPos)
+	print("check pos = ", GameManager.checkpointPos, "player pos: ", GameManager.playerScene.global_position)
 	GameManager.has_checkpoint = true
 
 func spawnAtCheckpoint():
 	# If a checkpoint has been reached and level isnt finished, Spawn the player the checkpoint
 	if GameManager.has_checkpoint == true and GameManager.is_level_finished == false:
-		await get_tree().create_timer(6).timeout
-		player_instance.global_position = GameManager.checkpointPos
+		await get_tree().create_timer(4).timeout
+		GameManager.playerScene.global_position = GameManager.checkpointPos - Vector2(0, 200)
 		print("Spawned at checkpoint: ", GameManager.checkpointPos)
 		GameManager.can_player_move = true
