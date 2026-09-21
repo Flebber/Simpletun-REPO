@@ -37,12 +37,12 @@ func spawn_player(scene):
 		GameManager.playerScene = player_instance
 		get_tree().current_scene.add_child(player_instance)
 
-		# If a checkpoint has been reached and level isnt finished, Spawn the player the checkpoint
-		if GameManager.has_checkpoint == true and GameManager.is_level_finished == false:
-			player_instance.global_position = GameManager.checkpointPos
-			print("Spawned at checkpoint: ", GameManager.checkpointPos)
-			GameManager.can_player_move = true
-		else: # Spawn player at spawn_point
-			player_instance.global_position = global_position 
-			print("Spawned at default pos: ", point)
-			GameManager.can_player_move = true
+		## If a checkpoint has been reached and level isnt finished, Spawn the player the checkpoint
+		#if GameManager.has_checkpoint == true and GameManager.is_level_finished == false:
+			#player_instance.global_position = GameManager.checkpointPos
+			#print("Spawned at checkpoint: ", GameManager.checkpointPos)
+			#GameManager.can_player_move = true
+# Spawn player at spawn_point
+		player_instance.global_position = global_position 
+		print("Spawned at default pos: ", point)
+		GameManager.can_player_move = true
