@@ -21,8 +21,8 @@ func setup():
 		print("no input_manager for movement")
 		return
 	input_manager.jump_pressed.connect(_is_jump_pressed)
-	GameManager.level_finished.connect(can_move_check)
-	GameManager.player_dead.connect(can_move_check)
+	GameManager.level_finished.connect(disable_movement)
+	GameManager.player_dead.connect(disable_movement)
 
 
 """ Checks if player can_move via signals
@@ -30,7 +30,7 @@ Connected to:
 GameManager.level_finished
 GameManager.player_dead
 """
-func can_move_check():
+func disable_movement():
 	GameManager.can_player_move = false
 
 #region Movement
