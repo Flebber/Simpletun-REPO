@@ -161,7 +161,7 @@ offset_bottom = 58.0
 scale = Vector2(2.25, 2)
 text = "COINS:"
 
-[node name="DebugStats" type="Control" parent="Camera2D/StatusUI" unique_id=1833138842 node_paths=PackedStringArray("stats", "movement", "health", "glide_check")]
+[node name="DebugStats" type="Control" parent="Camera2D/StatusUI" unique_id=1833138842 node_paths=PackedStringArray("stats", "movement", "health", "glide_check", "player")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -171,6 +171,7 @@ stats = NodePath("Stats")
 movement = NodePath("../../../Movement")
 health = NodePath("../../../Health")
 glide_check = NodePath("../../../GlideCheck")
+player = NodePath("../../..")
 
 [node name="Stats" type="Label" parent="Camera2D/StatusUI/DebugStats" unique_id=1150677334]
 layout_mode = 0
@@ -178,6 +179,7 @@ offset_left = 27.0
 offset_top = 49.0
 offset_right = 298.0
 offset_bottom = 244.66667
+theme_override_font_sizes/font_size = 24
 text = "
 "
 
