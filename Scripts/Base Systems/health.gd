@@ -33,6 +33,7 @@ signal died
 
 func _ready() -> void:
 	died.connect(die_check)
+	GameManager.player_respawn.connect(playerHealthDead)
 
 # Check if Current health is <=0
 func die_check():
@@ -40,6 +41,9 @@ func die_check():
 	if parent is Player:
 		GameManager.player_dead.emit()
 
+func playerHealthDead():
+	if parent is Player:
+		is_dead = false
 
 # Heal the body that calls this function
 func heal(amount):

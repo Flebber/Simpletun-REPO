@@ -12,9 +12,11 @@ func _physics_process(delta: float) -> void:
 	var p_health : float = health.current_health
 	var speed : Vector2 = player.velocity
 	var gcheck : bool = !glide_check.is_colliding()
+	var gmpdead : bool = GameManager.is_player_dead
 	stats.text = str(
 		"Checkpoint: ({hascheckp}, {checkpos})
 		health: {health} 
 		velocity: {speed}
-		can_glide: {gcheck}"
-	).format({"hascheckp": hascheckp, "checkpos": checkpos, "health": p_health, "speed": speed, "gcheck": gcheck})
+		can_glide: {gcheck}
+		GM_pdead: {gmpdead}"
+	).format({"hascheckp": hascheckp, "checkpos": checkpos, "health": p_health, "speed": speed, "gcheck": gcheck, "gmpdead": gmpdead})

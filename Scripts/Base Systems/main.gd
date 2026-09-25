@@ -6,7 +6,7 @@ func _ready() -> void:
 	
 
 func reset_level_data():
-	GameManager.has_checkpoint = falseyyyyyyy
+	GameManager.has_checkpoint = false
 	
 	InventoryManager.reset_count()
 	
