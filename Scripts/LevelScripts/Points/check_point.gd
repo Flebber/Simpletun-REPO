@@ -12,7 +12,6 @@ extends Area2D
 var player : PackedScene = preload("res://Scenes/Characters/player.tscn")
 var player_instance: Node = null
 
-signal playerRespawn()
 
 
 # Signals and Component Assignment/Setup Functions
@@ -32,7 +31,9 @@ func _ready() -> void:
 	collision_check.setup()
 	
 	point_manager.point_reached.connect(check_point_reached)
+	
 	GameManager.player_dead.connect(spawnAtCheckpoint)
+	
 	
 
 # Sets GameManager checkpoint flags/specific checkpoint position {Connected point_manager.point_reached}
@@ -45,9 +46,7 @@ func spawnAtCheckpoint():
 	# If a checkpoint has been reached and level isnt finished, Spawn the player the checkpoint
 	if GameManager.has_checkpoint == true and GameManager.is_level_finished == false:
 		await get_tree().create_timer(4).timeout
+		GameManager.player_respawn.emit()
 		GameManager.playerScene.global_position = GameManager.checkpointPos - Vector2(0, 100)
-		playerRespawn.emit()
-		print("Spawned at checkpoint: ", GameManager.checkpointPos)
-		GameManager.can_player_move = true
-		GameManager.is_player_dead = false
 		
+		print("Spawned at checkpoint: ", GameManager.checkpointPos)

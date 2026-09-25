@@ -15,7 +15,6 @@ signal scene_swapped(scene : PackedScene)
 
 
 # Player Signals/Flags
-@warning_ignore("unused_signal")
 var playerScene : Player
 @warning_ignore("unused_signal")
 signal player_dead
@@ -25,6 +24,8 @@ var can_player_move : bool = true
 # Point Signals/Flags
 var checkpointPos : Vector2 = Vector2.ZERO
 var has_checkpoint : bool = false 
+@warning_ignore("unused_signal")
+signal player_respawn
 
 
 # Menus Signals/Flags
