@@ -41,3 +41,4 @@ func spawn_player(scene):
 		GameManager.playerScene.global_position = global_position 
 		print("Spawned at default pos: ", point)
 		GameManager.can_player_move = true
+		GameManager.is_player_dead = false
