@@ -33,7 +33,8 @@ signal died
 
 func _ready() -> void:
 	died.connect(die_check)
-	GameManager.player_respawn.connect(playerHealthDead)
+	GameManager.player_respawn.connect(playerResetHealthDead)
+	GameManager.level_cancelled.connect(playerResetHealthDead)
 
 # Check if Current health is <=0
 func die_check():
@@ -41,7 +42,8 @@ func die_check():
 	if parent is Player:
 		GameManager.player_dead.emit()
 
-func playerHealthDead():
+# Reset health.is_dead for player {connected to GameManager.player_respawn and GameManager.level_cancelled}
+func playerResetHealthDead():
 	if parent is Player:
 		is_dead = false
 

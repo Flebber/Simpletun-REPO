@@ -10,3 +10,4 @@ func continue_pressed():
 	
 	SceneManagerNode.current_index += 1
 	GameManager.level_cancelled.emit()
+	GameManager.is_level_finished = false
