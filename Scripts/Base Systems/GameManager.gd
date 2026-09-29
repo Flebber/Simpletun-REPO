@@ -2,11 +2,11 @@ extends Node
 
 # Level/Scene Signals/Flags
 @warning_ignore("unused_signal")
-signal level_finished
-var is_level_finished : bool = false
+signal level_finished # Used for Stopping Movement and UI
+var is_level_finished : bool = false 
 
 @warning_ignore("unused_signal")
-signal level_cancelled
+signal level_cancelled # All types of level exiting (retrying, continuing, returning to menu etc.)
 var is_cancel_connect : bool = false
 
 

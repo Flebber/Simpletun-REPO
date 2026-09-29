@@ -20,6 +20,7 @@ func setup():
 	if input_manager == null:
 		print("no input_manager for movement")
 		return
+	
 	input_manager.jump_pressed.connect(_is_jump_pressed)
 	GameManager.level_finished.connect(disable_movement)
 	GameManager.player_dead.connect(disable_movement)
