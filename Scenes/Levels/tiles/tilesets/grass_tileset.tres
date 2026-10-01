@@ -11,8 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://dflxxpf8is5v2" path="res://Scenes/Pickups/coin.tscn" id="9_3s02o"]
 [ext_resource type="PackedScene" uid="uid://btmpeyh4psnf0" path="res://Scenes/Pickups/poo.tscn" id="10_6gg0w"]
 [ext_resource type="PackedScene" uid="uid://cqn0a1aufcauy" path="res://Scenes/Pickups/key.tscn" id="11_aodgd"]
+[ext_resource type="Texture2D" uid="uid://dnddbb4xphatn" path="res://assets/sprites/Terrain/sewer_tileset.png" id="12_d71c7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kijn0"]
+resource_name = "ForestTile"
 texture = ExtResource("1_rpbx2")
 texture_region_size = Vector2i(32, 32)
 9:0/0 = 0
@@ -91,6 +93,57 @@ scenes/1/scene = ExtResource("9_3s02o")
 scenes/2/scene = ExtResource("10_6gg0w")
 scenes/3/scene = ExtResource("11_aodgd")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ikvjr"]
+resource_name = "SewerTile"
+texture = ExtResource("12_d71c7")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -6.8571424, 16, -6.8571424, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -6.8571424, 16, -6.8571424, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -6.8571424, 11.428574, -6.8571424, 10.666668, 16, -16, 16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 10.666668, 10.666668, 10.666668, 10.666668, 16, -16, 16)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -10.666666, 16, -10.666666, 10.666668, -16, 10.666668)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.666666, -16, 16, -16, 16, 16, -10.666666, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 10.666668, -16, 10.666668, 16, -16, 16)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 10.666668, -16, 10.666668, -10.666666, 16, -10.666666, 16, 16, -16, 16)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.666666, -16, 16, -16, 16, 16, -16, 16, -16, -10.666666, -10.666666, -10.666666)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.666666, -16, 16, -16, 16, 10.666668, -10.666666, 10.666668)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 10.666668, -16, 10.666668)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 10.666668, -16, 10.666668, 10.666668, -16, 10.666668)
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.666666, -5.333333, 16, -5.333333, 16, 16, -10.666666, 16)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -5.333333, 16, -5.333333, 16, 16, -16, 16)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -5.333333, 16, -5.333333, 16, 16, -16, 16)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
 [resource]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
@@ -100,3 +153,4 @@ sources/1 = SubResource("TileSetAtlasSource_kijn0")
 sources/2 = SubResource("TileSetScenesCollectionSource_m1cf4")
 sources/3 = SubResource("TileSetScenesCollectionSource_3xwtw")
 sources/4 = SubResource("TileSetScenesCollectionSource_6gg0w")
+sources/5 = SubResource("TileSetAtlasSource_ikvjr")
