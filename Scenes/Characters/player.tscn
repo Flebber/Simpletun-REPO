@@ -11,6 +11,7 @@
 [ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="8_gdgf0"]
 [ext_resource type="Script" uid="uid://diiylu8rs278j" path="res://Scripts/Player/ui_component.gd" id="9_xo8ps"]
 [ext_resource type="Script" uid="uid://ci6ho7fxj2c41" path="res://Scripts/UI/status_ui.gd" id="10_fcmex"]
+[ext_resource type="PackedScene" uid="uid://dgd7wovfgiqof" path="res://Scenes/Combat/Melee/meleeComponent.tscn" id="12_cueqf"]
 
 [sub_resource type="Animation" id="Animation_272bh"]
 length = 0.001
@@ -150,6 +151,7 @@ position_smoothing_speed = 8.0
 rotation_smoothing_speed = 8.0
 
 [node name="StatusUI" type="CanvasLayer" parent="Camera2D" unique_id=1445492772 node_paths=PackedStringArray("coin_display")]
+visible = false
 script = ExtResource("10_fcmex")
 coin_display = NodePath("CoinDisplay")
 
@@ -246,3 +248,7 @@ theme = ExtResource("8_gdgf0")
 theme_override_font_sizes/font_size = 60
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Melee" parent="." unique_id=1337392927 instance=ExtResource("12_cueqf")]
+position = Vector2(125, 60.714287)
+scale = Vector2(5.25, -10)

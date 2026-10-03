@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dgd7wovfgiqof"]
+
+[ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="1_dcbip"]
+[ext_resource type="Script" uid="uid://nvmn3wn4f0b0" path="res://Scripts/Base Systems/damage.gd" id="2_vtlm4"]
+[ext_resource type="Script" uid="uid://dfeked6iton0k" path="res://Scripts/Combat/attack_component.gd" id="3_vtlm4"]
+[ext_resource type="Script" uid="uid://br1ukvlbvd2be" path="res://Scripts/Combat/CombatData.gd" id="4_nckul"]
+
+[sub_resource type="Resource" id="Resource_w1lb6"]
+script = ExtResource("4_nckul")
+metadata/_custom_type_script = "uid://br1ukvlbvd2be"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nckul"]
+
+[node name="Melee" type="Area2D" unique_id=1337392927]
+
+[node name="CollisionCheck" type="Node" parent="." unique_id=1357358358]
+script = ExtResource("1_dcbip")
+metadata/_custom_type_script = "uid://dov27h2jhaq5u"
+
+[node name="Damage" type="Node" parent="." unique_id=1507152712 node_paths=PackedStringArray("collision_check")]
+script = ExtResource("2_vtlm4")
+collision_check = NodePath("../CollisionCheck")
+metadata/_custom_type_script = "uid://nvmn3wn4f0b0"
+
+[node name="AttackComponent" type="Node" parent="." unique_id=995293195]
+script = ExtResource("3_vtlm4")
+combatData = SubResource("Resource_w1lb6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1315555420]
+shape = SubResource("CapsuleShape2D_nckul")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=479134012]
