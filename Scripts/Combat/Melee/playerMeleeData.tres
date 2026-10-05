@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CombatData" format=3 uid="uid://c52d2o4dw8xqb"]
+
+[ext_resource type="Texture2D" uid="uid://b6r32xxltl1aq" path="res://icon.svg" id="1_orynp"]
+[ext_resource type="Script" uid="uid://br1ukvlbvd2be" path="res://Scripts/Combat/CombatData.gd" id="2_mnnqi"]
+
+[resource]
+script = ExtResource("2_mnnqi")
+atkSprite = ExtResource("1_orynp")
+test_int = 3
+isPlayer = true
+metadata/_custom_type_script = "uid://br1ukvlbvd2be"

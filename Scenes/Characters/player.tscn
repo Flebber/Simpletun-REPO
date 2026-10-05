@@ -11,7 +11,8 @@
 [ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="8_gdgf0"]
 [ext_resource type="Script" uid="uid://diiylu8rs278j" path="res://Scripts/Player/ui_component.gd" id="9_xo8ps"]
 [ext_resource type="Script" uid="uid://ci6ho7fxj2c41" path="res://Scripts/UI/status_ui.gd" id="10_fcmex"]
-[ext_resource type="PackedScene" uid="uid://dgd7wovfgiqof" path="res://Scenes/Combat/Melee/meleeComponent.tscn" id="12_cueqf"]
+[ext_resource type="PackedScene" uid="uid://dgd7wovfgiqof" path="res://Scenes/Combat/AttackComponent.tscn" id="12_cueqf"]
+[ext_resource type="Resource" uid="uid://c52d2o4dw8xqb" path="res://Scripts/Combat/Melee/playerMeleeData.tres" id="13_01b8d"]
 
 [sub_resource type="Animation" id="Animation_272bh"]
 length = 0.001
@@ -127,7 +128,7 @@ _data = {
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0xm2m"]
 height = 35.06
 
-[node name="Player" type="CharacterBody2D" unique_id=1000896276 node_paths=PackedStringArray("movement", "input_manager", "health", "animation_manager", "animation_player", "sprite", "status_ui", "ui_controller")]
+[node name="Player" type="CharacterBody2D" unique_id=1000896276 node_paths=PackedStringArray("movement", "input_manager", "health", "attack_component", "animation_manager", "animation_player", "sprite", "status_ui", "ui_controller")]
 z_index = -1
 scale = Vector2(0.28, 0.28)
 floor_max_angle = 0.0
@@ -135,6 +136,7 @@ script = ExtResource("1_x3wgy")
 movement = NodePath("Movement")
 input_manager = NodePath("InputManager")
 health = NodePath("Health")
+attack_component = NodePath("AttackComponent")
 animation_manager = NodePath("PlayerAnimationManager")
 animation_player = NodePath("AnimationPlayer")
 sprite = NodePath("Sprite")
@@ -249,6 +251,5 @@ theme_override_font_sizes/font_size = 60
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Melee" parent="." unique_id=1337392927 instance=ExtResource("12_cueqf")]
-position = Vector2(125, 60.714287)
-scale = Vector2(5.25, -10)
+[node name="AttackComponent" parent="." unique_id=1337392927 instance=ExtResource("12_cueqf")]
+combatData = ExtResource("13_01b8d")

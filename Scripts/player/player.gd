@@ -6,6 +6,7 @@ class_name Player extends CharacterBody2D
 @export var movement : Movement 
 @export var input_manager : InputManager 
 @export var health : Health
+@export var attack_component : AttackComponent
 
 
 # Visual Components/Nodes
@@ -39,10 +40,11 @@ func _ready() -> void:
 	
 	# Call component.setup() when player is ready (Minimizes Component/Signal Assignment Errors)
 	movement.setup()
+	attack_component.setup()
 	animation_manager.setup()
 	ui_controller.setup()
 	status_ui.setup()
-
+	
 	
 	# Set Players' sprite to sprite_texture ( Allows for easy change )
 	sprite.texture = sprite_texture
