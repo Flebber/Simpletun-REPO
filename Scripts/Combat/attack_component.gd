@@ -13,7 +13,9 @@ class_name AttackComponent
 
 var parent : CharacterBody2D 
 
-signal attackGo(dir : )
+var atkDir : float
+signal attackGo(dir : float)
+
 
 # Parent sends signal to atk, determines direction of attack, plays animation, checks if there is a area colliding, deals damage, 
 # This will be fully modular, Not primarily input managed, Just signals
@@ -28,6 +30,6 @@ func setup():
 	print(parent, " equipped with ", combatData.atkShape, " shape and is a ", combatData.atkType)
 	print(parent, "test int = ", combatData.test_int)
 
-
+# Attack signal gets emitted, now attack (using a local inpput whilst testing
 func attackStart():
-	print(parent, " is attacking using ", combatData.atkType)
+	print(parent, " is attacking using ", combatData.atkType, " in the dir: ", atkDir)
