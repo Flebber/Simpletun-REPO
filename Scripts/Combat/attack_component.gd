@@ -13,8 +13,7 @@ class_name AttackComponent
 var parent : CharacterBody2D 
 
 
-var atkDir : float
-signal attackGo(dir : float)	# Signal which will emit when the parent wants to attack, takes the direction of the attack as a float (-1 = left...)
+signal attackGo(dir : Vector2)	# Signal which will emit when the parent wants to attack, takes the direction of the attack as a Vector2
 
 
 # Parent sends signal to atk, determines direction of attack, plays animation, checks if there is a area colliding, deals damage, 
@@ -29,13 +28,28 @@ func setup():
 	
 	print(parent, " equipped with ", combatData.atkShape, " shape and is a ", combatData.atkType)
 	print(parent, "test int = ", combatData.test_int)
+	
+	attackGo.connect(attackStart)
+
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("atk_right"):
+		print("atk right")
+		attackGo.emit(Vector2(1, 0))
+	if event.is_action_pressed("atk_left"):
+		print("atk left")
+		attackGo.emit(Vector2(-1, 0))
+
 
 # Attack signal gets emitted, now attack (using a local inpput whilst testing)
-func attackStart():
+func attackStart(dir):
 	# Input starts attack whilst testing the system
+	print(parent, " is attacking using ", combatData.atkType, " in the dir: ", dir)
 	# Collision Check 1 time (debug with print)
+	
 	# Damage Applied
+	
 	# Attack Ends
 	# Animation Plays
 	# Attack Ends
-	print(parent, " is attacking using ", combatData.atkType, " in the dir: ", atkDir)
