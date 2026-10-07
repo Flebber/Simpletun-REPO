@@ -9,18 +9,18 @@ class_name AttackComponent
 
 @export var combatData : CombatData
 
-
-
+# Parent = Entity that has this combat compoennt
 var parent : CharacterBody2D 
 
+
 var atkDir : float
-signal attackGo(dir : float)
+signal attackGo(dir : float)	# Signal which will emit when the parent wants to attack, takes the direction of the attack as a float (-1 = left...)
 
 
 # Parent sends signal to atk, determines direction of attack, plays animation, checks if there is a area colliding, deals damage, 
 # This will be fully modular, Not primarily input managed, Just signals
 
-
+# Setup Components and Parent gets assigned 
 func setup():
 	parent = get_parent()
 	
@@ -30,6 +30,6 @@ func setup():
 	print(parent, " equipped with ", combatData.atkShape, " shape and is a ", combatData.atkType)
 	print(parent, "test int = ", combatData.test_int)
 
-# Attack signal gets emitted, now attack (using a local inpput whilst testing
+# Attack signal gets emitted, now attack (using a local inpput whilst testing)
 func attackStart():
 	print(parent, " is attacking using ", combatData.atkType, " in the dir: ", atkDir)
