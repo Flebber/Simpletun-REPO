@@ -32,4 +32,10 @@ func setup():
 
 # Attack signal gets emitted, now attack (using a local inpput whilst testing)
 func attackStart():
+	# Input starts attack whilst testing the system
+	# Collision Check 1 time (debug with print)
+	# Damage Applied
+	# Attack Ends
+	# Animation Plays
+	# Attack Ends
 	print(parent, " is attacking using ", combatData.atkType, " in the dir: ", atkDir)
