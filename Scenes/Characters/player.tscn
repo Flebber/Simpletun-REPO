@@ -153,7 +153,6 @@ position_smoothing_speed = 8.0
 rotation_smoothing_speed = 8.0
 
 [node name="StatusUI" type="CanvasLayer" parent="Camera2D" unique_id=1445492772 node_paths=PackedStringArray("coin_display")]
-visible = false
 script = ExtResource("10_fcmex")
 coin_display = NodePath("CoinDisplay")
 

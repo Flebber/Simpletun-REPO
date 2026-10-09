@@ -20,10 +20,9 @@ func collision_detect(body : Node):
 	if body is Area2D or body is CharacterBody2D:
 		collided.emit(body)
 		externalBody = body
-		print(parent, "'s external body is ", externalBody)
+		
 	
 func body_exit(body: Node):
 	if body is Area2D or body is CharacterBody2D:
 		body_exited.emit(body)
 		externalBody = null
-		print(parent, "'s external body is no longer ", externalBody)

@@ -12,7 +12,7 @@ class_name AttackComponent
 
 # Parent = Entity that has this combat compoennt
 var parent  
-
+var target
 
 var dir : Vector2
 
@@ -37,11 +37,9 @@ func setup():
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("atk_right"):
-		print("atk right")
 		attackGo.emit(Vector2(1, 1))
 
 	if event.is_action_pressed("atk_left"):
-		print("atk left")
 		attackGo.emit(Vector2(-1, 1))
 
 
@@ -55,10 +53,14 @@ func attackStart(dir):
 	print(parent, " is attacking using ", combatData.atkType, " in the dir: ", dir)
 	
 	# Collision Check 1 time (debug with print)
-	print(colllision_check.externalBody)
+	target = colllision_check.externalBody
+	print("external body = ", target)
 	
+	if target != parent:
+		print("can damage")
 	# Damage Applied
 	
 	# Attack Ends
 	# Animation Plays
 	# Attack Ends
+	

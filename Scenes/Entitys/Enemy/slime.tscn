@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://dousbscuqfnow"]
 
+[ext_resource type="Script" uid="uid://dqtv8yu5oyr8e" path="res://Scripts/Enemys/Slime/slime.gd" id="1_l8f66"]
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="1_oh5f8"]
 [ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scripts/Base Systems/health.gd" id="2_sgn5k"]
 [ext_resource type="Texture2D" uid="uid://b6r32xxltl1aq" path="res://icon.svg" id="3_sgn5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgn5k"]
 
-[node name="Area2D" type="Area2D" unique_id=2050302146]
+[node name="Slime" type="Area2D" unique_id=2050302146 node_paths=PackedStringArray("collision_check", "health", "sprite_2d", "animation_player")]
+script = ExtResource("1_l8f66")
+collision_check = NodePath("CollisionCheck")
+health = NodePath("Health")
+sprite_2d = NodePath("Sprite2D")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="CollisionCheck" type="Node" parent="." unique_id=1887892087]
 script = ExtResource("1_oh5f8")
