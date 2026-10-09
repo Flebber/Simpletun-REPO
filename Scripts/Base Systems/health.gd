@@ -33,6 +33,7 @@ signal died
 
 func _ready() -> void:
 	died.connect(die_check)
+
 	if parent is Player:
 		GameManager.player_respawn.connect(playerResetHealthDead)
 		GameManager.level_cancelled.connect(playerResetHealthDead)

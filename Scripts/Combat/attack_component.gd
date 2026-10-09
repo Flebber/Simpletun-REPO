@@ -53,11 +53,12 @@ func attackStart(dir):
 	print(parent, " is attacking using ", combatData.atkType, " in the dir: ", dir)
 	
 	# Collision Check 1 time (debug with print)
+	colllision_check.scanCollision()
 	target = colllision_check.externalBody
 	print("external body = ", target)
 	
 	if target != parent:
-		print("can damage")
+		print("can damage", colllision_check.scannedCollsions)
 	# Damage Applied
 	
 	# Attack Ends
