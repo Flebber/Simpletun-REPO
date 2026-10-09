@@ -253,4 +253,3 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AttackComponent" parent="." unique_id=1337392927 instance=ExtResource("12_cueqf")]
 combatData = ExtResource("13_01b8d")
-initialPos = Vector2(10, 0)

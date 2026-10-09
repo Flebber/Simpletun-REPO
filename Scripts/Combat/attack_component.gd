@@ -13,7 +13,7 @@ class_name AttackComponent
 # Parent = Entity that has this combat compoennt
 var parent  
 
-@export var initialPos : Vector2
+
 var dir : Vector2
 
 signal attackGo(dir : Vector2)	# Signal which will emit when the parent wants to attack, takes the direction of the attack as a Vector2
@@ -38,16 +38,18 @@ func setup():
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("atk_right"):
 		print("atk right")
-		attackGo.emit(Vector2(1, 0))
+		attackGo.emit(Vector2(1, 1))
 
 	if event.is_action_pressed("atk_left"):
 		print("atk left")
-		attackGo.emit(Vector2(-1, 0))
+		attackGo.emit(Vector2(-1, 1))
+
+
 
 # Attack signal gets emitted, now attack (using a local inpput whilst testing)
 func attackStart(dir):
 	# Temp offset 
-	hurt_box.position = parent.position + (initialPos * dir)
+	hurt_box.position = parent.position + (combatData.initialPos * dir)
 	
 	# Input starts attack whilst testing the system
 	print(parent, " is attacking using ", combatData.atkType, " in the dir: ", dir)

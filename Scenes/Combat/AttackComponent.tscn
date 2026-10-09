@@ -19,7 +19,6 @@ hurt_box = NodePath("HurtBox")
 [node name="HurtBox" type="Area2D" parent="." unique_id=1337392927]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1315555420]
-position = Vector2(36, 17)
 shape = SubResource("CapsuleShape2D_nckul")
 
 [node name="CollisionCheck" type="Node" parent="HurtBox" unique_id=1357358358]
