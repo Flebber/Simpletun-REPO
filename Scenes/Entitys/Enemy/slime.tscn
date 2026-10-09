@@ -4,11 +4,17 @@
 [ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scripts/Base Systems/health.gd" id="2_sgn5k"]
 [ext_resource type="Texture2D" uid="uid://b6r32xxltl1aq" path="res://icon.svg" id="3_sgn5k"]
 
-[node name="Slime" type="Node2D" unique_id=276230366]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgn5k"]
+
+[node name="Area2D" type="Area2D" unique_id=2050302146]
 
 [node name="CollisionCheck" type="Node" parent="." unique_id=1887892087]
 script = ExtResource("1_oh5f8")
 metadata/_custom_type_script = "uid://dov27h2jhaq5u"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=936903884]
+scale = Vector2(3.391651, 3.2868667)
+shape = SubResource("RectangleShape2D_sgn5k")
 
 [node name="Health" type="Node" parent="." unique_id=1442018408]
 script = ExtResource("2_sgn5k")
@@ -19,3 +25,4 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_sgn5k")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2032162926]
+root_node = NodePath("")

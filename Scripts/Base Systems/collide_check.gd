@@ -5,6 +5,8 @@ class_name CollisionCheck extends Node
 # Makes the parent area.2d body_entered signal accsessible to any script
 signal collided(body : Node)
 
+var externalBody 
+
 # Makes the parent area.2d body_exited signal accsessible to any script
 signal body_exited(body : Node)
 
@@ -15,8 +17,13 @@ func setup() -> void:
 
 # Emits accessible collided signal which also returns the body that entered {Connected to parent.body_entered}
 func collision_detect(body : Node):
+	if body is Area2D or body is CharacterBody2D:
 		collided.emit(body)
-
-
+		externalBody = body
+		print(parent, "'s external body is ", externalBody)
+	
 func body_exit(body: Node):
-	body_exited.emit(body)
+	if body is Area2D or body is CharacterBody2D:
+		body_exited.emit(body)
+		externalBody = null
+		print(parent, "'s external body is no longer ", externalBody)

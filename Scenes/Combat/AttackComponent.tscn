@@ -5,13 +5,16 @@
 [ext_resource type="Script" uid="uid://nvmn3wn4f0b0" path="res://Scripts/Base Systems/damage.gd" id="5_vck8v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nckul"]
+radius = 13.0
+height = 54.0
 
-[node name="AttackComponent" type="Node" unique_id=995293195 node_paths=PackedStringArray("colllision_check", "damage", "animation_player", "collision_shape_2d")]
+[node name="AttackComponent" type="Node" unique_id=995293195 node_paths=PackedStringArray("colllision_check", "damage", "animation_player", "collision_shape_2d", "hurt_box")]
 script = ExtResource("1_is7rk")
 colllision_check = NodePath("HurtBox/CollisionCheck")
 damage = NodePath("HurtBox/Damage")
 animation_player = NodePath("AnimationPlayer")
 collision_shape_2d = NodePath("HurtBox/CollisionShape2D")
+hurt_box = NodePath("HurtBox")
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=1337392927]
 
