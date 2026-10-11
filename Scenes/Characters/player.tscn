@@ -250,5 +250,6 @@ theme_override_font_sizes/font_size = 60
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="AttackComponent" parent="." unique_id=1337392927 instance=ExtResource("12_cueqf")]
+[node name="AttackComponent" parent="." unique_id=1337392927 node_paths=PackedStringArray("owner_entity") instance=ExtResource("12_cueqf")]
+owner_entity = NodePath("..")
 combatData = ExtResource("13_01b8d")

@@ -1,6 +1,8 @@
 extends Node
 class_name AttackComponent
 
+@export var owner_entity : Node
+
 @export var colllision_check : CollisionCheck
 @export var damage: Damage
 
@@ -11,8 +13,8 @@ class_name AttackComponent
 @export var combatData : CombatData
 
 # Parent = Entity that has this combat compoennt
-var parent  
-var target
+var parent : Node
+var targets : Array
 
 var dir : Vector2
 
@@ -24,10 +26,13 @@ signal attackGo(dir : Vector2)	# Signal which will emit when the parent wants to
 
 # Setup Components and Parent gets assigned 
 func setup():
+	
 	parent = get_parent()
 	
 	colllision_check.setup() 
 	damage.setup()
+	
+	colllision_check.owner_entity = owner_entity
 	
 	print(parent, " equipped with ", combatData.atkShape, " shape and is a ", combatData.atkType)
 	print(parent, "test int = ", combatData.test_int)
@@ -46,19 +51,28 @@ func _input(event: InputEvent) -> void:
 
 # Attack signal gets emitted, now attack (using a local inpput whilst testing)
 func attackStart(dir):
+	# Input starts attack whilst testing the system
+	
 	# Temp offset 
 	hurt_box.position = parent.position + (combatData.initialPos * dir)
 	
-	# Input starts attack whilst testing the system
-	print(parent, " is attacking using ", combatData.atkType, " in the dir: ", dir)
+	# Wait 2 phys frames cus 1 doesnt work for some reason
+	await get_tree().physics_frame
+	await get_tree().physics_frame
 	
 	# Collision Check 1 time (debug with print)
 	colllision_check.scanCollision()
-	target = colllision_check.externalBody
-	print("external body = ", target)
+	targets = colllision_check.scannedCollsions
+
+	# Temp Debug Attack
+	for target in targets:
+		var targethealth : Health = target.health
+		print(target, " health = ", targethealth.current_health)
+
+	# Need to handle !parent inside this script for combat specifcs
 	
-	if target != parent:
-		print("can damage", colllision_check.scannedCollsions)
+	print("can damage", targets)
+	
 	# Damage Applied
 	
 	# Attack Ends
