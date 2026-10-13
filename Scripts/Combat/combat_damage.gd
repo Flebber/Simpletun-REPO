@@ -15,3 +15,7 @@ func setup():
 	combatData = parent.combatData
 
 	print("combatdmg test: ", combatData.test_int)
+
+func damage_targets(victims : Array):
+	victims = parent.targets
+	print("can damage", victims)

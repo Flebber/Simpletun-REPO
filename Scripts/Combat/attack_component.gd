@@ -73,7 +73,7 @@ func attackStart(dir):
 
 	# Need to handle !parent inside this script for combat specifcs
 	
-	print("can damage", targets)
+	combat_damage.damage_targets(targets)
 	
 	# Damage Applied
 	

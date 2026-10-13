@@ -22,5 +22,10 @@ position = Vector2(261, -15)
 z_index = -1
 position = Vector2(362, -37)
 
-[node name="Celeste" parent="." unique_id=2050302146 instance=ExtResource("5_5iseo")]
+[node name="YellowSlime" parent="." unique_id=2050302146 instance=ExtResource("4_smuj1")]
+z_index = -1
+position = Vector2(376, -44)
+scale = Vector2(0.48594114, 0.43205586)
+
+[node name="Celeste" parent="." unique_id=1241871915 instance=ExtResource("5_5iseo")]
 position = Vector2(133, -53)
