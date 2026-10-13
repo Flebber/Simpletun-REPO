@@ -17,6 +17,5 @@ func setup() -> void:
 	collision_check.collided.connect(deal_damage)
 
 # Deal (amount) damage to the CharacterBody that Collided {Connected to collision_check.collided}
-func deal_damage(body : CharacterBody2D):
+func deal_damage(body : Node):
 	body.health.current_health -= amount
-	

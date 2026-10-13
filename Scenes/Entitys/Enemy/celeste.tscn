@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://pbtlwjqiai38"]
+
+[ext_resource type="Script" uid="uid://dqtv8yu5oyr8e" path="res://Scripts/Enemys/Slime/slime.gd" id="1_nx4p3"]
+[ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="2_p33r1"]
+[ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scripts/Base Systems/health.gd" id="3_ausv5"]
+[ext_resource type="Texture2D" uid="uid://cl215nn8flnlo" path="res://assets/sprites/entitys/enemys/celestedebug.png" id="4_nx4p3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgn5k"]
+
+[node name="Celeste" type="Area2D" unique_id=2050302146 node_paths=PackedStringArray("collision_check", "health", "sprite_2d", "animation_player")]
+script = ExtResource("1_nx4p3")
+collision_check = NodePath("CollisionCheck")
+health = NodePath("Health")
+sprite_2d = NodePath("Sprite2D")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="CollisionCheck" type="Node" parent="." unique_id=1887892087]
+script = ExtResource("2_p33r1")
+metadata/_custom_type_script = "uid://dov27h2jhaq5u"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=936903884]
+scale = Vector2(4.145351, 5.222466)
+shape = SubResource("RectangleShape2D_sgn5k")
+
+[node name="Health" type="Node" parent="." unique_id=1442018408]
+script = ExtResource("3_ausv5")
+max_health = 5.0
+metadata/_custom_type_script = "uid://dgwhbks1vjgk6"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=597939092]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_nx4p3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2032162926]
+root_node = NodePath("")

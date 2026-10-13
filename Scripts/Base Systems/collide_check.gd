@@ -29,7 +29,7 @@ func body_exit(body: Node):
 		body_exited.emit(body)
 
 
-# Callable which checks all bodys/areas inside of the collsionshape and lists them to an aray
+# Callable which checks all bodys/areas inside of the collsion shape and adds them to an array
 func scanCollision():
 	scannedCollsions.clear()
 	for area in parent.get_overlapping_areas():
@@ -40,6 +40,7 @@ func scanCollision():
 		if isValidTarget(body):
 			scannedCollsions.append(body)
 
+# Checks if the (target) is valid enough to go into the scanned collisions
 func isValidTarget(target) -> bool:
 	return(
 		target != owner_entity

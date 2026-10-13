@@ -39,7 +39,6 @@ func _ready() -> void:
 # Sets GameManager checkpoint flags/specific checkpoint position {Connected point_manager.point_reached}
 func check_point_reached(_emitted_point):
 	GameManager.checkpointPos = point.global_position
-	print("check pos = ", GameManager.checkpointPos, "player pos: ", GameManager.playerScene.global_position)
 	GameManager.has_checkpoint = true
 
 func spawnAtCheckpoint():
@@ -48,5 +47,3 @@ func spawnAtCheckpoint():
 		await get_tree().create_timer(4).timeout
 		GameManager.player_respawn.emit()
 		GameManager.playerScene.global_position = GameManager.checkpointPos - Vector2(0, 100)
-		
-		print("Spawned at checkpoint: ", GameManager.checkpointPos)

@@ -4,7 +4,8 @@ class_name AttackComponent
 @export var owner_entity : Node
 
 @export var colllision_check : CollisionCheck
-@export var damage: Damage
+@export var combat_damage: CombatDamage
+
 
 @export var animation_player: AnimationPlayer
 @export var collision_shape_2d: CollisionShape2D
@@ -30,7 +31,7 @@ func setup():
 	parent = get_parent()
 	
 	colllision_check.setup() 
-	damage.setup()
+	combat_damage.setup()
 	
 	colllision_check.owner_entity = owner_entity
 	
@@ -38,6 +39,7 @@ func setup():
 	print(parent, "test int = ", combatData.test_int)
 	
 	attackGo.connect(attackStart)
+
 
 
 func _input(event: InputEvent) -> void:
