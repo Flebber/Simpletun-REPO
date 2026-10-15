@@ -4,12 +4,12 @@
 [ext_resource type="Script" uid="uid://d1up373y1yse7" path="res://Scenes/UI/Stats/health_barPercent.gd" id="2_hkksu"]
 
 [node name="HealthBar" type="ProgressBar" unique_id=2125488593 node_paths=PackedStringArray("percentDisplay")]
-offset_left = 183.00002
-offset_top = -136.99998
-offset_right = 187.00002
-offset_bottom = -85.999985
+offset_left = 136.00002
+offset_top = -137.0
+offset_right = 140.00002
+offset_bottom = -86.0
 rotation = 1.5707964
-scale = Vector2(19.25, 7.5)
+scale = Vector2(14.5, 5.25)
 theme = ExtResource("1_ro48f")
 step = 1.0
 fill_mode = 3

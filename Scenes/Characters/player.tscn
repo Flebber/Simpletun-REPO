@@ -238,6 +238,7 @@ glide_check = NodePath("../GlideCheck")
 
 [node name="Health" type="Node" parent="." unique_id=647384210]
 script = ExtResource("6_khnq4")
+max_health = 10.0
 display_health = true
 
 [node name="AttackComponent" parent="." unique_id=1337392927 node_paths=PackedStringArray("owner_entity") instance=ExtResource("12_cueqf")]

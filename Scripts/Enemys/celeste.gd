@@ -9,4 +9,3 @@ extends Area2D
 func _ready() -> void:
 	collision_check.setup()
 	health.setup()
-	health.max_health = max_health

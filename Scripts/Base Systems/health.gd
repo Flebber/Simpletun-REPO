@@ -1,24 +1,35 @@
 class_name Health extends Node
 
-# Assigns Parent variable
+# Creates Empty Parent variable
 var parent 
 
-# Health Bar
-@onready var health_labelScene : PackedScene = load("uid://jvllxpq4k6dd")
-var health_label : HealthBar
+# Health Bar Scene/EmptyInstanceHolder
+@onready var health_barScene : PackedScene = load("uid://jvllxpq4k6dd")
+var health_bar : HealthBar
 
+#Signal for health setter changing
 signal healthChanged(currenthp : float, maxhp : float)
 
-# Modular Max Health Variable, Sets initial health state to == Max Health 
-@export var max_health : float = 10
-var current_health : float = max_health:
+# Modular Max Health Variable
+@export var max_health : float
+
+# Internal health storage
+var _current_health: float = 0.0
+
+# Public health property
+var current_health: float:
+	get:
+		return _current_health
 	set(value):
-		current_health = clamp(value, 0, max_health)
+		_current_health = clampf(value, 0.0, max_health)
+
 		# Set Death flag and Death signal
-		if current_health == 0 and !is_dead:
+		if _current_health == 0.0 and !is_dead:
 			is_dead = true
 			died.emit()
-		healthChanged.emit(current_health, max_health)
+
+		# Notify listeners of health changes
+		healthChanged.emit(_current_health, max_health)
 
 
 # Death Flag
@@ -36,8 +47,14 @@ func setup() -> void:
 	if parent is Player:
 		GameManager.player_respawn.connect(playerResetHealthDead)
 		GameManager.level_cancelled.connect(playerResetHealthDead)
-	
+
+	# Read the exported value at setup time
+	_current_health = max_health
+
+	# Create/Configure Healthbar
 	health_show()
+
+
 # Check if Current health is <=0
 func die_check():
 # Player death signal
@@ -53,14 +70,19 @@ func playerResetHealthDead():
 func heal(amount):
 	current_health += amount 
 
-func health_show():
-	if display_health == true:
-		health_label = health_labelScene.instantiate()
-		parent.add_child(health_label)
-		health_label.setup()
-		health_label.display_health = true
-		
-		health_label.max_value = max_health
-		health_label.value = current_health
-		health_label.percentDisplay.text = str((current_health / max_health * 100), "%")
-	return
+func health_show() -> void:
+	if display_health:
+		# Assign and create healthbar instance
+		health_bar = health_barScene.instantiate()
+		parent.add_child(health_bar)
+
+		# Call health_bar setup only if display_health
+		health_bar.setup()
+		health_bar.display_health = true
+
+		# Sets healthbar values and displays maxhealth % by default
+		health_bar.max_value = max_health
+		health_bar.value = _current_health
+		health_bar.percentDisplay.text = str(
+			(_current_health / max_health) * 100.0, "%"
+		)
