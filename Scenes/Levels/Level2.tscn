@@ -23,6 +23,7 @@ z_index = -1
 position = Vector2(362, -37)
 
 [node name="YellowSlime" parent="." unique_id=2050302146 instance=ExtResource("4_smuj1")]
+modulate = Color(0.8581884, 0.8581885, 0, 1)
 z_index = -1
 position = Vector2(376, -44)
 scale = Vector2(0.48594114, 0.43205586)

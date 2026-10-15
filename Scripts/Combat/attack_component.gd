@@ -17,7 +17,7 @@ class_name AttackComponent
 var parent : Node
 var targets : Array
 
-var dir : Vector2
+var atkdir : Vector2
 
 signal attackGo(dir : Vector2)	# Signal which will emit when the parent wants to attack, takes the direction of the attack as a Vector2
 
@@ -41,7 +41,7 @@ func setup():
 	attackGo.connect(attackStart)
 
 
-
+# Input starts attack whilst testing the system
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("atk_right"):
 		attackGo.emit(Vector2(1, 1))
@@ -53,8 +53,6 @@ func _input(event: InputEvent) -> void:
 
 # Attack signal gets emitted, now attack (using a local inpput whilst testing)
 func attackStart(dir):
-	# Input starts attack whilst testing the system
-	
 	# Temp offset 
 	hurt_box.position = parent.position + (combatData.initialPos * dir)
 	
@@ -62,17 +60,11 @@ func attackStart(dir):
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	
-	# Collision Check 1 time (debug with print)
+	# Collision Checks/Logs Targets
 	colllision_check.scanCollision()
 	targets = colllision_check.scannedCollsions
 
-	# Temp Debug Attack
-	for target in targets:
-		var targethealth : Health = target.health
-		print(target, " health = ", targethealth.current_health)
-
-	# Need to handle !parent inside this script for combat specifcs
-	
+	# Logged Targets Receive Damage using the Combat_damage component
 	combat_damage.damage_targets(targets)
 	
 	# Damage Applied
