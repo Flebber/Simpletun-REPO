@@ -13,6 +13,7 @@ collision_check = NodePath("CollisionCheck")
 health = NodePath("Health")
 sprite_2d = NodePath("Sprite2D")
 animation_player = NodePath("AnimationPlayer")
+max_health = 1000.0
 
 [node name="CollisionCheck" type="Node" parent="." unique_id=1887892087]
 script = ExtResource("1_oh5f8")

@@ -135,6 +135,7 @@ script = ExtResource("1_x3wgy")
 movement = NodePath("Movement")
 input_manager = NodePath("InputManager")
 health = NodePath("Health")
+max_health = 10.0
 attack_component = NodePath("AttackComponent")
 animation_manager = NodePath("PlayerAnimationManager")
 animation_player = NodePath("AnimationPlayer")

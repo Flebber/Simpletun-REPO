@@ -7,28 +7,18 @@ var parent
 @onready var health_labelScene : PackedScene = load("uid://jvllxpq4k6dd")
 var health_label : HealthBar
 
+signal healthChanged(currenthp : float, maxhp : float)
 
 # Modular Max Health Variable, Sets initial health state to == Max Health 
 @export var max_health : float = 10
 var current_health : float = max_health:
 	set(value):
 		current_health = clamp(value, 0, max_health)
-		
-		# If display_health option == true, display health when alive / "dead" when dead
-		if display_health:
-			if current_health == 0:
-				health_label.value = 0000
-				health_label.percentDisplay.text = "Dead"
-
-			else:
-				health_label.value = current_health
-				health_label.percentDisplay.text = str((current_health / max_health * 100), "%")
-		
 		# Set Death flag and Death signal
 		if current_health == 0 and !is_dead:
 			is_dead = true
 			died.emit()
-			
+		healthChanged.emit(current_health, max_health)
 
 
 # Death Flag
@@ -67,6 +57,8 @@ func health_show():
 	if display_health == true:
 		health_label = health_labelScene.instantiate()
 		parent.add_child(health_label)
+		health_label.setup()
+		health_label.display_health = true
 		
 		health_label.max_value = max_health
 		health_label.value = current_health
