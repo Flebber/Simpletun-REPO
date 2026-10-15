@@ -12,7 +12,7 @@ class_name Player extends CharacterBody2D
 # Visual Components/Nodes
 @export var animation_manager : PlayerAnimationManager 
 @export var animation_player : AnimationPlayer 
-@onready var label: Label = $Label
+
 @export var sprite : Sprite2D 
 @onready var sprite_texture : Texture2D = load("uid://c48qsfsytjvkm")
 

@@ -8,11 +8,11 @@
 [ext_resource type="Script" uid="uid://bk6w55j6s7n8e" path="res://Scripts/Player/movement.gd" id="5_tx1dd"]
 [ext_resource type="Script" uid="uid://2dt240obw50u" path="res://Scripts/Player/animation_manager.gd" id="6_gymyn"]
 [ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scripts/Base Systems/health.gd" id="6_khnq4"]
-[ext_resource type="Theme" uid="uid://bsoyvqt3uq00v" path="res://assets/themes/main_theme.tres" id="8_gdgf0"]
 [ext_resource type="Script" uid="uid://diiylu8rs278j" path="res://Scripts/Player/ui_component.gd" id="9_xo8ps"]
 [ext_resource type="Script" uid="uid://ci6ho7fxj2c41" path="res://Scripts/UI/status_ui.gd" id="10_fcmex"]
 [ext_resource type="PackedScene" uid="uid://dgd7wovfgiqof" path="res://Scenes/Combat/AttackComponent.tscn" id="12_cueqf"]
 [ext_resource type="Resource" uid="uid://c52d2o4dw8xqb" path="res://Scripts/Combat/Melee/playerMeleeData.tres" id="13_01b8d"]
+[ext_resource type="PackedScene" uid="uid://jvllxpq4k6dd" path="res://Scenes/UI/Stats/health_bar.tscn" id="13_xccyk"]
 
 [sub_resource type="Animation" id="Animation_272bh"]
 length = 0.001
@@ -236,20 +236,13 @@ script = ExtResource("6_gymyn")
 health = NodePath("../Health")
 glide_check = NodePath("../GlideCheck")
 
-[node name="Health" type="Node" parent="." unique_id=647384210]
+[node name="Health" type="Node" parent="." unique_id=647384210 node_paths=PackedStringArray("health_label")]
 script = ExtResource("6_khnq4")
+health_label = NodePath("../HealthBar")
 display_health = true
-
-[node name="Label" type="Label" parent="." unique_id=215717849]
-offset_left = -114.28571
-offset_top = -114.28571
-offset_right = 94.71429
-offset_bottom = 60.714287
-theme = ExtResource("8_gdgf0")
-theme_override_font_sizes/font_size = 60
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="AttackComponent" parent="." unique_id=1337392927 node_paths=PackedStringArray("owner_entity") instance=ExtResource("12_cueqf")]
 owner_entity = NodePath("..")
 combatData = ExtResource("13_01b8d")
+
+[node name="HealthBar" parent="." unique_id=2125488593 instance=ExtResource("13_xccyk")]
