@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://p0bq4145glcm"]
+
+[ext_resource type="Script" uid="uid://bpat4826xg2y7" path="res://Scripts/Enemys/celeste.gd" id="1_jooet"]
+[ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="2_v6qeh"]
+[ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scripts/Base Systems/health.gd" id="3_wn1xj"]
+[ext_resource type="Texture2D" uid="uid://pntcdfgm3har" path="res://assets/sprites/Pickups/bigcoin.png" id="4_gevj5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_401qv"]
+
+[node name="Katrina" type="Area2D" unique_id=2050302146 node_paths=PackedStringArray("collision_check", "health", "sprite_2d", "animation_player")]
+script = ExtResource("1_jooet")
+collision_check = NodePath("CollisionCheck")
+health = NodePath("Health")
+sprite_2d = NodePath("Sprite2D")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="CollisionCheck" type="Node" parent="." unique_id=1887892087]
+script = ExtResource("2_v6qeh")
+metadata/_custom_type_script = "uid://dov27h2jhaq5u"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=936903884]
+scale = Vector2(6.2711716, 6.3830137)
+shape = SubResource("CircleShape2D_401qv")
+
+[node name="Health" type="Node" parent="." unique_id=1442018408]
+script = ExtResource("3_wn1xj")
+max_health = 60.0
+display_health = true
+metadata/_custom_type_script = "uid://dgwhbks1vjgk6"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=597939092]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_gevj5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2032162926]
+root_node = NodePath("")

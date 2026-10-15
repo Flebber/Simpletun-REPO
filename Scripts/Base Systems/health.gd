@@ -78,11 +78,8 @@ func health_show() -> void:
 
 		# Call health_bar setup only if display_health
 		health_bar.setup()
-		health_bar.display_health = true
 
 		# Sets healthbar values and displays maxhealth % by default
 		health_bar.max_value = max_health
 		health_bar.value = _current_health
-		health_bar.percentDisplay.text = str(
-			(_current_health / max_health) * 100.0, "%"
-		)
+		health_bar.percentDisplay.text = str(current_health)

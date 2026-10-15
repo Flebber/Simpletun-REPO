@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://du83s5f7t3uap" path="res://Scenes/Interactables/poster_board.tscn" id="3_svn12"]
 [ext_resource type="PackedScene" uid="uid://dousbscuqfnow" path="res://Scenes/Entitys/Enemy/slime.tscn" id="4_smuj1"]
 [ext_resource type="PackedScene" uid="uid://pbtlwjqiai38" path="res://Scenes/Entitys/Enemy/celeste.tscn" id="5_5iseo"]
+[ext_resource type="PackedScene" uid="uid://p0bq4145glcm" path="res://Scenes/Entitys/Enemy/katrina.tscn" id="6_4rk67"]
 
 [node name="Main" type="Node" unique_id=1196040944]
 script = ExtResource("1_m40gi")
@@ -25,8 +26,12 @@ scale = Vector2(0.6214126, 0.62653446)
 [node name="YellowSlime" parent="." unique_id=2050302146 instance=ExtResource("4_smuj1")]
 modulate = Color(0.8581884, 0.8581885, 0, 1)
 z_index = -1
-position = Vector2(473, -50)
+position = Vector2(382, -15.000004)
 scale = Vector2(0.48594114, 0.43205586)
 
 [node name="Celeste" parent="." unique_id=1241871915 instance=ExtResource("5_5iseo")]
 position = Vector2(133, -53)
+
+[node name="Katrina" parent="." unique_id=201200516 instance=ExtResource("6_4rk67")]
+position = Vector2(492, -80)
+scale = Vector2(0.48594114, 0.43205586)

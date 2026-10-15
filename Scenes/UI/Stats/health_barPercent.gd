@@ -23,4 +23,4 @@ func show_health(currenthp, maxhp):
 	else:
 		value = currenthp
 		# Multiples by 1000 not 100 due to output being 5.0% not 50% etc otherwise 
-		percentDisplay.text = str(roundf((currenthp / maxhp * 1000)), "%")
+		percentDisplay.text = str(currenthp) #" percent: ", roundf((currenthp / maxhp * 1000)), "%")
