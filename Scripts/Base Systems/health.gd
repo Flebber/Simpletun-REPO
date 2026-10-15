@@ -1,9 +1,11 @@
 class_name Health extends Node
 
 # Assigns Parent variable
-@onready var parent = get_parent()
+var parent 
 
-@export var health_label : HealthBar
+# Health Bar
+@onready var health_labelScene : PackedScene = load("uid://jvllxpq4k6dd")
+var health_label : HealthBar
 
 
 # Modular Max Health Variable, Sets initial health state to == Max Health 
@@ -37,16 +39,15 @@ signal died
 @export var display_health : bool = false
 
 
-func _ready() -> void:
+func setup() -> void:
+	parent = get_parent()
 	died.connect(die_check)
 
 	if parent is Player:
 		GameManager.player_respawn.connect(playerResetHealthDead)
 		GameManager.level_cancelled.connect(playerResetHealthDead)
 	
-	health_label.max_value = max_health
-	health_label.value = current_health
-	health_label.percentDisplay.text = str((current_health / max_health * 100), "%")
+	health_show()
 # Check if Current health is <=0
 func die_check():
 # Player death signal
@@ -64,5 +65,10 @@ func heal(amount):
 
 func health_show():
 	if display_health == true:
-		#parent.add_child(health_label)
-		pass
+		health_label = health_labelScene.instantiate()
+		parent.add_child(health_label)
+		
+		health_label.max_value = max_health
+		health_label.value = current_health
+		health_label.percentDisplay.text = str((current_health / max_health * 100), "%")
+	return

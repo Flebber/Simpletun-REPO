@@ -7,4 +7,4 @@ extends Area2D
 
 func _ready() -> void:
 	collision_check.setup()
-	
+	health.setup()

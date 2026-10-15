@@ -44,7 +44,7 @@ func _ready() -> void:
 	animation_manager.setup()
 	ui_controller.setup()
 	status_ui.setup()
-	
+	health.setup()
 	
 	# Set Players' sprite to sprite_texture ( Allows for easy change )
 	sprite.texture = sprite_texture
