@@ -37,6 +37,8 @@ func _ready() -> void:
 	
 	ui_controller.status_ui = status_ui
 	status_ui.ui_controller = ui_controller
+	
+	input_manager.attack_component = attack_component
 	#endregion
 	
 	# Call component.setup() when player is ready (Minimizes Component/Signal Assignment Errors)

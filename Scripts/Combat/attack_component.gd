@@ -42,12 +42,12 @@ func setup():
 
 
 # Input starts attack whilst testing the system
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("atk_right"):
-		attackGo.emit(Vector2(1, 1))
-
-	if event.is_action_pressed("atk_left"):
-		attackGo.emit(Vector2(-1, 1))
+#func _input(event: InputEvent) -> void:
+	#if event.is_action_pressed("atk_right"):
+		#attackGo.emit(Vector2(1, 1))
+#
+	#if event.is_action_pressed("atk_left"):
+		#attackGo.emit(Vector2(-1, 1))
 
 
 
