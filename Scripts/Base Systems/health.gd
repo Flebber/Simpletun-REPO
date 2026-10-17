@@ -1,7 +1,7 @@
 class_name Health extends Node
 
 # Creates Empty Parent variable
-var parent 
+var parent : Node
 
 # Health Bar Scene/EmptyInstanceHolder
 @onready var health_barScene : PackedScene = load("uid://jvllxpq4k6dd")
@@ -60,11 +60,15 @@ func die_check():
 # Player death signal
 	if parent is Player:
 		GameManager.player_dead.emit()
+	else: 
+		print(parent, " is dead")
+		parent.queue_free()
 
 # Reset health.is_dead for player {connected to GameManager.player_respawn and GameManager.level_cancelled}
 func playerResetHealthDead():
 	if parent is Player:
 		is_dead = false
+	
 
 # Heal the body that calls this function
 func heal(amount):

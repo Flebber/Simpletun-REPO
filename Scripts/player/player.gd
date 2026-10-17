@@ -6,7 +6,6 @@ class_name Player extends CharacterBody2D
 @export var movement : Movement 
 @export var input_manager : InputManager 
 @export var health : Health
-@export var max_health : float
 @export var attack_component : AttackComponent
 
 

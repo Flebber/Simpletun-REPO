@@ -41,19 +41,9 @@ func setup():
 	attackGo.connect(attackStart)
 
 
-# Input starts attack whilst testing the system
-#func _input(event: InputEvent) -> void:
-	#if event.is_action_pressed("atk_right"):
-		#attackGo.emit(Vector2(1, 1))
-#
-	#if event.is_action_pressed("atk_left"):
-		#attackGo.emit(Vector2(-1, 1))
-
-
-
 # Attack signal gets emitted, now attack (using a local inpput whilst testing)
 func attackStart(dir):
-	# Temp offset 
+	# Place the hurtbox in the desired position
 	hurt_box.position = parent.position + (combatData.initialPos * dir)
 	
 	# Wait 2 phys frames cus 1 doesnt work for some reason
@@ -66,10 +56,7 @@ func attackStart(dir):
 
 	# Logged Targets Receive Damage using the Combat_damage component
 	combat_damage.damage_targets(targets)
-	
-	# Damage Applied
-	
-	# Attack Ends
+
 	# Animation Plays
 	# Attack Ends
 	
