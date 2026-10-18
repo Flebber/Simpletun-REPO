@@ -22,7 +22,7 @@ var atkdir : Vector2
 signal attackGo(dir : Vector2)	# Signal which will emit when the parent wants to attack, takes the direction of the attack as a Vector2
 
 
-# Parent sends signal to atk, determines direction of attack, plays animation, checks if there is a area colliding, deals damage, 
+# Parent sends signal to atk, determines direction of attack, plays animation, checks if there is a area colliding, deals damage 
 # This will be fully modular, Not primarily input managed, Just signals
 
 # Setup Components and Parent gets assigned 
@@ -32,9 +32,10 @@ func setup():
 	
 	colllision_check.setup() 
 	combat_damage.setup()
-	
+
 	colllision_check.owner_entity = owner_entity
-	
+	combat_damage.amount = combatData.dmgAmount
+
 	print(parent, " equipped with ", combatData.atkShape, " shape and is a ", combatData.atkType)
 	print(parent, "test int = ", combatData.test_int)
 	
