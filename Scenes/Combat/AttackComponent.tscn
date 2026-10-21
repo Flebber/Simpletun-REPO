@@ -31,4 +31,3 @@ root_node = NodePath("../Melee")
 [node name="CombatDamage" type="Node" parent="." unique_id=218002364 node_paths=PackedStringArray("collision_check")]
 script = ExtResource("3_i051g")
 collision_check = NodePath("../HurtBox/CollisionCheck")
-amount = 10.0
