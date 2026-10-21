@@ -10,11 +10,11 @@
 [ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scripts/Base Systems/health.gd" id="6_khnq4"]
 [ext_resource type="Script" uid="uid://diiylu8rs278j" path="res://Scripts/Player/ui_component.gd" id="9_xo8ps"]
 [ext_resource type="Script" uid="uid://ci6ho7fxj2c41" path="res://Scripts/UI/status_ui.gd" id="10_fcmex"]
+[ext_resource type="Resource" uid="uid://ci6mpsh5ck8cm" path="res://Scripts/Combat/Melee/playerSlapData.tres" id="12_01b8d"]
 [ext_resource type="PackedScene" uid="uid://dgd7wovfgiqof" path="res://Scenes/Combat/AttackComponent.tscn" id="12_cueqf"]
-[ext_resource type="Resource" uid="uid://c52d2o4dw8xqb" path="res://Scripts/Combat/Melee/playerMeleeData.tres" id="13_01b8d"]
 
 [sub_resource type="Animation" id="Animation_272bh"]
-length = 0.001
+length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -44,6 +44,10 @@ tracks/1/keys = {
 _data = {
 &"RESET": SubResource("Animation_272bh")
 }
+
+[sub_resource type="Animation" id="Animation_cueqf"]
+
+[sub_resource type="Animation" id="Animation_01b8d"]
 
 [sub_resource type="Animation" id="Animation_gdgf0"]
 resource_name = "dead"
@@ -117,6 +121,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5vw27"]
 _data = {
+&"atk_slap_left": SubResource("Animation_cueqf"),
+&"atk_slap_right": SubResource("Animation_01b8d"),
 &"dead": SubResource("Animation_gdgf0"),
 &"idle": ExtResource("3_8erm5"),
 &"jump": SubResource("Animation_5vw27"),
@@ -195,7 +201,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1527416693]
 unique_name_in_owner = true
-position = Vector2(0, -9.059906e-06)
+position = Vector2(-10.714286, 3.8146973e-06)
 scale = Vector2(1.095, 1.095)
 texture = ExtResource("2_utp2y")
 hframes = 9
@@ -242,4 +248,4 @@ display_health = true
 
 [node name="AttackComponent" parent="." unique_id=1337392927 node_paths=PackedStringArray("owner_entity") instance=ExtResource("12_cueqf")]
 owner_entity = NodePath("..")
-combatData = ExtResource("13_01b8d")
+combatData = ExtResource("12_01b8d")

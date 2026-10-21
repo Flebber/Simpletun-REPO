@@ -2,6 +2,7 @@ extends Resource
 class_name CombatData
 
 @export var atkType : ATK_TYPE
+@export var atkSubType : ATK_SUBTYPE
 @export var atkSprite : Texture
 @export var atkShape : ATK_SHAPE
 @export var initialPos : Vector2
@@ -14,6 +15,11 @@ class_name CombatData
 enum ATK_TYPE {
 	melee,
 	ranged
+}
+
+enum ATK_SUBTYPE {
+	SLAP,
+	PUNCH
 }
 
 enum ATK_SHAPE {
