@@ -8,6 +8,9 @@ var anim : AnimationPlayer
 @export var health : Health
 @export var glide_check: RayCast2D
 
+var attack_component : AttackComponent
+var playerCombatData : CombatData
+
 
 # Failsafes and Signal Connects
 func setup():
@@ -22,6 +25,7 @@ func setup():
 		return
 		
 	GameManager.player_dead.connect(dead_animation)
+	attack_component.attackGo.connect(combat_animation)
 
 func _process(_delta: float) -> void:
 	# Death Flag
@@ -60,3 +64,6 @@ func movement_animation():
 func dead_animation():
 	GameManager.is_player_dead = true
 	anim.current_animation = "Player/dead"
+	
+func combat_animation(dir):
+	print(playerCombatData.atkSubType, dir)

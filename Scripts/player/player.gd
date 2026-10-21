@@ -33,11 +33,14 @@ func _ready() -> void:
 	#Animation_manager.gd
 	animation_manager.input_manager  = input_manager
 	animation_manager.anim = animation_player 
+	animation_manager.playerCombatData = attack_component.combatData
+	animation_manager.attack_component = attack_component
 	
 	ui_controller.status_ui = status_ui
 	status_ui.ui_controller = ui_controller
 	
 	input_manager.attack_component = attack_component
+	
 	#endregion
 	
 	# Call component.setup() when player is ready (Minimizes Component/Signal Assignment Errors)
