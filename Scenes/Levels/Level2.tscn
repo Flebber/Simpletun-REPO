@@ -20,6 +20,7 @@ tile_map_data = PackedByteArray("AAAKAAAABQABAAAAAAALAAAABQABAAAAAAALAAEABQABAAE
 position = Vector2(261, -15)
 
 [node name="Slime" parent="." unique_id=1593448654 instance=ExtResource("4_smuj1")]
+z_index = -1
 position = Vector2(363, -25)
 scale = Vector2(0.6214126, 0.62653446)
 

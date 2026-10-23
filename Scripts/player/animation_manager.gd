@@ -10,7 +10,7 @@ var anim : AnimationPlayer
 
 var attack_component : AttackComponent
 var playerCombatData : CombatData
-
+var attacking : bool
 
 # Failsafes and Signal Connects
 func setup():
@@ -26,10 +26,13 @@ func setup():
 		
 	GameManager.player_dead.connect(dead_animation)
 	attack_component.attackGo.connect(combat_animation)
+	anim.animation_finished.connect(waitForAnim)
 
 func _process(_delta: float) -> void:
 	# Death Flag
 	if GameManager.is_player_dead:
+		return
+	if attacking:
 		return
 	
 	movement_animation()
@@ -66,9 +69,25 @@ func dead_animation():
 	anim.current_animation = "Player/dead"
 	
 func combat_animation(dir : Vector2):
-	if dir.x > 0:
-		print(playerCombatData.getAtkSubTypeString(), " right direction: ", dir)
+	if attacking or GameManager.is_player_dead:
+		return
 		
-	if dir.x < 0:
-		print(playerCombatData.getAtkSubTypeString(), " left direction: ", dir)
+	attacking = true
+	var atkSubType : String = playerCombatData.getAtkSubTypeString()
+	var animation_name : String
 	
+	if dir.x > 0:
+		print("Player/atk_%s_right" % atkSubType)
+		animation_name = "Player/atk_%s_right" % atkSubType
+	elif dir.x < 0:
+		print("Player/atk_%s_left" % atkSubType)
+		animation_name = "Player/atk_%s_left" % atkSubType
+	else:
+		attacking = false
+		return
+	anim.play(animation_name)
+
+
+func waitForAnim(anim_name: StringName) -> void:
+	if String(anim_name).begins_with("Player/atk_"):
+		attacking = false

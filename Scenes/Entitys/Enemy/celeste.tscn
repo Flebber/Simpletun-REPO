@@ -8,6 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgn5k"]
 
 [node name="Celeste" type="Area2D" unique_id=2050302146 node_paths=PackedStringArray("collision_check", "health", "sprite_2d", "animation_player")]
+z_index = -1
 script = ExtResource("1_nx4p3")
 collision_check = NodePath("CollisionCheck")
 health = NodePath("Health")
