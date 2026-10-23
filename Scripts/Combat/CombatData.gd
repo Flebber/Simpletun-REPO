@@ -7,6 +7,7 @@ class_name CombatData
 @export var atkShape : ATK_SHAPE
 @export var initialPos : Vector2
 @export var dmgAmount : float = 0.0
+@export var atkRateFPS : float
 
 @export var test_int : int
 

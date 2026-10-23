@@ -13,6 +13,8 @@ class_name AttackComponent
 
 @export var combatData : CombatData
 
+var is_attacking: bool = false
+
 # Parent = Entity that has this combat compoennt
 var parent : Node
 var targets : Array
@@ -44,20 +46,33 @@ func setup():
 
 # Attack signal gets emitted, now attack (using a local inpput whilst testing)
 func attackStart(dir):
+	# Prevent another attack from starting
+	if is_attacking:
+		return
+	is_attacking = true
+	
 	# Place the hurtbox in the desired position
 	hurt_box.position = parent.position + (combatData.initialPos * dir)
-	
+
+
 	# Wait 2 phys frames cus 1 doesnt work for some reason
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	
+	# Animation Plays
+	
+	
 	# Collision Checks/Logs Targets
 	colllision_check.scanCollision()
+	
 	targets = colllision_check.scannedCollsions
+	
+	for i in range(combatData.atkRateFPS):
+		await get_tree().physics_frame
+	
 
 	# Logged Targets Receive Damage using the Combat_damage component
 	combat_damage.damage_targets(targets)
 
-	# Animation Plays
 	# Attack Ends
-	
+	is_attacking = false
