@@ -65,5 +65,10 @@ func dead_animation():
 	GameManager.is_player_dead = true
 	anim.current_animation = "Player/dead"
 	
-func combat_animation(dir):
-	print(playerCombatData.atkSubType, dir)
+func combat_animation(dir : Vector2):
+	if dir.x > 0:
+		print(playerCombatData.getAtkSubTypeString(), " right direction: ", dir)
+		
+	if dir.x < 0:
+		print(playerCombatData.getAtkSubTypeString(), " left direction: ", dir)
+	

@@ -218,8 +218,8 @@ metadata/_edit_use_anchors_ = true
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1527416693]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(0, 39.285713)
-scale = Vector2(1.25, 1.5)
+position = Vector2(0, 39.285717)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_utp2y")
 hframes = 8
 vframes = 7

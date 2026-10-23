@@ -18,9 +18,10 @@ enum ATK_TYPE {
 }
 
 enum ATK_SUBTYPE {
-	SLAP,
-	PUNCH
+	slap,
+	punch
 }
+
 
 enum ATK_SHAPE {
 	circle,
@@ -28,3 +29,7 @@ enum ATK_SHAPE {
 	projectile,
 	dome
 }
+
+# Callable to get the exported atkSubtype as a String not Int
+func getAtkSubTypeString() -> String:
+	return ATK_SUBTYPE.keys()[atkSubType]
