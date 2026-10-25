@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dfeked6iton0k" path="res://Scripts/Combat/attack_component.gd" id="1_is7rk"]
 [ext_resource type="Script" uid="uid://dynpgnf4emrrw" path="res://Scripts/Combat/combat_damage.gd" id="3_i051g"]
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="4_2u70b"]
+[ext_resource type="Texture2D" uid="uid://c48qsfsytjvkm" path="res://assets/sprites/Characters/Player/pud_spritesheet.png" id="4_plkug"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nckul"]
 radius = 13.0
@@ -31,3 +32,6 @@ root_node = NodePath("../Melee")
 [node name="CombatDamage" type="Node" parent="." unique_id=218002364 node_paths=PackedStringArray("collision_check")]
 script = ExtResource("3_i051g")
 collision_check = NodePath("../HurtBox/CollisionCheck")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1107099031]
+texture = ExtResource("4_plkug")

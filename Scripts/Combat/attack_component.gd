@@ -59,14 +59,11 @@ func attackStart(dir):
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	
-	# Animation Plays
-	
-	
 	# Collision Checks/Logs Targets
 	colllision_check.scanCollision()
-	
 	targets = colllision_check.scannedCollsions
 	
+	# Account for firerate
 	for i in range(combatData.atkRateFPS):
 		await get_tree().physics_frame
 	
