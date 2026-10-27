@@ -1,0 +1,213 @@
+[gd_scene format=3 uid="uid://dgd7wovfgiqof"]
+
+[ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="4_2u70b"]
+[ext_resource type="Script" uid="uid://bx6wnivq7unsi" path="res://Scripts/Combat/attack_effect.gd" id="4_is7rk"]
+[ext_resource type="Texture2D" uid="uid://cqvefk74ghxn4" path="res://assets/particles/combat/melee_particleSpritesheet.png" id="4_plkug"]
+
+[sub_resource type="GDScript" id="GDScript_i051g"]
+script/source = "extends Node
+class_name AttackComponent
+
+@export var owner_entity : Node
+
+@export var colllision_check : CollisionCheck
+@export var combat_damage: CombatDamage
+
+
+@export var animation_player: AnimationPlayer
+@export var collision_shape_2d: CollisionShape2D
+@export var hurt_box: Area2D
+
+@export var combatData : CombatData
+@export var attack_effect: AttackEffect
+
+var is_attacking: bool = false
+
+# Parent = Entity that has this combat compoennt
+var parent : Node
+var targets : Array
+
+var atkdir : Vector2
+
+signal attackGo(dir : Vector2)	# Signal which will emit when the parent wants to attack, takes the direction of the attack as a Vector2
+
+
+# Parent sends signal to atk, determines direction of attack, plays animation, checks if there is a area colliding, deals damage 
+# This will be fully modular, Not primarily input managed, Just signals
+
+# Setup Components and Parent gets assigned 
+func setup():
+	
+	parent = get_parent()
+	
+	colllision_check.setup() 
+	combat_damage.setup()
+
+	colllision_check.owner_entity = owner_entity
+	combat_damage.amount = combatData.dmgAmount
+
+	print(parent, \" equipped with \", combatData.atkShape, \" shape and is a \", combatData.atkType)
+	print(parent, \"test int = \", combatData.test_int)
+	
+	attackGo.connect(attackStart)
+
+
+# Attack signal gets emitted, now attack (using a local inpput whilst testing)
+func attackStart(dir):
+	# Prevent another attack from starting
+	if is_attacking:
+		return
+	is_attacking = true
+	
+	# Place the hurtbox in the desired position
+	hurt_box.position = parent.position + (combatData.initialPos * dir)
+
+
+	# Wait 2 phys frames cus 1 doesnt work for some reason
+	await get_tree().physics_frame
+	await get_tree().physics_frame
+	
+	# Collision Checks/Logs Targets
+	colllision_check.scanCollision()
+	targets = colllision_check.scannedCollsions
+	
+	# Account for firerate
+	for i in range(combatData.atkRateFPS):
+		await get_tree().physics_frame
+	
+
+	# Logged Targets Receive Damage using the Combat_damage component
+	combat_damage.damage_targets(targets)
+
+	# Attack Ends
+	is_attacking = false
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nckul"]
+radius = 13.0
+height = 54.0
+
+[sub_resource type="GDScript" id="GDScript_plkug"]
+script/source = "extends Node
+class_name CombatDamage
+
+var parent : AttackComponent
+
+# Independant Collision Component 
+@export var collision_check : CollisionCheck 
+
+var combatData : CombatData
+
+# Modular Damage Amount
+var amount : float
+
+func setup():
+	# Assign when parent is ready for 0 errors
+	parent = get_parent()
+	combatData = parent.combatData
+
+	print(\"combatdmg test: \", combatData.test_int)
+
+func damage_targets(victims : Array):
+	victims = parent.targets
+	print(\"can damage\", victims)
+
+	# Temp Debug Attack
+	for target in victims:
+		var targethealth : Health = target.health
+		targethealth.current_health -= amount
+		print(target, \" health = \", targethealth.current_health)
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plkug"]
+atlas = ExtResource("4_plkug")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is7rk"]
+atlas = ExtResource("4_plkug")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7g28"]
+atlas = ExtResource("4_plkug")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aka0f"]
+atlas = ExtResource("4_plkug")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u70b"]
+atlas = ExtResource("4_plkug")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vck8v"]
+atlas = ExtResource("4_plkug")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wcht"]
+atlas = ExtResource("4_plkug")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a6tbo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plkug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is7rk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7g28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aka0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u70b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vck8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wcht")
+}],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="AttackComponent" type="Node" unique_id=995293195 node_paths=PackedStringArray("colllision_check", "combat_damage", "animation_player", "collision_shape_2d", "hurt_box", "attack_effect")]
+script = SubResource("GDScript_i051g")
+colllision_check = NodePath("HurtBox/CollisionCheck")
+combat_damage = NodePath("CombatDamage")
+animation_player = NodePath("AnimationPlayer")
+collision_shape_2d = NodePath("HurtBox/CollisionShape2D")
+hurt_box = NodePath("HurtBox")
+attack_effect = NodePath("AttackEffect")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1337392927]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1315555420]
+visible = false
+shape = SubResource("CapsuleShape2D_nckul")
+
+[node name="CollisionCheck" type="Node" parent="HurtBox" unique_id=1357358358]
+script = ExtResource("4_2u70b")
+metadata/_custom_type_script = "uid://dov27h2jhaq5u"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=479134012]
+root_node = NodePath("../Melee")
+
+[node name="CombatDamage" type="Node" parent="." unique_id=218002364 node_paths=PackedStringArray("collision_check")]
+script = SubResource("GDScript_plkug")
+collision_check = NodePath("../HurtBox/CollisionCheck")
+
+[node name="AttackEffect" type="Node" parent="." unique_id=676913011 node_paths=PackedStringArray("effect")]
+script = ExtResource("4_is7rk")
+effect = NodePath("Effect")
+
+[node name="Effect" type="AnimatedSprite2D" parent="AttackEffect" unique_id=1613262239]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_a6tbo")
+frame = 6
+frame_progress = 1.0

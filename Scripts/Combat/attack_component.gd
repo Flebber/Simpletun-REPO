@@ -5,7 +5,7 @@ class_name AttackComponent
 
 @export var colllision_check : CollisionCheck
 @export var combat_damage: CombatDamage
-
+@export var attack_effect: AttackEffect
 
 @export var animation_player: AnimationPlayer
 @export var collision_shape_2d: CollisionShape2D
