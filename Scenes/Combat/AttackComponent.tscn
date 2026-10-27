@@ -4,68 +4,12 @@
 [ext_resource type="Script" uid="uid://dynpgnf4emrrw" path="res://Scripts/Combat/combat_damage.gd" id="3_i051g"]
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="4_2u70b"]
 [ext_resource type="Script" uid="uid://bx6wnivq7unsi" path="res://Scripts/Combat/attack_effect.gd" id="4_is7rk"]
-[ext_resource type="Texture2D" uid="uid://cqvefk74ghxn4" path="res://assets/particles/combat/melee_particleSpritesheet.png" id="4_plkug"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nckul"]
 radius = 13.0
 height = 54.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_plkug"]
-atlas = ExtResource("4_plkug")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_is7rk"]
-atlas = ExtResource("4_plkug")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o7g28"]
-atlas = ExtResource("4_plkug")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aka0f"]
-atlas = ExtResource("4_plkug")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2u70b"]
-atlas = ExtResource("4_plkug")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vck8v"]
-atlas = ExtResource("4_plkug")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3wcht"]
-atlas = ExtResource("4_plkug")
-region = Rect2(192, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_a6tbo"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_plkug")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_is7rk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o7g28")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_aka0f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2u70b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vck8v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3wcht")
-}],
-"loop": false,
-"name": &"default",
-"speed": 20.0
-}]
+[sub_resource type="SpriteFrames" id="SpriteFrames_is7rk"]
 
 [node name="AttackComponent" type="Node" unique_id=995293195 node_paths=PackedStringArray("colllision_check", "combat_damage", "attack_effect", "animation_player", "collision_shape_2d", "hurt_box")]
 script = ExtResource("1_is7rk")
@@ -99,6 +43,4 @@ effect = NodePath("Effect")
 
 [node name="Effect" type="AnimatedSprite2D" parent="AttackEffect" unique_id=1613262239]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_a6tbo")
-frame = 6
-frame_progress = 1.0
+sprite_frames = SubResource("SpriteFrames_is7rk")

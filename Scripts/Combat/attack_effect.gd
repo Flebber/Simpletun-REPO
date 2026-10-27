@@ -1,7 +1,16 @@
 extends Node
 class_name AttackEffect
 
-@export var effect: AnimatedSprite2D
 
-@export var effectFPS : float
-@export var effectSpriteSheet : SpriteFrames
+var parent : AttackComponent
+
+@export var effect: AnimatedSprite2D
+@export var effectData : AttackEffectData
+
+
+func setup():
+	# Assign when parent is ready for 0 errors
+	parent = get_parent()
+	
+	effect.sprite_frames = effectData.effectSpriteSheet
+	

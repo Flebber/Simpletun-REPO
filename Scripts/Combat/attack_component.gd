@@ -12,6 +12,7 @@ class_name AttackComponent
 @export var hurt_box: Area2D
 
 @export var combatData : CombatData
+@export var AttackEffectData : AttackEffectData
 
 var is_attacking: bool = false
 
