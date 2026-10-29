@@ -12,7 +12,7 @@ class_name AttackComponent
 @export var hurt_box: Area2D
 
 @export var combatData : CombatData
-@export var AttackEffectData : AttackEffectData
+@export var atkEffectData : AttackEffectData
 
 var is_attacking: bool = false
 
@@ -38,6 +38,9 @@ func setup():
 
 	colllision_check.owner_entity = owner_entity
 	combat_damage.amount = combatData.dmgAmount
+	
+	attack_effect.effect.sprite_frames = atkEffectData.effectSpriteSheet
+	print(owner_entity, "spriteF = ", attack_effect.effect.sprite_frames)
 
 	print(parent, " equipped with ", combatData.atkShape, " shape and is a ", combatData.atkType)
 	print(parent, "test int = ", combatData.test_int)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AttackEffectData" format=3 uid="uid://b0bvrjbu6w4rs"]
+
+[ext_resource type="SpriteFrames" uid="uid://bfvg7rj25m46q" path="res://assets/particles/combat/attack_slap_effect.tres" id="1_sl8a8"]
+[ext_resource type="Script" uid="uid://bs8j7wtpj4t7v" path="res://Scripts/Combat/AttackEffectData.gd" id="2_g5oq5"]
+
+[resource]
+script = ExtResource("2_g5oq5")
+effectSpriteSheet = ExtResource("1_sl8a8")
+metadata/_custom_type_script = "uid://bs8j7wtpj4t7v"
