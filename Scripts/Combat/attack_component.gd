@@ -23,7 +23,7 @@ var targets : Array
 var atkdir : Vector2
 
 signal attackGo(dir : Vector2)	# Signal which will emit when the parent wants to attack, takes the direction of the attack as a Vector2
-
+signal atkEffectGo(pos : Vector2)
 
 # Parent sends signal to atk, determines direction of attack, plays animation, checks if there is a area colliding, deals damage 
 # This will be fully modular, Not primarily input managed, Just signals
@@ -35,10 +35,12 @@ func setup():
 	
 	colllision_check.setup() 
 	combat_damage.setup()
+	attack_effect.setup()
 
 	colllision_check.owner_entity = owner_entity
 	combat_damage.amount = combatData.dmgAmount
 	
+
 	attack_effect.effect.sprite_frames = atkEffectData.effectSpriteSheet
 	print(owner_entity, "spriteF = ", attack_effect.effect.sprite_frames)
 
@@ -57,11 +59,13 @@ func attackStart(dir):
 	
 	# Place the hurtbox in the desired position
 	hurt_box.position = parent.position + (combatData.initialPos * dir)
-
+	
 
 	# Wait 2 phys frames cus 1 doesnt work for some reason
 	await get_tree().physics_frame
 	await get_tree().physics_frame
+	atkEffectGo.emit(hurt_box.position)
+	
 	
 	# Collision Checks/Logs Targets
 	colllision_check.scanCollision()

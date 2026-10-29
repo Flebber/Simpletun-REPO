@@ -5,12 +5,18 @@ class_name AttackEffect
 var parent : AttackComponent
 
 @export var effect: AnimatedSprite2D
-@export var effectData : AttackEffectData
+var effectData : AttackEffectData
 
 
 func setup():
 	# Assign when parent is ready for 0 errors
 	parent = get_parent()
+	effectData = parent.atkEffectData
 	
-	effect.sprite_frames = effectData.effectSpriteSheet
-	
+	print(effectData)
+	#effect.sprite_frames = effectData.effectSpriteSheet
+	parent.atkEffectGo.connect(play_atk_effect)
+
+
+func play_atk_effect(pos):
+	print("effect started at " ,pos)
