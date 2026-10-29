@@ -20,3 +20,5 @@ func setup():
 
 func play_atk_effect(pos):
 	print("effect started at " ,pos)
+	effect.position = pos
+	effect.play("slap_effect")

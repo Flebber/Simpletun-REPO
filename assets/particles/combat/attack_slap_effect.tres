@@ -55,6 +55,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_3wcht")
 }],
 "loop": false,
-"name": &"default",
-"speed": 20.0
+"name": &"slap_effect",
+"speed": 30.0
 }]
