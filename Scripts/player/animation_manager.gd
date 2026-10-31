@@ -28,6 +28,7 @@ func setup():
 	attack_component.attackGo.connect(combat_animation)
 	anim.animation_finished.connect(waitForAnim)
 
+
 func _process(_delta: float) -> void:
 	# Death Flag
 	if GameManager.is_player_dead:

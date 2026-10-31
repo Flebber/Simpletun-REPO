@@ -9,6 +9,8 @@
 radius = 13.0
 height = 54.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_plkug"]
+
 [node name="AttackComponent" type="Node" unique_id=995293195 node_paths=PackedStringArray("colllision_check", "combat_damage", "attack_effect", "animation_player", "collision_shape_2d", "hurt_box")]
 script = ExtResource("1_is7rk")
 colllision_check = NodePath("HurtBox/CollisionCheck")
@@ -42,4 +44,4 @@ effect = NodePath("Effect")
 [node name="Effect" type="AnimatedSprite2D" parent="AttackEffect" unique_id=1613262239]
 texture_filter = 1
 scale = Vector2(2, 2)
-animation = &""
+sprite_frames = SubResource("SpriteFrames_plkug")
