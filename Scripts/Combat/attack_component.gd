@@ -23,7 +23,7 @@ var targets : Array
 var atkdir : Vector2
 
 signal attackGo(dir : Vector2)	# Signal which will emit when the parent wants to attack, takes the direction of the attack as a Vector2
-signal atkEffectGo(pos : Vector2)
+signal atkEffectGo(pos : Vector2, dir : Vector2)
 
 # Parent sends signal to atk, determines direction of attack, plays animation, checks if there is a area colliding, deals damage 
 # This will be fully modular, Not primarily input managed, Just signals
@@ -64,7 +64,7 @@ func attackStart(dir):
 	# Wait 2 phys frames cus 1 doesnt work for some reason
 	await get_tree().physics_frame
 	await get_tree().physics_frame
-	atkEffectGo.emit(hurt_box.position)
+	atkEffectGo.emit(hurt_box.position, dir)
 	
 	
 	# Collision Checks/Logs Targets

@@ -18,7 +18,12 @@ func setup():
 	parent.atkEffectGo.connect(play_atk_effect)
 
 
-func play_atk_effect(pos):
-	print("effect started at " ,pos)
+func play_atk_effect(pos : Vector2, dir : Vector2):
+	var posdir : String = ""
+	if dir.x == -1:
+		posdir = "LEFT"
+	elif dir.x == 1:
+		posdir = "RIGHT"
+	print("effect started at " ,pos, " posdir: ", posdir)
 	effect.position = pos
 	effect.play("slap_effect")
