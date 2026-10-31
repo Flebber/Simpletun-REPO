@@ -4,12 +4,11 @@
 [ext_resource type="Script" uid="uid://dynpgnf4emrrw" path="res://Scripts/Combat/combat_damage.gd" id="3_i051g"]
 [ext_resource type="Script" uid="uid://dov27h2jhaq5u" path="res://Scripts/Base Systems/collide_check.gd" id="4_2u70b"]
 [ext_resource type="Script" uid="uid://bx6wnivq7unsi" path="res://Scripts/Combat/attack_effect.gd" id="4_is7rk"]
+[ext_resource type="SpriteFrames" uid="uid://bfvg7rj25m46q" path="res://assets/particles/combat/attack_slap_effect.tres" id="5_is7rk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nckul"]
 radius = 13.0
 height = 54.0
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_plkug"]
 
 [node name="AttackComponent" type="Node" unique_id=995293195 node_paths=PackedStringArray("colllision_check", "combat_damage", "attack_effect", "animation_player", "collision_shape_2d", "hurt_box")]
 script = ExtResource("1_is7rk")
@@ -44,4 +43,7 @@ effect = NodePath("Effect")
 [node name="Effect" type="AnimatedSprite2D" parent="AttackEffect" unique_id=1613262239]
 texture_filter = 1
 scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_plkug")
+sprite_frames = ExtResource("5_is7rk")
+animation = &"slap_effect"
+frame = 6
+frame_progress = 1.0
