@@ -19,11 +19,9 @@ func setup():
 	print("combatdmg test: ", combatData.test_int)
 
 func damage_targets(victims : Array):
+	# Assign the valid targets array the Attack Component made
 	victims = parent.targets
-	print("can damage", victims)
 
-	# Temp Debug Attack
 	for target in victims:
 		var targethealth : Health = target.health
 		targethealth.current_health -= amount
-		print(target, " health = ", targethealth.current_health)
