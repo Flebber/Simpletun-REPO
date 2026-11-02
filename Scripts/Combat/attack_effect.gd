@@ -6,6 +6,7 @@ var parent : AttackComponent
 
 @export var effect: AnimatedSprite2D
 var effectData : AttackEffectData
+var effectName : String
 
 
 func setup():
@@ -20,6 +21,7 @@ func setup():
 
 func play_atk_effect(pos : Vector2, dir : Vector2):
 	var posdir : String = ""
+	effectName = effectData.effectName
 	if dir.x == -1:
 		posdir = "LEFT"
 		effect.flip_h = true
@@ -27,7 +29,7 @@ func play_atk_effect(pos : Vector2, dir : Vector2):
 		posdir = "RIGHT"
 		effect.flip_h = false
 
-	print("effect started at " ,pos, " posdir: ", posdir)
+	print(effectName, " effect started at " ,pos, " posdir: ", posdir)
 
 	effect.position = pos
-	effect.play("slap_effect")
+	effect.play(str(effectName, "_effect"))

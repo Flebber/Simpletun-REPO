@@ -1,0 +1,68 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cenaq4l7di6rv"]
+
+[ext_resource type="Texture2D" uid="uid://cqvefk74ghxn4" path="res://assets/particles/combat/melee_particleSpritesheet.png" id="1_iy2te"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aka0f"]
+atlas = ExtResource("1_iy2te")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plkug"]
+atlas = ExtResource("1_iy2te")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is7rk"]
+atlas = ExtResource("1_iy2te")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7g28"]
+atlas = ExtResource("1_iy2te")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u70b"]
+atlas = ExtResource("1_iy2te")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vck8v"]
+atlas = ExtResource("1_iy2te")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wcht"]
+atlas = ExtResource("1_iy2te")
+region = Rect2(192, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aka0f")
+}],
+"loop": false,
+"name": &"poo_effect",
+"speed": 120.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plkug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is7rk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7g28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aka0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u70b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vck8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wcht")
+}],
+"loop": false,
+"name": &"test_effect",
+"speed": 120.0
+}]

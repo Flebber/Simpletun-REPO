@@ -6,4 +6,5 @@
 [resource]
 script = ExtResource("2_g5oq5")
 effectSpriteSheet = ExtResource("1_sl8a8")
+effectName = "test"
 metadata/_custom_type_script = "uid://bs8j7wtpj4t7v"
