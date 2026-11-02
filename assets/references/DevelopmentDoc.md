@@ -14,10 +14,9 @@
     **_"If i put it on a rock would i still work"_**
 
 ## Doing (Programming)
-
 - [ ]
-## To do (Programming)
 
+## To do (Programming)
 - [ ] Respawn Checkpoint Animation
 - [ ] Create a basic enemy **NPC** _(slime, bald guy, etc)_
 - [ ] Implement Coyote Timing
@@ -27,8 +26,8 @@
 - [ ] Create a Basic **Quest system**
 - [ ] Create a neutral **NPC** _(Quest Giver)_
 - [ ] Create Procedural Generation System
-## Done (Programming)
 
+## Done (Programming)
 - [x] Create a Modular HealthBar System
 - [x] Modular Combat Particle Effect System
 - [x] Create Player Slap Melee CS
@@ -62,15 +61,11 @@
 - [x] Implement Collisions into grass tileset
 - [x] Follow the schedule Bidaily sessions
 
-## Design
 
-# Inspo
-
-# Levels
 
 ## Doing  (Design)
-
 - [ ]
+
 ## To do (Design)
 
 - [ ] Create 2 variations of grass **tileset** for different biomes. _(Snow, Jungle, Sewer etc.)_
@@ -81,8 +76,8 @@
 - [ ] Spritesheet for ranged **attacks**/**weapon**
 - [ ] Spritesheets for friendly **NPC**
 - [ ] Spritesheets for neutral **NPC**
-## Done (Design)
 
+## Done (Design)
 - [x] Slap Attack Particles
 - [x] Player Slap Animation
 - [x] Create Sewer tileset
@@ -108,16 +103,13 @@
 
 ## Marketing
 
-# Youtube Account
-
 ## Doing (Marketing)
-
 - [ ] Publish First Shortform vid (**_short_**)
-## To do (Marketing)
 
+## To do (Marketing)
 - [ ] Reach 20 **Subscribers**
 - [ ] Reach 1k **views** on a **short**
 - [ ] Reach 100 **views** on a **vid**
-## Done (Marketing)
 
+## Done (Marketing)
 - [x] Create **Youtube** Account
