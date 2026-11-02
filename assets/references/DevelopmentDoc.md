@@ -14,21 +14,38 @@
     **_"If i put it on a rock would i still work"_**
 
 ## Doing (Programming)
-- [ ] Implement Coyote Timing
+
+- [ ]
 ## To do (Programming)
-- [ ] Create Interact logic
-- [ ] Create Poster Interact Logic
+
+- [ ] Respawn Checkpoint Animation
 - [ ] Create a basic enemy **NPC** _(slime, bald guy, etc)_
-- [ ] Create a HealthBar
-- [ ] Create a Melee **Combat system** _(Knife etc.)_
-- [ ] Create a Ranged **Combat system** _(Bow etc.)_
-- [ ] Create **Healing System**
+- [ ] Implement Coyote Timing
+- [ ] Create **Healing System** 
 - [ ] Create a friendly **NPC** _(minion, pet etc.)_
+- [ ] Create a Ranged **Combat system** _(Bow etc.)_
 - [ ] Create a Basic **Quest system**
 - [ ] Create a neutral **NPC** _(Quest Giver)_
 - [ ] Create Procedural Generation System
 ## Done (Programming)
-- [x] Create Modular Point Animation Manager
+
+- [x] Create a Modular HealthBar System
+- [x] Modular Combat Particle Effect System
+- [x] Create Player Slap Melee CS
+- [x] Directional Player Slap Logic
+- [x] Create a Melee **Combat system** _(Modular)_
+- [x] Fix Checkpoint Respawn Bug after reaching an end flag
+- [x] Fix Animation Bug on death  retry withot checkpoint
+- [x] Level_Cancelled clears checkpoint data
+- [x] Debug UI toggle
+- [x] Created Coin Counter
+- [x] Created Coin Logic
+- [x] Created PickupData Modular Funtions/Script
+- [x] Created PickupResource
+- [x] Created Pause Menu Logic
+- [x] Create Poster Interact Logic
+- [x] Create Interact logic
+- [x] Create Modular Point Animation Manager 
 - [x] Comment over all scripts
 - [x] Create Checkpoint Logic
 - [x] Create Spawn Point Logic
@@ -53,11 +70,9 @@
 
 ## Doing  (Design)
 
+- [ ]
 ## To do (Design)
-- [ ] Transtition for Poster Reading using Lerp
-- [ ] Design Menu UI Sprites
-- [ ] Design Death Menu UI Sprites
-- [ ] Design Finish Menu UI Sprites
+
 - [ ] Create 2 variations of grass **tileset** for different biomes. _(Snow, Jungle, Sewer etc.)_
 - [ ] Design 3 basic **levels** _(Grass/Forest, Jungle, Sewer etc.)_
 - [ ] Create 3 basic **levels** _(Grass/Forest, Jungle, Sewer etc.)_
@@ -67,6 +82,18 @@
 - [ ] Spritesheets for friendly **NPC**
 - [ ] Spritesheets for neutral **NPC**
 ## Done (Design)
+
+- [x] Slap Attack Particles
+- [x] Player Slap Animation
+- [x] Create Sewer tileset
+- [x] Design particle effect for Coin
+- [x] Design Finish Menu UI 
+- [x] Design Death Menu UI 
+- [x] Design Menu UI 
+- [x] Transtition for Poster Reading using Lerp 
+- [x] Designed Pause Menu
+- [x] Create A Global Theme (Handles Fonts, Margins etc.)
+- [x] Design Custom Font
 - [x] Design Tutorial Posters
 - [x] Design Coin Sprite
 - [x] Animate Checkpoint and Endpoint
@@ -85,10 +112,12 @@
 
 ## Doing (Marketing)
 
-## To do (Marketing)
 - [ ] Publish First Shortform vid (**_short_**)
+## To do (Marketing)
+
 - [ ] Reach 20 **Subscribers**
 - [ ] Reach 1k **views** on a **short**
 - [ ] Reach 100 **views** on a **vid**
 ## Done (Marketing)
+
 - [x] Create **Youtube** Account
