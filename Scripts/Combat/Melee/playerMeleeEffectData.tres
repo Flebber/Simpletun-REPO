@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AttackEffectData" format=3 uid="uid://bw6xpttmvj17e"]
+
+[ext_resource type="SpriteFrames" uid="uid://cu8p4k0ww3fqp" path="res://Scripts/Combat/Melee/playerMeleeEffectSprites.tres" id="1_7oipw"]
+[ext_resource type="Script" uid="uid://bs8j7wtpj4t7v" path="res://Scripts/Combat/AttackEffectData.gd" id="2_cy532"]
+
+[resource]
+script = ExtResource("2_cy532")
+effectSpriteSheet = ExtResource("1_7oipw")
+effectName = "test"
+metadata/_custom_type_script = "uid://bs8j7wtpj4t7v"

@@ -10,9 +10,9 @@
 [ext_resource type="Script" uid="uid://dgwhbks1vjgk6" path="res://Scripts/Base Systems/health.gd" id="6_khnq4"]
 [ext_resource type="Script" uid="uid://diiylu8rs278j" path="res://Scripts/Player/ui_component.gd" id="9_xo8ps"]
 [ext_resource type="Script" uid="uid://ci6ho7fxj2c41" path="res://Scripts/UI/status_ui.gd" id="10_fcmex"]
-[ext_resource type="Resource" uid="uid://ci6mpsh5ck8cm" path="res://Scripts/Combat/Melee/playerSlapData.tres" id="12_01b8d"]
+[ext_resource type="Resource" uid="uid://bn76fw7w7ca2x" path="res://Scripts/Combat/Melee/playerPunchData.tres" id="12_01b8d"]
 [ext_resource type="PackedScene" uid="uid://dgd7wovfgiqof" path="res://Scenes/Combat/AttackComponent.tscn" id="12_cueqf"]
-[ext_resource type="Resource" uid="uid://b0bvrjbu6w4rs" path="res://Scripts/Combat/Melee/playerSlapEffectData.tres" id="13_01b8d"]
+[ext_resource type="Resource" uid="uid://bw6xpttmvj17e" path="res://Scripts/Combat/Melee/playerMeleeEffectData.tres" id="13_01b8d"]
 
 [sub_resource type="Animation" id="Animation_272bh"]
 length = 0.001

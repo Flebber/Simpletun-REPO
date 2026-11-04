@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_qw6js")
+atkSubType = 1
 atkSprite = ExtResource("1_c0rld")
+atkShape = 1
 initialPos = Vector2(30, 20)
-dmgAmount = 5.0
+dmgAmount = 20.0
 atkRateFPS = 24.0
 test_int = 3
 isPlayer = true
