@@ -2,6 +2,7 @@ extends Node
 class_name AttackComponent
 
 @export var owner_entity : Node
+@export var owner_name : String
 
 @export var colllision_check : CollisionCheck
 @export var combat_damage: CombatDamage
@@ -33,6 +34,23 @@ func setup():
 	
 	parent = get_parent()
 	
+	var components : Array = [
+		owner_entity,
+		owner_name,
+		colllision_check,
+		combat_damage,
+		attack_effect,
+		animation_player,
+		collision_shape_2d,
+		hurt_box,
+		combatData,
+		atkEffectData
+	]
+	for i in components:
+		if i == null:
+			print(i, " is null for ")
+		else:
+			print(i, " is not nulls for")
 	colllision_check.setup() 
 	combat_damage.setup()
 	attack_effect.setup()
@@ -42,10 +60,7 @@ func setup():
 	
 
 	attack_effect.effect.sprite_frames = atkEffectData.effectSpriteSheet
-	print(owner_entity, "spriteF = ", attack_effect.effect.sprite_frames)
-
-	print(parent, " equipped with ", combatData.atkShape, " shape and is a ", combatData.atkType)
-	print(parent, "test int = ", combatData.test_int)
+	print(owner_entity, " is the owner entity")
 	
 	attackGo.connect(attackStart)
 
