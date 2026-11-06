@@ -5,7 +5,6 @@
 
 [resource]
 script = ExtResource("2_qw6js")
-atkSubType = 1
 atkSprite = ExtResource("1_c0rld")
 atkShape = 1
 initialPos = Vector2(30, 20)

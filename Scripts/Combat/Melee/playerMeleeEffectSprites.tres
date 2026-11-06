@@ -1,6 +1,11 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://cu8p4k0ww3fqp"]
 
 [ext_resource type="Texture2D" uid="uid://cqvefk74ghxn4" path="res://assets/particles/combat/melee_particleSpritesheet.png" id="1_vnsov"]
+[ext_resource type="Texture2D" uid="uid://c6dovqppxio7o" path="res://assets/particles/combat/pinkbardmeep.png" id="1_wwj4y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1l0hm"]
+atlas = ExtResource("1_wwj4y")
+region = Rect2(0, 0, 768, 768)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_plkug"]
 atlas = ExtResource("1_vnsov")
@@ -32,7 +37,19 @@ region = Rect2(192, 0, 32, 32)
 
 [resource]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1l0hm")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1l0hm")
+}, {
+"duration": 1.0,
+"texture": null
+}],
 "loop": true,
 "name": &"punch_effect",
 "speed": 5.0
