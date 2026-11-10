@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("2_cy532")
 effectSpriteSheet = ExtResource("1_7oipw")
-effectName = "punch"
+effectName = "slap"
 metadata/_custom_type_script = "uid://bs8j7wtpj4t7v"

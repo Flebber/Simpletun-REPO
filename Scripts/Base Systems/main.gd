@@ -1,9 +1,10 @@
 class_name Main extends Node
 
+
 func _ready() -> void:
 	GameManager.level_cancelled.connect(reset_level_data)
 	GameManager.player_respawn.connect(resetPlayerOnRespawn)
-	
+
 
 func reset_level_data():
 	GameManager.has_checkpoint = false
