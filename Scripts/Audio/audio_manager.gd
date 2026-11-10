@@ -1,10 +1,10 @@
 extends Node
 
-@export var clips: AudioStreamPlayer2D
-@export var one_shots: AudioStreamPlayer2D
+@export var audio_player: AudioStreamPlayer2D
 @export var audio_bank: AudioBank
 
 
-func setup() -> void:
-	audio_bank.clips = clips
-	audio_bank.one_shots = one_shots
+
+func _ready() -> void:
+	audio_bank.audio_player = audio_player
+	print(audio_bank.audio_player, audio_bank.ClipBank, audio_bank.OneShotBank)

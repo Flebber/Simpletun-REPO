@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b8hb8ntmffjye"]
+
+[ext_resource type="Script" uid="uid://bs0delstpctkd" path="res://Scripts/Audio/audio_manager.gd" id="1_6ybar"]
+[ext_resource type="AudioStream" uid="uid://c6rllh015c7hm" path="res://assets/sfx/pud/combat/hurt.mp3" id="2_ruhjw"]
+[ext_resource type="Script" uid="uid://dp2vv5sdx3hyv" path="res://Scripts/Audio/audio_bank.gd" id="3_xk0s4"]
+
+[node name="AudioManager" type="Node" unique_id=846780213 node_paths=PackedStringArray("audio_player", "audio_bank")]
+script = ExtResource("1_6ybar")
+audio_player = NodePath("AudioPlayer")
+audio_bank = NodePath("AudioBank")
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1756197638]
+unique_name_in_owner = true
+stream = ExtResource("2_ruhjw")
+
+[node name="AudioBank" type="Node" parent="." unique_id=1780630329]
+script = ExtResource("3_xk0s4")

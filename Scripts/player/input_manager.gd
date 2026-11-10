@@ -22,4 +22,3 @@ func _input(event: InputEvent) -> void:
 
 	if event.is_action_pressed("atk_left"):
 		attack_component.attackGo.emit(Vector2(-1, 1))
-	AudioGlobal.audioPlay()

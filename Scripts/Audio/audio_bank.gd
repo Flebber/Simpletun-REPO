@@ -1,8 +1,7 @@
 extends Node
 class_name AudioBank
 
-var clips: AudioStreamPlayer2D
-var one_shots: AudioStreamPlayer2D
+var audio_player : AudioStreamPlayer2D
 
 var ClipBank : Dictionary[String, AudioStreamMP3] = {
 	
