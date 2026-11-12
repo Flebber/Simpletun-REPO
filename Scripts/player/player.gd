@@ -24,6 +24,7 @@ class_name Player extends CharacterBody2D
 #endregion
 
 func _ready() -> void:
+
 	#region Assign Child Components -> Component
 	#Movement.gd
 	movement.input_manager = input_manager
@@ -51,5 +52,11 @@ func _ready() -> void:
 	status_ui.setup()
 	health.setup()
 	
+	health.healthHurt.connect(PlayerSoundEffects)
+	
 	# Set Players' sprite to sprite_texture ( Allows for easy change )
 	sprite.texture = sprite_texture
+
+func PlayerSoundEffects(sigcheck : String):
+	if sigcheck == "hurt":
+		AudioManager.playSfxOS("pudHurt")

@@ -18,4 +18,6 @@ func setup() -> void:
 
 # Deal (amount) damage to the CharacterBody that Collided {Connected to collision_check.collided}
 func deal_damage(body : Node):
-	body.health.current_health -= amount
+	var bhealth : Health = body.health
+	bhealth.current_health -= amount
+	bhealth.healthHurt.emit("hurt")

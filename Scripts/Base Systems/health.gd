@@ -9,6 +9,7 @@ var health_bar : HealthBar
 
 #Signal for health setter changing
 signal healthChanged(currenthp : float, maxhp : float)
+signal healthHurt(sigcheck : String)
 
 # Modular Max Health Variable
 @export var max_health : float
@@ -22,7 +23,7 @@ var current_health: float:
 		return _current_health
 	set(value):
 		_current_health = clampf(value, 0.0, max_health)
-
+		
 		# Set Death flag and Death signal
 		if _current_health == 0.0 and !is_dead:
 			is_dead = true
