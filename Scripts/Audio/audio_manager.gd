@@ -8,8 +8,6 @@ extends Node
 
 func _ready() -> void:
 	audio_bank.audio_player = audio_player
-	print(audio_bank.audio_player, audio_bank.ClipBank, audio_bank.OneShotBank)
-	
 
 
 # play oneshot sound effect

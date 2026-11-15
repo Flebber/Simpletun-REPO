@@ -46,11 +46,12 @@ func setup():
 		combatData,
 		atkEffectData
 	]
-	for i in components:
-		if i == null:
-			print(i, " is null for ")
-		else:
-			print(i, " is not nulls for")
+	#for i in components:
+		#if i == null:
+			#print(i, " is null for ", owner_entity)
+		#else:
+			#print(i, " is not nulls for", owner_entity)
+			
 	colllision_check.setup() 
 	combat_damage.setup()
 	attack_effect.setup()

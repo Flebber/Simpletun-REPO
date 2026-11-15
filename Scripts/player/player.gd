@@ -20,6 +20,8 @@ class_name Player extends CharacterBody2D
 @export var status_ui: CanvasLayer
 @export var ui_controller: Control
 
+@warning_ignore("unused_signal")
+signal playerSFXsignal(sigcheck : String)
 
 #endregion
 
@@ -53,6 +55,7 @@ func _ready() -> void:
 	health.setup()
 	
 	health.healthHurt.connect(PlayerSoundEffects)
+	playerSFXsignal.connect(PlayerSoundEffects)
 	
 	# Set Players' sprite to sprite_texture ( Allows for easy change )
 	sprite.texture = sprite_texture
@@ -60,3 +63,9 @@ func _ready() -> void:
 func PlayerSoundEffects(sigcheck : String):
 	if sigcheck == "hurt":
 		AudioManager.playSfxOS("pudHurt")
+	if sigcheck == "pudJump":
+		print("sfx jump")
+		AudioManager.playSfxOS("pudJump")
+	if sigcheck == "pudGlide":
+			AudioManager.playSfxCP("pudGlide")
+			print("sfx glide")

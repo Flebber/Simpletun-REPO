@@ -55,11 +55,13 @@ func movement_animation():
 		anim.current_animation = "Player/idle"
 			
 	# Jump Animation (Play Glide Anim if held and !onfloor)
-	if Input.is_action_just_pressed("jump") and player.is_on_floor():
+	if Input.is_action_just_pressed("jump") and glide_check.is_colliding():
 		anim.current_animation = "Player/jump"
+		player.playerSFXsignal.emit("pudJump")
 		
 	elif Input.is_action_pressed("glide") and not player.is_on_floor():
 		anim.current_animation = "Player/jump"
+		player.playerSFXsignal.emit("pudGlide")
 		
 		if glide_check.is_colliding() and not player.is_on_floor():
 			anim.stop()
