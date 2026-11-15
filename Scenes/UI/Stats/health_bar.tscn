@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d1up373y1yse7" path="res://Scenes/UI/Stats/health_barPercent.gd" id="2_hkksu"]
 
 [node name="HealthBar" type="ProgressBar" unique_id=2125488593 node_paths=PackedStringArray("percentDisplay")]
+z_index = 2
 offset_left = 136.00002
 offset_top = -137.0
 offset_right = 140.00002
