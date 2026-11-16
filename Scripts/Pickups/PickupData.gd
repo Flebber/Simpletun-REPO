@@ -5,5 +5,5 @@ class_name PickupData
 @export var pickup_icon : Texture
 @export var max_stack : int
 
-
+@export var SFX : AudioStreamMP3
 @export var islocked : bool

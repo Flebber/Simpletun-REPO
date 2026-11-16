@@ -26,6 +26,7 @@ func pickupActivate(body):
 		parentPickupName.emit(pickupName)
 		
 		await get_tree().process_frame 
+		AudioManager.playSfxOS("coinPickup")
 		parent.queue_free()
 	else:
 		print("Not Player or Pickedup already")
