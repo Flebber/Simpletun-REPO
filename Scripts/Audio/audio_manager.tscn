@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://bs0delstpctkd" path="res://Scripts/Audio/audio_manager.gd" id="1_6ybar"]
 [ext_resource type="Script" uid="uid://dp2vv5sdx3hyv" path="res://Scripts/Audio/audio_bank.gd" id="3_xk0s4"]
 
-[sub_resource type="AudioStream" id="AudioStream_ruhjw"]
-
 [node name="AudioManager" type="Node" unique_id=846780213 node_paths=PackedStringArray("audio_player", "audio_bank")]
 script = ExtResource("1_6ybar")
 audio_player = NodePath("AudioPlayer")
@@ -12,7 +10,6 @@ audio_bank = NodePath("AudioBank")
 
 [node name="AudioPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1756197638]
 unique_name_in_owner = true
-stream = SubResource("AudioStream_ruhjw")
 
 [node name="AudioBank" type="Node" parent="." unique_id=1780630329]
 script = ExtResource("3_xk0s4")

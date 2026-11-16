@@ -64,8 +64,10 @@ func PlayerSoundEffects(sigcheck : String):
 	if sigcheck == "hurt":
 		AudioManager.playSfxOS("pudHurt")
 	if sigcheck == "pudJump":
-		print("sfx jump")
 		AudioManager.playSfxOS("pudJump")
-	if sigcheck == "pudGlide":
-			AudioManager.playSfxCP("pudGlide")
-			print("sfx glide")
+	
+	#if sigcheck == "pudGlide":
+			#AudioManager.playSfxCP("pudGlide")
+			#print("sfx glide")
+			#if sigcheck == "pudGlideStop":
+				#print("stop glide sound")

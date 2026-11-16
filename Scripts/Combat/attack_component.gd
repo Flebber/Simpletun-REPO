@@ -86,6 +86,8 @@ func attackStart(dir):
 	# Collision Checks/Logs Targets
 	colllision_check.scanCollision()
 	targets = colllision_check.scannedCollsions
+
+	
 	
 	# Account for firerate
 	for i in range(combatData.atkRateFPS):

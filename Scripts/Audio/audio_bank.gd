@@ -20,7 +20,7 @@ var OneShotBank : Dictionary[String,  AudioStreamMP3] = {
 
 #region Pud SFX
 	"pudHurt": load("uid://cixljks6ivfr4"),
-	"pudDeath": load("uid://ctdoij6kaovl2"),
+	"pudDeath": load("uid://ctdoij6kaovl2w"),
 	"pudHuss": load("uid://b6q3o5gp5l6j0"),
 	"pudJump": load("uid://fcd2lewrcmi8"),
 #endregion

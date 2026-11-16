@@ -11,6 +11,7 @@ var anim : AnimationPlayer
 var attack_component : AttackComponent
 var playerCombatData : CombatData
 var attacking : bool
+var isgliding : bool
 
 # Failsafes and Signal Connects
 func setup():
@@ -61,10 +62,13 @@ func movement_animation():
 		
 	elif Input.is_action_pressed("glide") and not player.is_on_floor():
 		anim.current_animation = "Player/jump"
-		player.playerSFXsignal.emit("pudGlide")
+		isgliding = true
+		if isgliding == true:
+			player.playerSFXsignal.emit("pudGlide")
 		
 		if glide_check.is_colliding() and not player.is_on_floor():
 			anim.stop()
+			player.playerSFXsignal.emit("pudGlideStop")
 
 # Death Animation and Set Flags {Connected to player_dead}
 func dead_animation():
