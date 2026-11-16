@@ -35,10 +35,7 @@ func _ready() -> void:
 
 # Set Gamemanager level finished signals/flags and display finish menu {Connected point_manager.point_reached}
 func end_point_reached(emitted_point):
-	# If the emitted point from point_manager == the parent point
-	if emitted_point == point:
-		print("end touched")
-	
+	AudioManager.playSfxOS("finishLevel")
 	GameManager.level_finished.emit()
 	GameManager.is_level_finished = true
 	
