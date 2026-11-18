@@ -3,4 +3,4 @@ class_name AttackEffectData
 
 @export var effectSpriteSheet : SpriteFrames
 @export var effectName : String
-@export var SFX : AudioStreamMP3
+@export var SFX : String

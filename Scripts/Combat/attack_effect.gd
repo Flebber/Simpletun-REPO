@@ -38,6 +38,5 @@ func play_atk_effect(pos : Vector2, dir : Vector2):
 
 	effect.position = pos
 	effect.play(str(effectName, "_effect"))
-	
-	AudioManager.audio_player.stream = effectData.SFX
-	AudioManager.audio_player.play()
+
+	AudioManager.playSfxOS(effectData.SFX)

@@ -5,9 +5,8 @@
 
 [sub_resource type="AudioStream" id="AudioStream_ruhjw"]
 
-[node name="AudioManager" type="Node" unique_id=846780213 node_paths=PackedStringArray("audio_player", "audio_bank")]
+[node name="AudioManager" type="Node" unique_id=846780213 node_paths=PackedStringArray("audio_bank")]
 script = ExtResource("1_6ybar")
-audio_player = NodePath("AudioPlayer")
 audio_bank = NodePath("AudioBank")
 
 [node name="AudioPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1756197638]
