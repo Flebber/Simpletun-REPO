@@ -46,5 +46,5 @@ func play_atk_effect(pos : Vector2, dir : Vector2):
 
 func end_atk_effect(VFX : AnimatedSprite2D):
 	print(str(effectName, "_end_effect is playing now"))
-	VFX.modulate.a = lerpf(1, 0, 5)
-	VFX.play("global_fade")
+	var tween = create_tween()
+	tween.tween_property(VFX, "modulate:a", 0.0, 0.1)
