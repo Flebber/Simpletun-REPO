@@ -20,6 +20,7 @@ func setup():
 	effectData = parent.atkEffectData
 
 	parent.atkEffectGo.connect(play_atk_effect)
+	effect.animation_finished.connect(end_atk_effect.bind(effect))
 
 # Find the desired effect and position then play it {Connected to attack_component.atkEffectGo}
 func play_atk_effect(pos : Vector2, dir : Vector2):
@@ -37,6 +38,13 @@ func play_atk_effect(pos : Vector2, dir : Vector2):
 		effect.flip_h = false
 
 	effect.position = pos
+	effect.modulate.a = 1
 	effect.play(str(effectName, "_effect"))
 
 	AudioManager.playSfxOS(effectData.SFX)
+
+
+func end_atk_effect(VFX : AnimatedSprite2D):
+	print(str(effectName, "_end_effect is playing now"))
+	VFX.modulate.a = lerpf(1, 0, 5)
+	VFX.play("global_fade")

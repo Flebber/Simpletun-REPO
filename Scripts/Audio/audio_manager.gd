@@ -22,7 +22,14 @@ func playSfxOS(sfx : String):
 # play clip sound effect
 func playSfxCP(sfx):
 	isSfxPlaying = true
-	var sound = audio_bank.ClipBank[sfx]
+	var sound = audio_bank.OneShotBank[sfx]
+
+	audio_instance = AudioStreamPlayer.new()
+	add_child(audio_instance)
+
+	audio_instance.finished.connect(endSFX.bind(audio_instance))
+
+	audio_instance.name = str(sfx)
 	audio_instance.stream = sound
 	audio_instance.play()
 

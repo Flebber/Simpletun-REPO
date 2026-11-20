@@ -57,4 +57,24 @@ animations = [{
 "loop": false,
 "name": &"slap_effect",
 "speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u70b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aka0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7g28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is7rk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plkug")
+}],
+"loop": false,
+"name": &"slap_end_effect",
+"speed": 30.0
 }]
